@@ -4,10 +4,16 @@
   parent: WindowRCDResistant
   components:
   - type: Sprite
-    drawdepth: WallTops
-    sprite: _NF/Structures/Windows/reinforced_uranium_window.rsi # Frontier
+    # Begin Stellar - Wallening
+    drawdepth: Mobs
+    sprite: _ST/Tileset/Walls/window_uranium_reinforced.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/reinforced_uranium_window.rsi # Frontier
+    sprite: _ST/Tileset/Walls/window_uranium_reinforced.rsi
+    state: full
+  - type: PlacementReplacement
+    key: windows
+  - type: SpriteFade
+    # End Stellar - Wallening
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: RGlass
@@ -37,7 +43,7 @@
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: IconSmooth
-    base: ruwindow
+    base: window # Stellar
   - type: Construction
     graph: Window
     node: reinforcedUraniumWindow

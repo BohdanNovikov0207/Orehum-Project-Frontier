@@ -72,6 +72,7 @@
   - type: Appearance
   - type: WiresVisuals
   - type: Sprite
+    drawdepth: Overdoors # Stellar
     sprite: Structures/Wallmounts/air_monitors.rsi
     layers:
     - state: alarmp

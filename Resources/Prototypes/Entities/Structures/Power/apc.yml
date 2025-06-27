@@ -23,7 +23,7 @@
   - type: AccessReader
   #  access: [["Engineering"]] # Frontier
   - type: Sprite
-    drawdepth: WallMountedItems
+    drawdepth: Overdoors # Stellar
     sprite: Structures/Power/apc.rsi
     layers:
     - state: base
