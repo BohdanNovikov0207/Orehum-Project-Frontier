@@ -24,7 +24,7 @@
   #  access: [["Engineering"]] # Frontier
   - type: Sprite
     drawdepth: Overdoors # Stellar
-    sprite: Structures/Power/apc.rsi
+    sprite: _ST/Tileset/OnWalls/apc.rsi # Stellar - Wallening
     layers:
     - state: base
     - state: panel
@@ -68,7 +68,7 @@
     sourceNode: input
     loadNode: output
     collectionName: apc
-    sprite: Structures/Power/apc.rsi
+    sprite: _ST/Tileset/OnWalls/apc.rsi # Stellar - Wallening
     state: static
   - type: BatteryCharger
     voltage: Medium
@@ -157,7 +157,8 @@
     mode: SnapgridCenter
   components:
   - type: Sprite
-    sprite: Structures/Power/apc.rsi
+    drawdepth: WallMountedItems
+    sprite: _ST/Tileset/OnWalls/apc.rsi # Stellar - Wallening
     state: frame
   - type: Construction
     graph: APC
