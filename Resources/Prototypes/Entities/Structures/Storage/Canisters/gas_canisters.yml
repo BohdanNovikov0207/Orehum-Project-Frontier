@@ -9,11 +9,20 @@
     - type: InteractionOutline
     - type: Transform
       noRot: true
+    - type: Dropshadow # Begin Stellar - Wallening
+      sprite:
+        sprite: _ST/Effects/dropshadow.rsi
+        state: shadow-large
+      offset: 0, -0.35
     - type: Sprite
-      sprite: _NF/Structures/Storage/canister.rsi # Frontier
+      drawdepth: Walls
+      offset: 0, 0.1
+      sprite: _ST/Tileset/Atmos/canisters.rsi
       noRot: true
       layers:
-        - state: air # Frontier
+        - state: canister-airmix
+        - state: display-a
+          shader: unshaded # End Stellar - Wallening
     - type: Appearance
     - type: GenericVisualizer
       visuals:
@@ -127,7 +136,9 @@
   components:
     - type: Sprite
       layers:
-        - state: storage # Frontier
+      - state: canister-storage # Stellar
+      - state: display-s # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -176,7 +187,9 @@
   components:
   - type: Sprite
     layers:
-      - state: air # Frontier
+      - state: canister-airmix # Stellar
+      - state: display-a # Stellar
+        shader: unshaded # Stellar
   - type: GasCanister
     gasMixture:
       volume: 1500
@@ -216,7 +229,9 @@
   components:
   - type: Sprite
     layers:
-      - state: oxygen # Frontier
+      - state: canister-oxygen # Stellar
+      - state: display-o # Stellar
+        shader: unshaded # Stellar
   - type: GasCanister
     gasMixture:
       volume: 1500
@@ -296,7 +311,9 @@
   components:
     - type: Sprite
       layers:
-        - state: nitrogen # Frontier
+      - state: canister-nitrogen # Stellar
+      - state: display-n # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -378,7 +395,9 @@
   components:
     - type: Sprite
       layers:
-        - state: carbon # Frontier
+      - state: canister-oxide # Stellar
+      - state: display-c # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -464,7 +483,9 @@
   components:
     - type: Sprite
       layers:
-        - state: plasma # Frontier
+      - state: canister-plasma # Stellar
+      - state: display-p # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -510,7 +531,9 @@
   components:
     - type: Sprite
       layers:
-        - state: tritium # Frontier
+      - state: canister-tritium # Stellar
+      - state: display-t # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -555,7 +578,9 @@
   components:
     - type: Sprite
       layers:
-        - state: water_vapor
+      - state: canister-watervapor # Stellar
+      - state: display-w # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -599,7 +624,9 @@
   components:
     - type: Sprite
       layers:
-        - state: ammonia # Frontier
+      - state: canister-ammonia # Stellar
+      - state: display-a # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -646,7 +673,9 @@
   components:
     - type: Sprite
       layers:
-        - state: nitrous_oxide # Frontier
+      - state: canister-oxide # Stellar
+      - state: display-n # Stellar
+        shader: unshaded # Stellar
     - type: GasCanister
       gasMixture:
         volume: 1500
@@ -694,7 +723,9 @@
   components:
   - type: Sprite
     layers:
-    - state: frezon
+    - state: canister-frezon # Stellar
+    - state: display-f # Stellar
+      shader: unshaded # Stellar
   - type: GasCanister
     gasMixture:
       volume: 1500
@@ -770,8 +801,8 @@
       damageModifierSet: Metallic
     - type: InteractionOutline
     - type: Sprite
-      sprite: _NF/Structures/Storage/canister.rsi # Frontier
-      state: air-1 # Frontier
+      sprite: _ST/Tileset/Atmos/canisters.rsi # Stellar
+      state: canister-airmix-broken
     - type: Physics
       bodyType: Dynamic
     - type: Fixtures
@@ -796,8 +827,8 @@
   id: StorageCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: storage-1 # Frontier
+    - type: Sprite
+      state: canister-storage-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
@@ -805,7 +836,7 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    state: air-1 # Frontier
+    state: canister-airmix-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
@@ -813,39 +844,39 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    state: oxygen-1 # Frontier
+    state: canister-oxygen-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
   id: NitrogenCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: nitrogen-1 # Frontier
+    - type: Sprite
+      state: canister-nitrogen-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
   id: CarbonDioxideCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: carbon-1 # Frontier
+    - type: Sprite
+      state: canister-oxide-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
   id: PlasmaCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: plasma-1 # Frontier
+    - type: Sprite
+      state: canister-plasma-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
   id: TritiumCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: tritium-1 # Frontier
+    - type: Sprite
+      state: canister-tritium-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
@@ -853,24 +884,24 @@
   name: broken water vapor canister
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: water_vapor-1
+    - type: Sprite
+      state: canister-watervapor-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
   id: AmmoniaCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: ammonia-1
+    - type: Sprite
+      state: canister-ammonia-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
   id: NitrousOxideCanisterBroken
   categories: [ HideSpawnMenu ]
   components:
-  - type: Sprite
-    state: nitrous_oxide-1 # Frontier
+    - type: Sprite
+      state: canister-oxide-broken # Stellar
 
 - type: entity
   parent: GasCanisterBrokenBase
@@ -878,4 +909,4 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    state: frezon-1
+    state: canister-frezon-broken # Stellar
