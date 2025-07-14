@@ -62,6 +62,8 @@
   id: BaseWall
   components:
   - type: Occluder # Breaks on diagonal walls
+  - type: CosmicCorruptible # Stellar
+    convertTo: WallCosmicCult # Stellar
 
 - type: entity
   abstract: true
@@ -776,6 +778,7 @@
   - type: IconSmooth
     key: wallsbase # Stellar
     base: tallmetal
+
 
 - type: entity
   parent: WallDiagonalBase
