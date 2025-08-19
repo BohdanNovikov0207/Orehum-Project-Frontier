@@ -331,13 +331,16 @@
   suffix: indestructible
   components:
     - type: Sprite
-      sprite: Structures/Walls/plastitanium.rsi
-      color: "#cdf3cd" # Frontier
+      # Begin Stellar - Wallening
+      sprite: _ST/Tileset/Walls/plastitanium.rsi
+    - type: SpriteFade
     - type: Icon
-      sprite: Structures/Walls/plastitanium.rsi
+      sprite: _ST/Tileset/Walls/plastitanium.rsi
+      state: full
+      # End Stellar - Wallening
     - type: IconSmooth
-      key: walls
-      base: plastitanium
+      key: wallsbase
+      base: wall # Stellar - Wallening
     - type: Fixtures
       fixtures:
         fix1:
@@ -374,12 +377,15 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    color: "#cdf3cd" # Frontier
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Begin Stellar - Wallening
+    state: plastitanium
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi
+    state: plastitanium
+  - type: IconSmooth
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
@@ -395,14 +401,31 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    color: "#ffffff" # Frontier
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Begin Stellar - Wallening
+    state: plastitanium
   - type: Icon
-    sprite: Structures/Walls/plastitanium_diagonal.rsi
-    state: state0
-  - type: RCDDeconstructable # Frontier
-    deconstructable: false # Frontier
+    sprite: _ST/Tileset/Walls/diagonal.rsi
+    state: plastitanium
+  - type: IconSmooth
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+        - !type:SpawnEntitiesBehavior
+          spawn:
+            Girder:
+              min: 1
+              max: 1
+        - !type:DoActsBehavior
+          acts: [ "Destruction" ]
+        - !type:PlaySoundBehavior
+          sound:
+            collection: MetalSlam
 
 - type: entity
   parent: BaseWallTierTwo # Mono
@@ -511,15 +534,15 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _NF/Structures/Walls/reinforced_diagonal.rsi # Frontier: _NF folder
-    state: state0
-  - type: IconSmooth
-    mode: DiagonalNF # Frontier: Diagonal<DiagonalNF
-    key: walls
-    base: state
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Begin Stellar - Wallening
+    state: metal_reinforced
   - type: Icon
-    sprite: _NF/Structures/Walls/reinforced_diagonal.rsi # Frontier: _NF folder
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi
+    state: metal_reinforced
+  - type: IconSmooth
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
   - type: Damageable
     damageContainer: StructuralInorganic
     damageModifierSet: StructuralMetallicStrong
@@ -787,12 +810,12 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: _NF/Structures/Walls/solid_diagonal.rsi # Frontier: use _NF variant
-    state: state0
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Stellar
+    state: metal
   - type: Icon
-    sprite: _NF/Structures/Walls/solid_diagonal.rsi # Frontier: use _NF variant
-    state: state0
-  - type: Destructible # Mono - override HP stats from parent: WallShuttleDiagonal
+    sprite: _ST/Tileset/Walls/diagonal.rsi # Stellar
+    state: metal
+  - type: Destructible
     thresholds:
     - trigger:
         !type:DamageTrigger
@@ -814,6 +837,10 @@
         node: girder
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: IconSmooth # Begin Stellar - Wallening
+    mode: NoSprite
+    key: wallsbase
+  - type: SpriteFade # End Stellar - Wallening
 
 - type: entity
   parent: WallSolid
