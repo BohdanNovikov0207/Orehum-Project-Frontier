@@ -2,6 +2,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using Content.Corvax.Interfaces.Shared;
 using Content.Server.Database;
 using Content.Shared._NF.CCVar;
 using Content.Shared.CCVar;
@@ -32,6 +33,8 @@ namespace Content.Server.Preferences.Managers
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
         [Dependency] private readonly IEntityManager _entityManager = default!; // Frontier
 
+        private ISharedSponsorsManager? _sponsors;
+
         // Cache player prefs on the server so we don't need as much async hell related to them.
         private readonly Dictionary<NetUserId, PlayerPrefData> _cachedPlayerPrefs =
             new();
@@ -42,6 +45,7 @@ namespace Content.Server.Preferences.Managers
 
         public void Init()
         {
+            IoCManager.Instance!.TryResolveType(out _sponsors); // Corvax-Sponsors
             _netManager.RegisterNetMessage<MsgPreferencesAndSettings>();
             _netManager.RegisterNetMessage<MsgSelectCharacter>(HandleSelectCharacterMessage);
             _netManager.RegisterNetMessage<MsgUpdateCharacter>(HandleUpdateCharacterMessage);
@@ -107,7 +111,12 @@ namespace Content.Server.Preferences.Managers
             var curPrefs = prefsData.Prefs!;
             var session = _playerManager.GetSessionById(userId);
 
-            profile.EnsureValid(session, _dependencies);
+            // Corvax-Sponsors-Start
+            var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
+                ? prototypes.ToArray()
+                : [];
+            profile.EnsureValid(session, _dependencies, sponsorPrototypes);
+            // Corvax-Sponsors-End
 
             // Frontier: check for profile modifications (based on Monolith's impl)
             if (validateFields && profile is HumanoidCharacterProfile humanProfile)
@@ -288,6 +297,17 @@ namespace Content.Server.Preferences.Managers
 
             prefsData.PrefsLoaded = true;
 
+            // Corvax-Sponsors-Start: Remove sponsor markings from expired sponsors
+            var collection = IoCManager.Instance!;
+            foreach (var (_, profile) in prefsData.Prefs.Characters)
+            {
+                var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
+                    ? prototypes.ToArray()
+                    : [];
+                profile.EnsureValid(session, collection, sponsorPrototypes);
+            }
+            // Corvax-Sponsors-End
+
             var msg = new MsgPreferencesAndSettings();
             msg.Preferences = prefsData.Prefs;
             msg.Settings = new GameSettings
@@ -408,10 +428,10 @@ namespace Content.Server.Preferences.Managers
         {
             // Clean up preferences in case of changes to the game,
             // such as removed jobs still being selected.
-
+            var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes) ? prototypes.ToArray() : []; // Corvax-Sponsors
             return new PlayerPreferences(prefs.Characters.Select(p =>
             {
-                return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection));
+                return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection, sponsorPrototypes));
             }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor, prefs.ConstructionFavorites);
         }
 

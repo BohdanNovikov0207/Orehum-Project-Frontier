@@ -46,6 +46,11 @@ namespace Content.Shared.Humanoid.Markings
 		[DataField("shader")]
 		public string? Shader { get; private set; } = null;
         // end impstation edit
+        // Corvax-Sponsors-Start
+        [DataField("sponsorOnly")]
+        public bool SponsorOnly = false;
+        // Corvax-Sponsors-End
+
         public Marking AsMarking()
         {
             return new Marking(ID, Sprites.Count);

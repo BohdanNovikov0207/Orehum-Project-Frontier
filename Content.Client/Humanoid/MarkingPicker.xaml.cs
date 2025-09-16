@@ -10,6 +10,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Client.Utility;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Corvax.Interfaces.Shared;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
 
 namespace Content.Client.Humanoid;
@@ -22,6 +23,8 @@ public sealed partial class MarkingPicker : Control
     [Dependency] private readonly IEntityManager _entityManager = default!;
 
     private readonly SpriteSystem _sprite;
+
+    private ISharedSponsorsManager? _sponsorsManager; // Corvax-Sponsors
 
     public Action<MarkingSet>? OnMarkingAdded;
     public Action<MarkingSet>? OnMarkingRemoved;

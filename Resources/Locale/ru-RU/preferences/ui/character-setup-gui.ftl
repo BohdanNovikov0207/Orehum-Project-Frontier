@@ -11,3 +11,4 @@ character-setup-gui-save-panel-save = Сохранить
 character-setup-gui-save-panel-nosave = Не сохранять
 character-setup-gui-save-panel-cancel = Отмена
 character-setup-gui-character-setup-adminremarks-button = Админ заметки
+character-setup-gui-character-setup-sponsor-button = Спонсор

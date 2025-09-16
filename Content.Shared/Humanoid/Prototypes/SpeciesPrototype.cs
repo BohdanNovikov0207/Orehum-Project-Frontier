@@ -128,6 +128,13 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField]
     public Color ForcedMarkingColor { get; private set; } = new();
+    // Corvax-Sponsors-Start
+    /// <summary>
+    /// Whether the species is available only for sponsors
+    /// </summary>
+    [DataField]
+    public bool SponsorOnly { get; private set; } = false;
+    // Corvax-Sponsors-End
 }
 
 public enum SpeciesNaming : byte
