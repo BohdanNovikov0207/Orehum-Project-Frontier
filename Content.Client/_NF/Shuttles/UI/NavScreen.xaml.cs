@@ -15,6 +15,7 @@ namespace Content.Client.Shuttles.UI
         public event Action<NetEntity?, ServiceFlags>? OnServiceFlagsChanged;
         public event Action<NetEntity?, Vector2>? OnSetTargetCoordinates;
         public event Action<NetEntity?, bool>? OnSetHideTarget;
+        public event Action<string>? OnNetworkPortButtonPressed;
 
         private bool _targetCoordsModified = false;
 
@@ -28,6 +29,12 @@ namespace Content.Client.Shuttles.UI
             DampenerOff.OnPressed += _ => SetDampenerMode(InertiaDampeningMode.Off);
             DampenerOn.OnPressed += _ => SetDampenerMode(InertiaDampeningMode.Dampen);
             AnchorOn.OnPressed += _ => SetDampenerMode(InertiaDampeningMode.Anchor);
+
+            // Network Port Buttons
+            DeviceButton1.OnPressed += _ => OnPortButtonPressed("SignalShuttleConsole1");
+            DeviceButton2.OnPressed += _ => OnPortButtonPressed("SignalShuttleConsole2");
+            DeviceButton3.OnPressed += _ => OnPortButtonPressed("SignalShuttleConsole3");
+            DeviceButton4.OnPressed += _ => OnPortButtonPressed("SignalShuttleConsole4");
 
             DampenerOff.Group = _buttonGroup;
             DampenerOn.Group = _buttonGroup;
@@ -45,6 +52,11 @@ namespace Content.Client.Shuttles.UI
             TargetY.OnTextChanged += _ => _targetCoordsModified = true;
             TargetSet.OnPressed += _ => SetTargetCoords();
             TargetShow.OnPressed += _ => SetHideTarget(!TargetShow.Pressed);
+        }
+
+        private void OnPortButtonPressed(string sourcePort)
+        {
+            OnNetworkPortButtonPressed?.Invoke(sourcePort);
         }
 
         private void SetDampenerMode(InertiaDampeningMode mode)

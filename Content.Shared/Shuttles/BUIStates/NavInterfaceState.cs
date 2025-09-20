@@ -26,6 +26,13 @@ public sealed class NavInterfaceState
     public bool RotateWithEntity = true;
 
     // Frontier fields
+
+    /// <summary>
+    /// Custom display names for network port buttons.
+    /// Key is the port ID, value is the display name.
+    /// </summary>
+    public Dictionary<string, string> NetworkPortNames;
+
     /// <summary>
     /// Frontier - the state of the shuttle's inertial dampeners
     /// </summary>
@@ -70,7 +77,8 @@ public sealed class NavInterfaceState
         ServiceFlags serviceFlags, // Frontier
         Vector2? target, // Frontier
         NetEntity? targetEntity, // Frontier
-        bool hideTarget) // Frontier
+        bool hideTarget, // Frontier
+        Dictionary<string, string>? networkPortNames = null)
     {
         MaxRange = maxRange;
         Coordinates = coordinates;
@@ -81,6 +89,7 @@ public sealed class NavInterfaceState
         Target = target; // Frontier
         TargetEntity = targetEntity; // Frontier
         HideTarget = hideTarget; // Frontier
+        NetworkPortNames = networkPortNames ?? new Dictionary<string, string>();
     }
 }
 

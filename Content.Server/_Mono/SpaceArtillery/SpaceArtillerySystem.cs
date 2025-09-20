@@ -1,18 +1,21 @@
 using System.Numerics;
+using Content.Server._Mono.FireControl;
+using Content.Server._Mono.SpaceArtillery.Components;
 using Content.Server.DeviceLinking.Systems;
 using Content.Server.Power.Components;
 using Content.Server.Power.EntitySystems;
 using Content.Server.Weapons.Ranged.Systems;
+using Content.Shared._Mono.ShipGuns;
 using Content.Shared._Mono.SpaceArtillery;
 using Content.Shared.Camera;
 using Content.Shared.DeviceLinking;
 using Content.Shared.DeviceLinking.Events;
+using Content.Shared.Examine;
 using Content.Shared.Power;
 using Content.Shared.Projectiles;
 using Content.Shared.Weapons.Ranged.Events;
 using Robust.Shared.Map;
 using Robust.Shared.Player;
-using SpaceArtilleryComponent = Content.Server._Mono.SpaceArtillery.Components.SpaceArtilleryComponent;
 
 namespace Content.Server._Mono.SpaceArtillery;
 
@@ -23,10 +26,11 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
     [Dependency] private readonly BatterySystem _battery = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _recoilSystem = default!;
+    [Dependency] private readonly FireControlSystem _fireControl = default!;
 
     private const float DISTANCE = 100;
     private const float BIG_DAMAGE = 1000;
-    private const float BIG_DAMGE_KICK = 35;
+    private const float BIG_DAMAGE_KICK = 35;
     private ISawmill _sawmill = default!;
 
     public override void Initialize()
@@ -39,6 +43,7 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
         SubscribeLocalEvent<SpaceArtilleryComponent, SignalReceivedEvent>(OnSignalReceived);
         SubscribeLocalEvent<SpaceArtilleryComponent, ChargeChangedEvent>(OnBatteryChargeChanged);
         SubscribeLocalEvent<ShipWeaponProjectileComponent, ProjectileHitEvent>(OnProjectileHit);
+        SubscribeLocalEvent<ShipGunClassComponent, ExaminedEvent>(OnExamined);
     }
 
 
@@ -56,7 +61,7 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
             return;
 
         if (apc is { Powered: true } || battery?.CurrentCharge >= component.PowerUseActive)
-            TryFireArtillery(uid, component);
+            TryFireArtillery(uid, Transform(uid), component);
         else
             OnMalfunction(uid, component);
     }
@@ -88,9 +93,12 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
         }
     }
 
-    private void TryFireArtillery(EntityUid uid, SpaceArtilleryComponent component)
+    private void TryFireArtillery(EntityUid uid, TransformComponent xform, SpaceArtilleryComponent component)
     {
-        var xform = Transform(uid);
+        if (xform.GridUid == null && !xform.MapUid.HasValue)
+        {
+            return;
+        }
 
         if (!_gun.TryGetGun(uid, out var gunUid, out var gun))
         {
@@ -101,12 +109,15 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
         var worldPosX = _xform.GetWorldPosition(uid).X;
         var worldPosY = _xform.GetWorldPosition(uid).Y;
         var worldRot = _xform.GetWorldRotation(uid) + Math.PI;
-        var targetSpot = new Vector2(worldPosX - DISTANCE * (float) Math.Sin(worldRot), worldPosY + DISTANCE * (float) Math.Cos(worldRot));
+        var targetSpot = new Vector2(worldPosX - DISTANCE * (float)Math.Sin(worldRot), worldPosY + DISTANCE * (float)Math.Cos(worldRot));
 
-        EntityCoordinates targetCordinates;
-        targetCordinates = new EntityCoordinates(xform.MapUid!.Value, targetSpot);
+        // Create coordinates for the target and source positions
+        var sourceCoordinates = xform.Coordinates;
+        var targetCoordinates = new EntityCoordinates(xform.MapUid!.Value, targetSpot);
 
-        _gun.AttemptShoot(uid, gunUid, gun, targetCordinates);
+        // Call AttemptShoot with the correct signature that includes target coordinates
+        // This will eventually call GunSystem.Shoot which correctly handles grid velocity
+        _gun.AttemptShoot(uid, gunUid, gun, targetCoordinates);
     }
 
     private void OnShotEvent(EntityUid uid, SpaceArtilleryComponent component, AmmoShotEvent args)
@@ -139,7 +150,7 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
             return;
 
         var players = Filter.Empty();
-        players.AddInGrid((EntityUid) grid);
+        players.AddInGrid((EntityUid)grid);
 
         foreach (var player in players.Recipients)
         {
@@ -148,7 +159,21 @@ public sealed partial class SpaceArtillerySystem : EntitySystem
 
             var vector = _xform.GetWorldPosition(uid) - _xform.GetWorldPosition(playerEnt);
 
-            _recoilSystem.KickCamera(playerEnt, vector.Normalized() * (float) hitEvent.Damage.GetTotal() / BIG_DAMAGE * BIG_DAMGE_KICK);
+            _recoilSystem.KickCamera(playerEnt, vector.Normalized() * (float)hitEvent.Damage.GetTotal() / BIG_DAMAGE * BIG_DAMAGE_KICK);
         }
+    }
+
+    private void OnExamined(EntityUid uid, ShipGunClassComponent component, ExaminedEvent args)
+    {
+        if (!TryComp<FireControllableComponent>(uid, out var controllable))
+            return;
+        if (!args.IsInDetailsRange)
+            return;
+        args.PushMarkup(
+            Loc.GetString(
+                "ship-gun-class-component-examine-detail",
+                ("processingPower", _fireControl.GetProcessingPowerCost(uid, controllable))
+            )
+        );
     }
 }

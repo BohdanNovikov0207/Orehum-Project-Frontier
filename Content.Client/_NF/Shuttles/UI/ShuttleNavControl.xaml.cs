@@ -17,6 +17,12 @@ public sealed partial class ShuttleNavControl
     public InertiaDampeningMode DampeningMode { get; set; }
     public ServiceFlags ServiceFlags { get; set; } = ServiceFlags.None;
 
+    /// <summary>
+    /// Whether the shuttle is currently in FTL. This is used to disable the Park button
+    /// while in FTL to prevent parking while traveling.
+    /// </summary>
+    public bool InFtl { get; set; }
+
     private void NfUpdateState(NavInterfaceState state)
     {
 
@@ -29,6 +35,9 @@ public sealed partial class ShuttleNavControl
 
         DampeningMode = state.DampeningMode;
         ServiceFlags = state.ServiceFlags;
+
+        // Check if the entity has an FTLComponent which indicates it's in FTL
+        InFtl = transform.GridUid != null && EntManager.HasComponent<FTLComponent>(transform.GridUid);
     }
 
     // New Frontiers - Maximum IFF Distance - checks distance to object, draws if closer than max range
