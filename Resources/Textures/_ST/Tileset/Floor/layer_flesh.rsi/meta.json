@@ -1,45 +1,45 @@
 {
     "version": 1,
+    "license": "LicenseRef-Wallening",
+    "copyright": "A custom item by AftrLite (Github).",
     "size": {
         "x": 32,
-        "y": 64
+        "y": 32
     },
-    "license": "LicenseRef-Wallening",
-    "copyright": "By AftrLite",
     "states": [
         {
             "name": "full"
         },
         {
-            "name": "tallmetal0",
+            "name": "floor0",
             "directions": 4
         },
         {
-            "name": "tallmetal1",
+            "name": "floor1",
             "directions": 4
         },
         {
-            "name": "tallmetal2",
+            "name": "floor2",
             "directions": 4
         },
         {
-            "name": "tallmetal3",
+            "name": "floor3",
             "directions": 4
         },
         {
-            "name": "tallmetal4",
+            "name": "floor4",
             "directions": 4
         },
         {
-            "name": "tallmetal5",
+            "name": "floor5",
             "directions": 4
         },
         {
-            "name": "tallmetal6",
+            "name": "floor6",
             "directions": 4
         },
         {
-            "name": "tallmetal7",
+            "name": "floor7",
             "directions": 4
         }
     ]
