@@ -85,6 +85,17 @@
   - type: ShipyardSellCondition # Teleport to shipyard console on sale
     preserveOnSale: true
   # End Frontier
+  - type: TypingIndicator
+    proto: ghost
+  - type: Speech
+  - type: UserInterface
+    interfaces:
+  #ADT start
+      enum.GhostInfoUiKey.Key:
+        type: GhostInfoBoundUserInterface
+  - type: GhostInfo
+  #ADT end
+
 
 # proto for player ghosts specifically
 - type: entity
