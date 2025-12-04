@@ -48795,7 +48795,6 @@ entities:
   entities:
   - uid: 10447
     components:
-    - type: Transform
       pos: 35.5,-57.5
       parent: 3564
 - proto: GunSafeSubMachineGunDrozd
@@ -48804,12 +48803,6 @@ entities:
     components:
     - type: Transform
       pos: 34.5,-57.5
-      parent: 3564
-- proto: Handcuffs
-  entities:
-  - uid: 1104
-    components:
-    - type: Transform
       pos: 33.5,-2.5
       parent: 2
   - uid: 1509
@@ -51470,7 +51463,7 @@ entities:
 
         [bold]Sentencing Phase:[/bold]
 
-        If the death penalty was sought (you MUST have gone through a trial for death penalty) then skip to the second part. 
+        If the death penalty was sought (you MUST have gone through a trial for death penalty) then skip to the second part.
 
         I. Each side can present more evidence/witnesses in any order. There is NO ban on emotional aspects or anything. The prosecution is to submit a suggested penalty. After all the sides are done then the judicial authority is to give a sentence.
 
