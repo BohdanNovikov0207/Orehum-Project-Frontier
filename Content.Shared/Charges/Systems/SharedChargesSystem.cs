@@ -7,7 +7,8 @@ using Robust.Shared.Serialization; // Frontier
 
 namespace Content.Shared.Charges.Systems;
 
-public abstract class SharedChargesSystem : EntitySystem
+// Mono - make partial
+public abstract partial class SharedChargesSystem : EntitySystem
 {
     [Dependency] protected readonly IGameTiming _timing = default!;
     [Dependency] protected readonly SharedAppearanceSystem Appearance = default!; // Frontier
@@ -25,6 +26,7 @@ public abstract class SharedChargesSystem : EntitySystem
         SubscribeLocalEvent<LimitedChargesComponent, ActionAttemptEvent>(OnChargesAttempt);
         SubscribeLocalEvent<LimitedChargesComponent, MapInitEvent>(OnChargesMapInit);
         SubscribeLocalEvent<LimitedChargesComponent, ActionPerformedEvent>(OnChargesPerformed);
+        InitializeAmmo(); // Mono
     }
 
     private void OnExamine(EntityUid uid, LimitedChargesComponent comp, ExaminedEvent args)

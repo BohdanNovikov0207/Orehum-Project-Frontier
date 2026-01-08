@@ -79,6 +79,10 @@
   - type: PowerSwitch
   - type: ApcPowerReceiver # Frontier
     powerLoad: 250 # Allows us to not use the 1000 baseline
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 5
 
 - type: entity
   id: DisposalUnit

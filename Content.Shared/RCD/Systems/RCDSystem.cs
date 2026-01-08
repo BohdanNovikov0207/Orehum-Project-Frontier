@@ -27,6 +27,9 @@ using Robust.Shared.Serialization;
 using System.Linq;
 using Robust.Shared.Audio;
 
+// Mono
+using System.Numerics;
+
 namespace Content.Shared.RCD.Systems;
 
 public sealed class RCDSystem : EntitySystem
@@ -231,8 +234,10 @@ public sealed class RCDSystem : EntitySystem
         #endregion
 
         // Try to start the do after
-        var effect = Spawn(effectPrototype, location);
-        var ev = new RCDDoAfterEvent(GetNetCoordinates(location), component.ConstructionDirection, component.ProtoId, cost, GetNetEntity(effect));
+        // <Mono>
+        var effect = Spawn(effectPrototype, _mapSystem.GridTileToLocal(gridUid.Value, mapGrid, position));
+        _transform.SetParent(effect, gridUid.Value);
+        var ev = new RCDDoAfterEvent(GetNetCoordinates(location), component.ConstructionDirection, component.ProtoId, cost, EntityManager.GetNetEntity(effect));
 
         var doAfterArgs = new DoAfterArgs(EntityManager, user, delay, ev, uid, target: args.Target, used: uid)
         {

@@ -36,6 +36,9 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 25
+  - type: ShipRepairable
+    repairTime: 2
+    repairCost: 3
 
 - type: entity
   abstract: true
@@ -75,6 +78,9 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 25
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 6
 
 - type: entity
   abstract: true
@@ -114,6 +120,9 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 50
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 8
 
 - type: entity
   abstract: true
@@ -153,6 +162,9 @@
         acts: [ "Destruction" ]
   - type: StaticPrice
     price: 75
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 12
 
 - type: entity
   abstract: true

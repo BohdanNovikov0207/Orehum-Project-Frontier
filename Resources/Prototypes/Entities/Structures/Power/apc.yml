@@ -203,6 +203,10 @@
   - type: Battery
     maxCharge: 50000
     startingCharge: 50000
+  # Mono
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 10
 
 - type: entity
   parent: BaseAPC
@@ -212,6 +216,10 @@
   - type: Battery
     maxCharge: 100000
     startingCharge: 100000
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 14
 
 - type: entity
   parent: BaseAPC
@@ -221,7 +229,10 @@
   - type: Battery
     maxCharge: 150000
     startingCharge: 150000
-
+  # Mono
+  - type: ShipRepairable
+    repairTime: 7
+    repairCost: 17
 - type: entity
   parent: BaseAPC
   id: APCHyperCapacity
@@ -230,6 +241,10 @@
   - type: Battery
     maxCharge: 200000
     startingCharge: 200000
+  # Mono
+  - type: ShipRepairable
+    repairTime: 9
+    repairCost: 20
 
 - type: entity
   parent: BaseAPC
@@ -241,3 +256,7 @@
     startingCharge: 50000
   - type: AccessReader
     access: [["Xenoborg"]]
+  # Mono
+  - type: ShipRepairable
+    repairTime: 9
+    repairCost: 20

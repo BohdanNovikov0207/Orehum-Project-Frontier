@@ -420,3 +420,6 @@
   - type: DeviceLinkSink
     ports:
     - Trigger
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 25

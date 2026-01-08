@@ -1,6 +1,6 @@
 # region Removed Upstream
 - type: entity
-  parent: BaseWall
+  parent: BaseWallTierTwo # Mono
   id: WallShuttleInterior
   name: shuttle wall
   suffix: Interior

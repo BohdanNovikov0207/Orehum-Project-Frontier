@@ -114,6 +114,9 @@
     guides:
     - Chef
     - FoodRecipes
+  - type: ShipRepairable
+    repairTime: 2
+    repairCost: 3
 
 - type: entity
   id: SyndicateMicrowave
@@ -137,3 +140,6 @@
     providedRecipes:
     - RecipeBaguetteSword
     - RecipeThrowingCroissant
+  - type: ShipRepairable
+    repairTime: 2
+    repairCost: 3

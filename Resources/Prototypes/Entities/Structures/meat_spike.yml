@@ -61,3 +61,7 @@
   - type: ContainerContainer
     containers:
       body: !type:ContainerSlot
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 8

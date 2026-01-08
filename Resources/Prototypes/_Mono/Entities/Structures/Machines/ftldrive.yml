@@ -135,3 +135,6 @@
       travelTime: 5
       arrivalTime: 1
       cooldownTime: 0.5
+  - type: ShipRepairable
+    repairTime: 20
+    repairCost: 150

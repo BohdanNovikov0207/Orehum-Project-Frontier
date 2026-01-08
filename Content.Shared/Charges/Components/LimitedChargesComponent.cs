@@ -20,6 +20,13 @@ public sealed partial class LimitedChargesComponent : Component
     public int MaxCharges = 3;
 
     /// <summary>
+    /// The current number of charges
+    /// </summary>
+    [DataField("charges"), ViewVariables(VVAccess.ReadWrite)]
+    [AutoNetworkedField]
+    public int Charges = 3;
+
+    /// <summary>
     /// Last time charges was changed. Used to derive current charges.
     /// </summary>
     [DataField(customTypeSerializer:typeof(TimeOffsetSerializer)), AutoNetworkedField]

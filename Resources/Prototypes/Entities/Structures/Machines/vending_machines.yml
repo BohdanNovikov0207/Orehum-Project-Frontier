@@ -129,6 +129,10 @@
     containers:
       cash_slot: !type:ContainerSlot
   # End Frontier
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 10
 
 - type: entity
   id: VendingMachineWallmount
@@ -193,7 +197,10 @@
     enabled: false
     usesApcPower: true
   - type: Rotatable
-
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 10
 # Vending machines
 
 - type: entity

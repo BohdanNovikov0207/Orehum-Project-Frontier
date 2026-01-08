@@ -165,6 +165,10 @@
     - SignalShuttleConsole4
     range: 90
   # Frontier edit end
+  # Mono
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 30
 
 - type: entity
   parent: [BaseComputerShuttle, BaseShuttleIntercom] # Frontier - BaseShuttleIntercom
@@ -456,6 +460,10 @@
   - type: GuideHelp
     guides:
     - Forensics
+  # Mono
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 6
 
 - type: entity
   parent: BaseComputerAiAccess
@@ -892,6 +900,9 @@
     radius: 1.5
     energy: 4.0
     color: "#e6e227"
+  - type: ShipRepairable
+    repairTime: 4
+    repairCost: 8
 
 - type: entity
   id: ComputerCargoOrders

@@ -1,4 +1,4 @@
-faction-lobby-traumateam-subtext = Аванпост медицинского реагирования и координации операций Trauma Team Interstellar.
+faction-lobby-traumateam-subtext = Аванпост Trauma Team Interstellar.
 faction-lobby-traumateam-description = Это центральный госпиталь Trauma Team Interstellar. Здесь вы можете:
    - Организовать или присоединиться к оперативной группе медицинского реагирования
    - Вести координацию с другими полевыми медиками и спасательными командами

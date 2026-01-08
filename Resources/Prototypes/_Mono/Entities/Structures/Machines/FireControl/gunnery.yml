@@ -69,6 +69,9 @@
     board: MachineGCSLowCircuitboard
   - type: FireControlServer
     processingPower: 8
+  - type: ShipRepairable
+    repairTime: 10
+    repairCost: 25
 
 - type: entity
   id: GunneryServerMedium
@@ -86,6 +89,9 @@
     activePower: 1250
     activeChargingPower: 1250
     chargeRate: 0.025 # 40 seconds
+  - type: ShipRepairable
+    repairTime: 13
+    repairCost: 40
 
 - type: entity
   id: GunneryServerHigh
@@ -103,6 +109,9 @@
     activePower: 2500
     activeChargingPower: 2500
     chargeRate: 0.016 # ~1 minute
+  - type: ShipRepairable
+    repairTime: 20
+    repairCost: 70
 
 - type: entity
   id: GunneryServerUltra
@@ -121,6 +130,9 @@
     activePower: 5000
     activeChargingPower: 5000
     chargeRate: 0.008 # ~2 minutes
+  - type: ShipRepairable
+    repairTime: 25
+    repairCost: 100
 
 # Monolith : Gunnery Computer
 - type: entity
@@ -168,3 +180,6 @@
     radius: 1.5
     energy: 1.6
     color: "#ff8400"
+  - type: ShipRepairable
+    repairTime: 7
+    repairCost: 25

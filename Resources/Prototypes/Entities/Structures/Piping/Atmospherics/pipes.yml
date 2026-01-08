@@ -65,6 +65,10 @@
     bodyType: static
   - type: StaticPrice
     price: 12 # Frontier: 30<12
+  # Mono
+  - type: ShipRepairable
+    repairTime: 1
+    repairCost: 1
 
 - type: entity
   abstract: true
