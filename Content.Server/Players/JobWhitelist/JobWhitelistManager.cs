@@ -13,7 +13,6 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
-using Serilog;
 
 namespace Content.Server.Players.JobWhitelist;
 
@@ -25,6 +24,9 @@ public sealed class JobWhitelistManager : IPostInjectInit
     [Dependency] private readonly IPlayerManager _player = default!;
     [Dependency] private readonly IPrototypeManager _prototypes = default!;
     [Dependency] private readonly UserDbDataManager _userDb = default!;
+    [Dependency] private readonly ILogManager _log = default!;
+
+    private readonly ISawmill _sawmill = default!;
 
     private readonly Dictionary<NetUserId, HashSet<string>> _whitelists = new();
     private readonly Dictionary<NetUserId, bool> _globalWhitelists = new(); // Frontier
@@ -33,6 +35,7 @@ public sealed class JobWhitelistManager : IPostInjectInit
     {
         _net.RegisterNetMessage<MsgJobWhitelist>();
         _net.RegisterNetMessage<MsgWhitelist>();
+        _log.GetSawmill(nameof(JobWhitelistManager));
     }
 
     private async Task LoadData(ICommonSession session, CancellationToken cancel)
@@ -90,17 +93,16 @@ public sealed class JobWhitelistManager : IPostInjectInit
 
     public bool IsWhitelisted(NetUserId player, ProtoId<JobPrototype> job)
     {
-        if (!_whitelists.TryGetValue(player, out var whitelists) || // Frontier: added globalWhitelist check
-        !_globalWhitelists.TryGetValue(player, out var globalWhitelist)) // Frontier
+        if (!_whitelists.TryGetValue(player, out var whitelists)) // WF: Globalwhitelist to join server =/= job whitelist
         {
-            Log.Error("Unable to check if player {Player} is whitelisted for {Job}. Stack trace:\\n{StackTrace}",
+            _sawmill.Error("Unable to check if player {Player} is whitelisted for {Job}. Stack trace:\\n{StackTrace}",
                 player,
                 job,
                 Environment.StackTrace);
             return false;
         }
 
-        return globalWhitelist || whitelists.Contains(job); // Frontier: added globalWhitelist
+        return whitelists.Contains(job); // WF: Globalwhitelist to join server =/= job whitelist
     }
 
     public async void RemoveWhitelist(NetUserId player, ProtoId<JobPrototype> job)
@@ -150,17 +152,16 @@ public sealed class JobWhitelistManager : IPostInjectInit
 
     public bool IsWhitelisted(NetUserId player, ProtoId<GhostRolePrototype> ghostRole)
     {
-        if (!_whitelists.TryGetValue(player, out var whitelists) ||
-        !_globalWhitelists.TryGetValue(player, out var globalWhitelist))
+        if (!_whitelists.TryGetValue(player, out var whitelists)) // WF: Globalwhitelist to join server =/= job whitelist
         {
-            Log.Error("Unable to check if player {Player} is whitelisted for {GhostRole}. Stack trace:\\n{StackTrace}",
+            _sawmill.Error("Unable to check if player {Player} is whitelisted for {GhostRole}. Stack trace:\\n{StackTrace}",
                 player,
                 ghostRole,
                 Environment.StackTrace);
             return false;
         }
 
-        return globalWhitelist || whitelists.Contains(ghostRole);
+        return whitelists.Contains(ghostRole);
     }
 
     public async void RemoveWhitelist(NetUserId player, ProtoId<GhostRolePrototype> ghostRole)
@@ -190,7 +191,7 @@ public sealed class JobWhitelistManager : IPostInjectInit
 
         if (!_globalWhitelists.TryGetValue(player, out var whitelist))
         {
-            Log.Error("Unable to check if player {Player} is globally whitelisted. Stack trace:\\n{StackTrace}",
+            _sawmill.Error("Unable to check if player {Player} is globally whitelisted. Stack trace:\\n{StackTrace}",
                 player,
                 Environment.StackTrace);
             return false;
