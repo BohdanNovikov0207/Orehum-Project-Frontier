@@ -26,7 +26,7 @@ namespace Content.Shared.Preferences
     [Serializable, NetSerializable]
     public sealed partial class HumanoidCharacterProfile : ICharacterProfile
     {
-        private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-z0-9 '\-]");
+        private static readonly Regex RestrictedNameRegex = new(@"[^A-Za-z0-9А-Яа-яёЁ ,'-]");
         private static readonly Regex ICNameCaseRegex = new(@"^(?<word>\w)|\b(?<word>\w)(?=\w*$)");
 
         public const int DefaultBalance = 30000; // Frontier
@@ -541,9 +541,9 @@ namespace Content.Shared.Preferences
 
             name = name.Trim();
 
-            if (configManager.GetCVar(CCVars.RestrictedNames))
+            if (configManager.GetCVar(CCVars.RestrictedNames) && Species != "IPC")
             {
-                name = Regex.Replace(name, @"[^\u0041-\u005A,\u0061-\u007A,\u00C0-\u00D6,\u00D8-\u00F6,\u00F8-\u00FF,\u0100-\u017F, -]", string.Empty);
+                // name = Regex.Replace(name, @"[^\u0041-\u005A,\u0061-\u007A,\u00C0-\u00D6,\u00D8-\u00F6,\u00F8-\u00FF,\u0100-\u017F, -]", string.Empty);
                 /*
                  * 0041-005A  Basic Latin: Uppercase Latin Alphabet
                  * 0061-007A  Basic Latin: Lowercase Latin Alphabet
@@ -552,6 +552,7 @@ namespace Content.Shared.Preferences
                  * 00F8-00FF  Latin-1 Supplement: Letters III
                  * 0100-017F  Latin Extended A: European Latin
                  */
+                name = RestrictedNameRegex.Replace(name, string.Empty);
             }
 
             if (configManager.GetCVar(CCVars.ICNameCase))

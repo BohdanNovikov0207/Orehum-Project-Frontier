@@ -12,9 +12,9 @@
 - type: pointOfInterest
   id: McHobo
   parent: BasePOI
-  name: Derelict McCargo
-  minimumDistance: 3250
-  maximumDistance: 5600
+  name: Заброшенный МакКарго
+  minimumDistance: 2250
+  maximumDistance: 3500
   spawnGroup: Scrapyard
   gridPath: /Maps/_NF/POI/mchobo.yml
   addComponents:
@@ -24,7 +24,7 @@
 
 - type: gameMap
   id: McHobo
-  mapName: "Derelict McCargo"
+  mapName: "Заброшенный МакКарго"
   mapPath: /Maps/_NF/POI/mchobo.yml
   minPlayers: 0
   stations:
@@ -32,5 +32,5 @@
       stationProto: DeadDropRecordsFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Derelict McCargo"
+          mapNameTemplate: "Заброшенный МакКарго"
         - type: BindToStationVariationPassExemption

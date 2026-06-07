@@ -78,7 +78,7 @@
     startAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_vent_clog.ogg
     earliestStart: 15
-    minimumPlayers: 15
+    minimumPlayers: 10
     weight: 5
     duration: 60
   - type: VentClogRule

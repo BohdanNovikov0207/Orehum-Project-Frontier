@@ -6,21 +6,19 @@
   weight: 50 # accounted for in jobs
   roles:
   - StationRepresentative
-  - DirectorOfCare
   - StationTrafficController
   - Valet # nyano
-  - NFJanitor
   - MailCarrier # nyano
   - SecurityGuard
 
-- type: department
-  id: Antag
-  name: department-Antag
-  description: department-NFAntag-description
-  color: "#DE3A3A"
-  weight: -20 # accounted for in jobs
-  roles:
-  - NFPirateCaptain
-  - NFPirateFirstMate
-  - NFPirate
-  - Prisoner #nyano
+# - type: department
+#   id: Antag
+#   name: department-Antag
+#   description: department-NFAntag-description
+#   color: "#311313"
+#   weight: -20 # accounted for in jobs
+#   roles:
+#   - NFPirateCaptain
+#   - NFPirateFirstMate
+#   - NFPirate
+#   - Prisoner #nyano

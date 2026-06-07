@@ -11,9 +11,9 @@
 - type: pointOfInterest
   id: NorthPole
   parent: BasePOI
-  name: "The North Pole"
+  name: "Северный полюс"
   minimumDistance: 2150
-  maximumDistance: 4850
+  maximumDistance: 3850
   spawnGroup: Christmas
   spawnChance: 0
   gridPath: /Maps/_NF/POI/northpole.yml

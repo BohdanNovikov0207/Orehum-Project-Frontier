@@ -1,6 +1,6 @@
 - type: gameMap
   id: Frontier
-  mapName: 'Frontier Outpost'
+  mapName: 'Администрация Сектора'
   mapPath: /Maps/_NF/Outpost/frontier.yml
   minPlayers: 0
   maxPlayers: 100
@@ -10,8 +10,10 @@
     Frontier:
       stationProto: StandardFrontierStation
       components:
+        - type: IFF
+          color: "#52d2be"
         - type: StationNameSetup
-          mapNameTemplate: 'Frontier Outpost'
+          mapNameTemplate: 'Аванпост АС'
 #          nameGenerator:
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
@@ -24,13 +26,11 @@
           availableJobs:
             Contractor: [ -1, -1 ]
             Pilot: [ -1, -1 ]
-            Mercenary: [ -1, -1 ]
             Borg: [ -1, -1 ]
             StationRepresentative: [ 1, 1 ]
             StationTrafficController: [ 1, 1 ]
             SecurityGuard: [ 1, 1 ]
             Valet: [ 1, 1 ]
-            NFJanitor: [ 1, 1 ]
             MailCarrier: [ 1, 1 ]
           tags:
           - HeadOfPersonnel
