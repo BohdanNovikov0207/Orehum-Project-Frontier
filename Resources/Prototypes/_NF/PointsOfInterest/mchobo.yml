@@ -18,6 +18,8 @@
   spawnGroup: Scrapyard
   gridPath: /Maps/_NF/POI/mchobo.yml
   addComponents:
+  - type: IFF
+    color: "#FFD700FF"
   - type: StationTransit
     routes:
       SpawnPoints: 50

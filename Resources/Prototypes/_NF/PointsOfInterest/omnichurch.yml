@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Omnichurch
   parent: BasePOI
-  name: "Церковь"
+  name: "Церковь [Нейтралитет]"
   minimumDistance: 1200
   maximumDistance: 2700
   gridPath: /Maps/_NF/POI/beacon.yml
