@@ -89,6 +89,9 @@
         Blunt: 19
   - type: Inventory
     templateId: corpse
+  - type: Tag
+    tags:
+    - HideFromGhostWarps
 
 - type: entity
   parent: MobHuman
