@@ -46,7 +46,9 @@ public sealed class AHelpUIController: UIController, IOnSystemChanged<BwoinkSyst
     private bool _discordRelayActive;
     private bool _hasUnreadAHelp;
     private bool _bwoinkSoundEnabled;
-    private string? _aHelpSound;
+    public const string AHelpErrorSound = "/Audio/_Orehum/Admin/ahelp_error.ogg";
+    public const string AHelpReceiveSound = "/Audio/_Orehum/Admin/ahelp_receive.ogg";
+    public const string AHelpSendSound = "/Audio/_Orehum/Admin/ahelp_send.ogg";
 
     protected override string SawmillName => "c.s.go.es.bwoink";
 
@@ -58,7 +60,6 @@ public sealed class AHelpUIController: UIController, IOnSystemChanged<BwoinkSyst
         SubscribeNetworkEvent<BwoinkPlayerTypingUpdated>(PeopleTypingUpdated);
 
         _adminManager.AdminStatusUpdated += OnAdminStatusUpdated;
-        _config.OnValueChanged(CCVars.AHelpSound, v => _aHelpSound = v, true);
         _config.OnValueChanged(CCVars.BwoinkSoundEnabled, v => _bwoinkSoundEnabled = v, true);
     }
 
@@ -116,14 +117,10 @@ public sealed class AHelpUIController: UIController, IOnSystemChanged<BwoinkSyst
     private void SetAHelpPressed(bool pressed)
     {
         if (GameAHelpButton != null)
-        {
             GameAHelpButton.Pressed = pressed;
-        }
 
         if (LobbyAHelpButton != null)
-        {
             LobbyAHelpButton.Pressed = pressed;
-        }
 
         UIManager.ClickSound();
         UnreadAHelpRead();
@@ -134,22 +131,19 @@ public sealed class AHelpUIController: UIController, IOnSystemChanged<BwoinkSyst
         Log.Info($"@{message.UserId}: {message.Text}");
         var localPlayer = _playerManager.LocalSession;
         if (localPlayer == null)
-        {
             return;
-        }
-        if (message.PlaySound && localPlayer.UserId != message.TrueSender)
-        {
-            if (_aHelpSound != null && (_bwoinkSoundEnabled || !_adminManager.IsActive()))
-                _audio.PlayGlobal(_aHelpSound, Filter.Local(), false);
-            _clyde.RequestWindowAttention();
-        }
 
         EnsureUIHelper();
 
-        if (!UIHelper!.IsOpen)
+        if (message.PlaySound && localPlayer.UserId != message.TrueSender && !UIHelper!.IsOpen)
         {
-            UnreadAHelpReceived();
+            _audio.PlayGlobal(AHelpReceiveSound, Filter.Local(), false);
+            _clyde.RequestWindowAttention();
         }
+
+
+        if (!UIHelper!.IsOpen)
+            UnreadAHelpReceived();
 
         UIHelper!.Receive(message);
     }
