@@ -128,7 +128,7 @@ function getChanges(body) {
 // Get the highest changelog number from the changelogs file
 function getHighestCLNumber() {
     // Read changelogs file
-    const file = fs.readFileSync(`../../${process.env.CHANGELOG_DIR}`, "utf8");
+    const file = fs.readFileSync(`../../../${process.env.CHANGELOG_DIR}`, "utf8");
 
     // Get list of CL numbers
     const data = yaml.load(file);
@@ -144,7 +144,7 @@ function writeChangelog(entry) {
 
     // Create a new changelogs file if it does not exist
     if (fs.existsSync(`../../${process.env.CHANGELOG_DIR}`)) {
-        const file = fs.readFileSync(`../../${process.env.CHANGELOG_DIR}`, "utf8");
+        const file = fs.readFileSync(`../../../${process.env.CHANGELOG_DIR}`, "utf8");
         data = yaml.load(file);
     }
 
