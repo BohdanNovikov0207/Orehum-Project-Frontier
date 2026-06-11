@@ -1,5 +1,9 @@
 Order: 1 # Orehum
-author: Unenduring
-changes:
-  - type: Initial # One of the following: Add, Remove, Tweak, Fix
-    message: Пасхалко
+Entries:
+- author: Unenduring
+  changes:
+    - type: Initial # One of the following: Add, Remove, Tweak, Fix
+      message: Пасхалко
+  id: 100000
+  time: '2025-04-30T00:34:21.0000000+00:00'
+  url: https://github.com/space-wizards/space-station-14/pull/37047
