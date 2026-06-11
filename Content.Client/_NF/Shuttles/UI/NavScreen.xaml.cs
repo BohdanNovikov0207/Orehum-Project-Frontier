@@ -6,7 +6,6 @@ using Content.Shared._NF.Shuttles.Events;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
 using Robust.Client.UserInterface.Controls;
-
 namespace Content.Client.Shuttles.UI
 {
     public sealed partial class NavScreen

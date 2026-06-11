@@ -1,5 +1,6 @@
 using Content.Server.Shuttles.Components;
 using Content.Shared.Atmos.Components;
+using Robust.Server.GameObjects;
 using Content.Shared.Audio;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing;
@@ -49,6 +50,21 @@ public sealed partial class ShuttleSystem
     // high-speed collisions tend to be a series of increasingly smaller collisions so don't spam admin logs
     private readonly TimeSpan _adminLogSpacing = TimeSpan.FromSeconds(3);
 
+    /// <summary>
+    /// Minimum velocity difference between 2 bodies for a shuttle "impact" to occur.
+    /// </summary>
+    private const int MinimumImpactVelocity = 10;
+
+    /// <summary>
+    /// Kinetic energy required to dismantle a single tile
+    /// </summary>
+    private const float TileBreakEnergy = 5000;
+
+    /// <summary>
+    /// Kinetic energy required to spawn sparks
+    /// </summary>
+    private const float SparkEnergy = 7000;
+
     private readonly SoundCollectionSpecifier _shuttleImpactSound = new("ShuttleImpactSound");
     private readonly ProtoId<ContentTileDefinition> _platingId = "Plating";
     private readonly EntProtoId _sparkEffect = "EffectSparks";
@@ -95,9 +111,8 @@ public sealed partial class ShuttleSystem
         )
             return;
 
-        if (!_gridQuery.TryComp(args.OurEntity, out var ourGrid) ||
-            !_gridQuery.TryComp(args.OtherEntity, out var otherGrid)
-        )
+        if (!TryComp<MapGridComponent>(uid, out var ourGrid) ||
+            !TryComp<MapGridComponent>(args.OtherEntity, out var otherGrid))
             return;
 
         var ourBody = args.OurBody;
@@ -440,4 +455,27 @@ public sealed partial class ShuttleSystem
     {
         return !(_impactedAt.ContainsKey(uid) && _gameTiming.CurTime < _impactedAt[uid] + _adminLogSpacing);
     }
+
+    private void ProcessTile(EntityUid uid, MapGridComponent grid, Vector2i tile, float energy, Vector2 dir)
+    {
+        DamageSpecifier damage = new();
+        damage.DamageDict = new() { { "Blunt", energy } };
+
+        foreach (EntityUid localUid in _lookup.GetLocalEntitiesIntersecting(uid, tile, gridComp: grid))
+        {
+            _damageSys.TryChangeDamage(localUid, damage);
+
+            TransformComponent form = Transform(localUid);
+            if (!form.Anchored)
+                _transform.Unanchor(localUid, form);
+            _throwing.TryThrow(localUid, dir);
+        }
+
+        if (energy > TileBreakEnergy)
+            _mapSystem.SetTile(new Entity<MapGridComponent>(uid, grid), tile, Tile.Empty);
+
+        if (energy > SparkEnergy)
+            Spawn("EffectSparks", new EntityCoordinates(uid, tile));
+    }
 }
+
