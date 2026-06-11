@@ -73,6 +73,10 @@
     interfaces:
       enum.RadarConsoleUiKey.Key:
         type: RadarConsoleBoundUserInterface
+        #ADT start
+      enum.GhostInfoUiKey.Key:
+        type: GhostInfoBoundUserInterface
+        #ADT end
   - type: IntrinsicUI
     uis:
       enum.RadarConsoleUiKey.Key:
@@ -88,11 +92,7 @@
   - type: TypingIndicator
     proto: ghost
   - type: Speech
-  - type: UserInterface
-    interfaces:
   #ADT start
-      enum.GhostInfoUiKey.Key:
-        type: GhostInfoBoundUserInterface
   - type: GhostInfo
   #ADT end
 

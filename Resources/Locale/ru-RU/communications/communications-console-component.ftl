@@ -2,13 +2,10 @@
 comms-console-menu-title = Консоль связи
 comms-console-menu-announcement-placeholder = Текст объявления...
 comms-console-menu-announcement-button = Сделать объявление
-comms-console-menu-announcement-button-tooltip = Отправьте своё сообщение в качестве радиообъявления на всю станцию.
-comms-console-menu-broadcast-button-tooltip = Транслируйте своё сообщение на настенные экраны по всей станции. Примечание: помещается всего десять символов!
 
 comms-console-menu-broadcast-placeholder = Транслировать текст...
 comms-console-menu-broadcast-button = Транслировать на экраны
 
-comms-console-menu-alert-level-button-tooltip = Изменение уровня угрозы станции.
 comms-console-change-alert-level-button = Изменить статус
 comms-console-confirm-alert-level-button = Подтвердить
 comms-console-call-button-label = Вызвать
