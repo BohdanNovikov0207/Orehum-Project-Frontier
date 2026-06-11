@@ -1,3 +1,4 @@
+using Content.Shared._NF.Shuttles;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
@@ -22,7 +23,7 @@ public abstract partial class SharedShuttleSystem : EntitySystem
     [Dependency] protected readonly SharedTransformSystem XformSystem = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
 
-    public const float FTLRange = 256f;
+    public const float FTLRange = 64f; // Frontier edit
     public const float FTLBufferRange = 8f;
     public const float TileDensityMultiplier = 0.5f;
 
@@ -172,7 +173,13 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         return HasComp<MapComponent>(coordinates.EntityId);
     }
 
-    public float GetFTLRange(EntityUid shuttleUid) => FTLRange;
+    /// <summary>
+    /// Frontier edit
+    /// </summary>
+    public float GetFTLRange(EntityUid shuttleUid, FTLDriveComponent? ftl = null)
+    {
+        return !Resolve(shuttleUid, ref ftl) ? 0f : ftl.Data.Range;
+    }
 
     public float GetFTLBufferRange(EntityUid shuttleUid, MapGridComponent? grid = null)
     {
@@ -188,10 +195,11 @@ public abstract partial class SharedShuttleSystem : EntitySystem
     /// <summary>
     /// Returns true if the spot is free to be FTLd to (not close to any objects and in range).
     /// </summary>
-    public bool FTLFree(EntityUid shuttleUid, EntityCoordinates coordinates, Angle angle, List<ShuttleExclusionObject>? exclusionZones)
+    public bool FTLFree(EntityUid shuttleUid, EntityCoordinates coordinates, Angle angle, List<ShuttleExclusionObject>? exclusionZones, FTLDriveComponent? ftl = null) // Frontier edit - FTL drive
     {
         if (!_physicsQuery.TryGetComponent(shuttleUid, out var shuttlePhysics) ||
-            !_xformQuery.TryGetComponent(shuttleUid, out var shuttleXform))
+            !_xformQuery.TryGetComponent(shuttleUid, out var shuttleXform)
+            || !Resolve(shuttleUid, ref ftl, false))
         {
             return false;
         }
@@ -205,8 +213,15 @@ public abstract partial class SharedShuttleSystem : EntitySystem
         // This is the already adjusted position
         var targetPosition = mapCoordinates.Position;
 
+        // Frontier edit start
+        // FTL on the same map won't work without a bluespace drive on board.
+        if (mapCoordinates.MapId == shuttleXform.MapID
+            && !ftl.Data.FTLToSameMap)
+            return false;
+        // Frontier edit end
+
         // Check range even if it's cross-map.
-        if ((targetPosition - ourPos).Length() > FTLRange)
+        if ((targetPosition - ourPos).Length() > GetFTLRange(shuttleUid, ftl)) // Frontier edit - FTL range
         {
             return false;
         }
