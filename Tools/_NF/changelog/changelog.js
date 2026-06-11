@@ -1,3 +1,10 @@
+// SPDX-FileCopyrightText: 2024 Piras314 <92357316+Piras314@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Aiden <28298836+Aidenkrz@users.noreply.github.com>
+// SPDX-FileCopyrightText: 2025 Piras314 <p1r4s@proton.me>
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
+// From https://github.com/DeltaV-Station/Delta-v/
 // Dependencies
 const fs = require("fs");
 const yaml = require("js-yaml");
@@ -6,16 +13,8 @@ const axios = require("axios");
 // Use GitHub token if available
 if (process.env.GITHUB_TOKEN) axios.defaults.headers.common["Authorization"] = `Bearer ${process.env.GITHUB_TOKEN}`;
 
-// Check changelog directory.
-if (!process.env.CHANGELOG_DIR) {
-    console.log("CHANGELOG_DIR not defined, exiting.");
-    return process.exit(1);
-}
-
-const ChangelogFilePath = `../../../${process.env.CHANGELOG_DIR}`
-
 // Regexes
-const HeaderRegex = /^\s*(?::cl:|🆑) *([a-z0-9_\-, ]+)?/img; // :cl: or 🆑 [0] followed by optional author name [1]
+const HeaderRegex = /^\s*(?::cl:|🆑) *([a-z0-9_\- ,]+)?\s+/im; // :cl: or 🆑 [0] followed by optional author name [1]
 const EntryRegex = /^ *[*-]? *(add|remove|tweak|fix): *([^\n\r]+)\r?$/img; // * or - followed by change type [0] and change message [1]
 const CommentRegex = /<!--.*?-->/gs; // HTML comments
 
@@ -39,12 +38,7 @@ async function main() {
     if (!author) {
         console.log("No author found, setting it to author of the PR\n");
         author = user.login;
-    } else {
-        author = author.trim()
     }
-
-    // Offset results past the header
-    commentlessBody = commentlessBody.slice(HeaderRegex.lastIndex);
 
     // Get all changes from the body
     const entries = getChanges(commentlessBody);
@@ -70,8 +64,9 @@ async function main() {
         changes: entries,
         id: getHighestCLNumber() + 1,
         time: time,
-        url: `https://github.com/${process.env.GITHUB_REPOSITORY}/pull/${process.env.PR_NUMBER}`,
     };
+
+    console.log('entry (line 63): ', entry);
 
     // Write changelogs
     writeChangelog(entry);
@@ -133,7 +128,7 @@ function getChanges(body) {
 // Get the highest changelog number from the changelogs file
 function getHighestCLNumber() {
     // Read changelogs file
-    const file = fs.readFileSync(ChangelogFilePath, "utf8");
+    const file = fs.readFileSync(`../../${process.env.CHANGELOG_DIR}`, "utf8");
 
     // Get list of CL numbers
     const data = yaml.load(file);
@@ -148,17 +143,20 @@ function writeChangelog(entry) {
     let data = { Entries: [] };
 
     // Create a new changelogs file if it does not exist
-    if (fs.existsSync(ChangelogFilePath)) {
-        const file = fs.readFileSync(ChangelogFilePath, "utf8");
+    if (fs.existsSync(`../../${process.env.CHANGELOG_DIR}`)) {
+        const file = fs.readFileSync(`../../${process.env.CHANGELOG_DIR}`, "utf8");
         data = yaml.load(file);
     }
+
+    console.log('entry (line 145): ', entry);
+    console.log('data (line 146): ', data);
 
     data.Entries.push(entry);
 
     // Write updated changelogs file
     fs.writeFileSync(
-        ChangelogFilePath,
-        "Entries:\n" +
+        `../../${process.env.CHANGELOG_DIR}`,
+        "Name: Orehum\nOrder: -1\nEntries:\n" + // IF YOU ARE A FORK, CHANGE THIS!!!!!!!!!!!!
             yaml.dump(data.Entries, { indent: 2 }).replace(/^---/, "")
     );
 }
