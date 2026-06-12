@@ -2,7 +2,7 @@ Order: 1 # Orehum
 Entries:
 - author: Unenduring
   changes:
-    - type: Initial # One of the following: Add, Remove, Tweak, Fix
+    - type: Add
       message: Пасхалко
   id: 100000
   time: '2025-04-30T00:34:21.0000000+00:00'
