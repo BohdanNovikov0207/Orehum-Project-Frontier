@@ -1,0 +1,155 @@
+# Trauma Team Medic Helmet
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitTraumaTeamMedic
+  categories: [ HideSpawnMenu ]
+  name: шлем скафандра медика TTI
+  description: Медицинский шлем с AR-интерфейсом для диагностики. Автоматически сканирует ранения и предлагает оптимальные протоколы лечения.
+  components:
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/helmet.rsi
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/helmet.rsi
+  - type: PointLight
+    color: white
+  - type: FireProtection
+    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+# Trauma Team Pilot Helmet
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitTraumaTeamPilot
+  categories: [ HideSpawnMenu ]
+  name: шлем скафандра пилота TTI
+  description: Шлем пилота с AR-интерфейсом для помощи в пилотировании.
+  components:
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/helmetpilot.rsi
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/helmetpilot.rsi
+  - type: PointLight
+    color: white
+  - type: FireProtection
+    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+# Trauma Team Officer Helmet
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitTraumaTeamOfficer
+  categories: [ HideSpawnMenu ]
+  name: шлем скафандра офицера TTI
+  description: Тактический шлем с панорамным HUD и ассистирующей системой авто-доводки. Защищает от большинства типов урона.
+  components:
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/helmetsec.rsi
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/helmetsec.rsi
+  - type: PointLight
+    color: white
+  - type: FireProtection
+    reduction: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+
+# Hardsuit Trauma Team Medic
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitTraumaTeamMedic
+  name: скафандр медика TTI
+  description: Модифицированный для боевых ситуаций скафандр с усиленной защитой спины. Позволяет эвакуировать раненых под огнем, сохраняя полную подвижность.
+  components:
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitTraumaTeamMedic
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
+        Radiation: 0.7
+        Caustic: 0.4
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+
+# Hardsuit Trauma Team Pilot
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitTraumaTeamPilot
+  name: скафандр пилота TTI
+  description: Модифицированный для боевых ситуаций скафандр. Обладает максимальной свободой передвижения, защищен от взрывов.
+  components:
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitTraumaTeamPilot
+  - type: ExplosionResistance
+    damageCoefficient: 0.2
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.65
+        Slash: 0.65
+        Piercing: 0.65
+        Heat: 0.65
+        Radiation: 0.7
+        Caustic: 0.4
+  - type: ClothingSpeedModifier
+    walkModifier: 1
+    sprintModifier: 1
+
+# Hardsuit Trauma Team Officer
+- type: entity
+  parent: ClothingOuterHardsuitBase
+  id: ClothingOuterHardsuitTraumaTeamOfficer
+  name: скафандр офицера TTI
+  description: Тяжелый боевой скафандр с интегрированной системой жизнеобеспечения.
+  components:
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitTraumaTeamOfficer
+  - type: ExplosionResistance
+    damageCoefficient: 0.6
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.6
+        Piercing: 0.6
+        Heat: 0.4
+        Radiation: 0.5
+        Caustic: 0.45
+  - type: ClothingSpeedModifier
+    walkModifier: 0.75
+    sprintModifier: 0.75

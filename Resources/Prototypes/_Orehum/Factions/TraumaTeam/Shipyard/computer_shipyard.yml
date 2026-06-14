@@ -1,0 +1,26 @@
+- type: entity
+  id: ComputerShipyardTraumaTeam
+  parent: [ComputerShipyardBase]
+  name: консоль верфи Trauma Team
+  description: Используется для приобретения и продажи шаттлов Trauma Team Interstellar.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.TraumaTeam
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.TraumaTeam:
+        type: ShipyardConsoleBoundUserInterface
+  - type: ShipyardConsole
+    shipyardChannel: TraumaTeam
+    newAccessLevels: [TraumaTeam]

@@ -1,0 +1,209 @@
+- type: roleLoadout
+  id: JobTraumaTeamMember
+  groups:
+  - ContractorNeck
+  - TraumaTeamJumpsuit
+  - TraumaTeamGloves
+  - TraumaTeamBackpack
+  - TraumaTeamOuterClothing
+  - TraumaTeamShoes
+  - TraumaTeamFace
+  - ContractorGlasses
+  - TraumaTeamBelt
+  - TraumaTeamEars
+  - ContractorBoxSurvival
+  - TraumaTeamMemberPDA
+  - ContractorWallet
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+- type: roleLoadout
+  id: JobTraumaTeamLeader
+  groups:
+  - ContractorNeck
+  - TraumaTeamJumpsuit
+  - TraumaTeamGloves
+  - TraumaTeamBackpack
+  - TraumaTeamOuterClothing
+  - TraumaTeamShoes
+  - TraumaTeamFace
+  - ContractorGlasses
+  - TraumaTeamBelt
+  - TraumaTeamEars
+  - ContractorBoxSurvival
+  - TraumaTeamLeaderPDA
+  - ContractorWallet
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+# Groups
+
+- type: loadoutGroup
+  id: TraumaTeamJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  hidden: true
+  loadouts:
+  - ClothingJumpsuitTraumaTeam
+  fallbacks:
+  - ClothingJumpsuitTraumaTeam
+
+- type: loadoutGroup
+  id: TraumaTeamOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - ClothingOuterHardsuitTraumaTeamMedic
+  - ClothingOuterHardsuitTraumaTeamPilot
+  - ClothingOuterHardsuitTraumaTeamOfficer
+  - ClothingOuterCoatTraumaTeam
+
+- type: loadoutGroup
+  id: TraumaTeamEars
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - ClothingHeadsetAltTraumaTeam
+
+- type: loadoutGroup
+  id: TraumaTeamBackpack
+  name: loadout-group-contractor-backpack
+  hidden: true
+  loadouts:
+  - ClothingBackpackTraumaTeam
+
+- type: loadoutGroup
+  id: TraumaTeamGloves
+  name: loadout-group-contractor-gloves
+  hidden: true
+  loadouts:
+  - ClothingHandsGlovesCombatTraumaTeam
+
+- type: loadoutGroup
+  id: TraumaTeamFace
+  name: loadout-group-contractor-face
+  minLimit: 0
+  loadouts:
+  - ClothingMaskGasTraumaTeam
+
+- type: loadoutGroup
+  id: TraumaTeamBelt
+  name: loadout-group-contractor-belt
+  minLimit: 0
+  loadouts:
+  - ClothingBeltTraumaTeamWebbing
+
+- type: loadoutGroup
+  id: TraumaTeamShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesMagBootsTraumaTeam
+  - ContractorClothingShoesColorBlack
+  fallbacks:
+  - ContractorClothingShoesColorBlack
+
+- type: loadoutGroup
+  id: TraumaTeamMemberPDA
+  name: loadout-group-contractor-pda
+  hidden: true
+  loadouts:
+  - TraumaTeamMemberPDA
+  fallbacks:
+  - TraumaTeamMemberPDA
+
+- type: loadoutGroup
+  id: TraumaTeamLeaderPDA
+  name: loadout-group-contractor-pda
+  hidden: true
+  loadouts:
+  - TraumaTeamLeaderPDA
+  fallbacks:
+  - TraumaTeamLeaderPDA
+
+# Loadouts
+
+- type: loadout
+  id: ClothingShoesMagBootsTraumaTeam
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 750
+  equipment:
+    shoes: ClothingShoesMagBootsTraumaTeam
+
+- type: loadout
+  id: ClothingJumpsuitTraumaTeam
+  price: 100
+  equipment:
+    jumpsuit: ClothingJumpsuitTraumaTeam
+
+- type: loadout
+  id: ClothingOuterHardsuitTraumaTeamMedic
+  price: 2500
+  equipment:
+    outerClothing: ClothingOuterHardsuitTraumaTeamMedic
+
+- type: loadout
+  id: ClothingOuterHardsuitTraumaTeamPilot
+  price: 1000
+  equipment:
+    outerClothing: ClothingOuterHardsuitTraumaTeamPilot
+
+- type: loadout
+  id: ClothingOuterHardsuitTraumaTeamOfficer
+  price: 4000
+  equipment:
+    outerClothing: ClothingOuterHardsuitTraumaTeamOfficer
+
+- type: loadout
+  id: ClothingOuterCoatTraumaTeam
+  price: 100
+  equipment:
+    outerClothing: ClothingOuterCoatTraumaTeam
+
+- type: loadout
+  id: ClothingHeadsetAltTraumaTeam
+  price: 100
+  equipment:
+    ears: ClothingHeadsetAltTraumaTeam
+
+- type: loadout
+  id: ClothingBackpackTraumaTeam
+  price: 100
+  equipment:
+    back: ClothingBackpackTraumaTeam
+
+- type: loadout
+  id: ClothingHandsGlovesCombatTraumaTeam
+  price: 100
+  equipment:
+    gloves: ClothingHandsGlovesCombatTraumaTeam
+
+- type: loadout
+  id: ClothingMaskGasTraumaTeam
+  price: 250
+  storage:
+    back:
+    - ClothingMaskGasTraumaTeam
+
+- type: loadout
+  id: ClothingBeltTraumaTeamWebbing
+  price: 100
+  equipment:
+    belt: ClothingBeltTraumaTeamWebbing
+
+- type: loadout
+  id: TraumaTeamMemberPDA
+  price: 100
+  equipment:
+    id: TraumaTeamMemberPDA
+
+- type: loadout
+  id: TraumaTeamLeaderPDA
+  price: 100
+  equipment:
+    id: TraumaTeamLeaderPDA

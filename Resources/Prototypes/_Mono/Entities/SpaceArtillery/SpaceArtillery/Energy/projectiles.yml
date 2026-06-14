@@ -9,9 +9,9 @@
   - type: Projectile
     damage:
       types:
-        Structural: 500
-        Heat: 200
-        Ion: 50
+        Radiation: 25
+        Structural: 1500
+        Heat: 50
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/plasmashot.rsi
     layers:
@@ -25,16 +25,16 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 3.3
+    lifetime: 10
   - type: PointLight
-    radarColor: "#C92BCC"
+    radarColor: "#FF0040"
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
-    totalIntensity: 80
-    intensitySlope: 4
-    maxIntensity: 15
-    maxTileBreak: 2
+    totalIntensity: 60
+    intensitySlope: 8
+    maxIntensity: 12
+    maxTileBreak: 3
 
 # RUBICON
 
@@ -47,9 +47,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 600
-        Heat: 250
-        Ion: 100
+        Radiation: 5
+        Heat: 20
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
     layers:
@@ -63,13 +62,13 @@
     requireNoGrid: true
     shape: circle
   - type: TimedDespawn
-    lifetime: 3.3
+    lifetime: 6.6
   - type: PointLight
     color: "#FB00FF"
   - type: EmpOnTrigger
     range: 4
     energyConsumption: 2700000
-    disableDuration: 5
+    disableDuration: 10
 
 # DYMERE
 
@@ -82,8 +81,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1000
-        Heat: 500
+        Structural: 500
+        Heat: 100
       armorPenetration: 1
     penetrationThreshold: 1000
   - type: Sprite
@@ -99,7 +98,7 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 4.4
+    lifetime: 10
   - type: PointLight
     color: "#6BC1FF"
   - type: GatheringProjectile
