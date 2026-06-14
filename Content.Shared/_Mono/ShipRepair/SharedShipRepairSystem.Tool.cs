@@ -140,7 +140,7 @@ public abstract partial class SharedShipRepairSystem : EntitySystem
                         continue;
                 }
 
-                var enough = !_charges.HasCharges(ent.Owner, cost);
+                var enough = _charges.HasCharges(ent.Owner, cost);
                 notEnoughCharges |= !enough;
                 if (needsRepair && enough)
                 {
