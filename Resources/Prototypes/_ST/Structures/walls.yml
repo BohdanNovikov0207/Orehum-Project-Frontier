@@ -93,26 +93,6 @@
 - type: entity
   parent:
   - StellarStructureBaseWall
-  - StellarStructureWallDamageable
-  - StellarStructureWallRCDDeconstructible
-  id: StellarWallWood
-  name: wood wall
-  description: It seems to be a section of hull plated with wood.
-  components:
-  - type: Sprite
-    sprite: _ST/Tileset/Walls/wood.rsi
-  - type: Icon
-    sprite: _ST/Tileset/Walls/wood.rsi
-  - type: StellarWallSmooth
-    key: WallSolid
-    fullState: wall
-  - type: Construction
-    graph: StellarWalls
-    node: WallWood
-
-- type: entity
-  parent:
-  - StellarStructureBaseWall
   id: StellarWallPlastitanium
   name: plastitanium wall
   description: It seems to be a section of hull plated with plastitanium.
@@ -124,39 +104,3 @@
   - type: StellarWallSmooth
     key: WallSolid
     fullState: wall
-
-- type: entity
-  parent:
-  - StellarStructureBaseWall
-  - StellarStructureWallDamageable
-  - StellarStructureWallRCDDeconstructible
-  id: StellarWallConcrete
-  name: concrete wall
-  description: It seems to be a section of hull plated with concrete.
-  components:
-  - type: Sprite
-    sprite: _ST/Tileset/Walls/concrete.rsi
-  - type: Icon
-    sprite: _ST/Tileset/Walls/concrete.rsi
-  - type: StellarWallSmooth
-    key: WallSolid
-    fullState: concrete
-
-- type: entity
-  parent:
-  - StellarStructureBaseWall
-  id: StellarWallMalign
-  name: malign wall
-  description: An unsettling-looking section of hull...
-  components:
-  - type: Sprite
-    sprite: _ST/Tileset/Walls/malign.rsi
-  - type: Icon
-    sprite: _ST/Tileset/Walls/malign.rsi
-  - type: StellarWallSmooth
-    key: WallSolid
-    fullState: wall
-    downState: downwall
-  - type: StellarCutaway
-  - type: CosmicCultExamine
-    cultistText: cosmic-examine-text-forthecult

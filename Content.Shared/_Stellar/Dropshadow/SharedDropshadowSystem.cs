@@ -32,7 +32,7 @@ public abstract class SharedDropshadowSystem : EntitySystem
             return false;
 
         Dirty(ent);
-        return !_gravity.IsWeightless(ent, xform: transform);
+        return !_gravity.IsWeightless(ent.Owner);
     }
 
     private void OnBuckled(Entity<DropshadowComponent> ent, ref BuckledEvent args)

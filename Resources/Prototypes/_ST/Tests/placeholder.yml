@@ -18,15 +18,6 @@
   id: AtmosFixWaterVaporMarker
 - type: entity
   parent: Error
-  id: BenchSofaCorpLeft
-- type: entity
-  parent: Error
-  id: BenchSofaCorpMiddle
-- type: entity
-  parent: Error
-  id: BenchSofaCorpRight
-- type: entity
-  parent: Error
   id: BookshelfGuidebooksFilled
 - type: entity
   parent: Error
@@ -40,9 +31,6 @@
 - type: entity
   parent: Error
   id: ColdPack1
-- type: entity
-  parent: Error
-  id: ComputerShipyard
 - type: entity
   parent: Error
   id: CrateEngineeringShittle
@@ -108,9 +96,6 @@
   id: GreatWrench
 - type: entity
   parent: Error
-  id: ImpCoffeeMachine
-- type: entity
-  parent: Error
   id: LockerAdministrativeAssistantFilled
 - type: entity
   parent: Error
@@ -118,9 +103,6 @@
 - type: entity
   parent: Error
   id: LockerHospitalityDirectorFilled
-- type: entity
-  parent: Error
-  id: LockerJanitorFilled
 - type: entity
   parent: Error
   id: MirrorApid
@@ -151,9 +133,6 @@
 - type: entity
   parent: Error
   id: PoweredlightUV
-- type: entity
-  parent: Error
-  id: ServiceTechFab
 - type: entity
   parent: Error
   id: SignApid
@@ -190,9 +169,6 @@
 - type: entity
   parent: Error
   id: TableUraniumGlass
-- type: entity
-  parent: Error
-  id: TableWoodReinforced
 - type: entity
   parent: Error
   id: UraniumCrabSpawnerFrank
