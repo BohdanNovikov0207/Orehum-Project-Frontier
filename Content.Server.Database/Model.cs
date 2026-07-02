@@ -54,15 +54,15 @@ namespace Content.Server.Database
                 .IsUnique();
 
             modelBuilder.Entity<Profile>()
-                .HasIndex(p => new {p.Slot, PrefsId = p.PreferenceId})
+                .HasIndex(p => new { p.Slot, PrefsId = p.PreferenceId })
                 .IsUnique();
 
             modelBuilder.Entity<Antag>()
-                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.AntagName})
+                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.AntagName })
                 .IsUnique();
 
             modelBuilder.Entity<Trait>()
-                .HasIndex(p => new {HumanoidProfileId = p.ProfileId, p.TraitName})
+                .HasIndex(p => new { HumanoidProfileId = p.ProfileId, p.TraitName })
                 .IsUnique();
 
             modelBuilder.Entity<ProfileRoleLoadout>()
@@ -110,15 +110,15 @@ namespace Content.Server.Database
                 .OnDelete(DeleteBehavior.SetNull);
 
             modelBuilder.Entity<AdminFlag>()
-                .HasIndex(f => new {f.Flag, f.AdminId})
+                .HasIndex(f => new { f.Flag, f.AdminId })
                 .IsUnique();
 
             modelBuilder.Entity<AdminRankFlag>()
-                .HasIndex(f => new {f.Flag, f.AdminRankId})
+                .HasIndex(f => new { f.Flag, f.AdminRankId })
                 .IsUnique();
 
             modelBuilder.Entity<AdminLog>()
-                .HasKey(log => new {log.RoundId, log.Id});
+                .HasKey(log => new { log.RoundId, log.Id });
 
             modelBuilder.Entity<AdminLog>()
                 .Property(log => log.Id);
@@ -143,7 +143,7 @@ namespace Content.Server.Database
                 .HasIndex(round => round.StartDate);
 
             modelBuilder.Entity<AdminLogPlayer>()
-                .HasKey(logPlayer => new {logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId});
+                .HasKey(logPlayer => new { logPlayer.RoundId, logPlayer.LogId, logPlayer.PlayerUserId });
 
             modelBuilder.Entity<ServerBan>()
                 .HasIndex(p => p.PlayerUserId);
@@ -158,13 +158,16 @@ namespace Content.Server.Database
                 .HasIndex(p => p.BanId)
                 .IsUnique();
 
-            modelBuilder.Entity<ServerBan>().ToTable(t =>
-                t.HasCheckConstraint("HaveEitherAddressOrUserIdOrHWId", "address IS NOT NULL OR player_user_id IS NOT NULL OR hwid IS NOT NULL"));
+            modelBuilder.Entity<ServerBan>()
+                .ToTable(t =>
+                    t.HasCheckConstraint("HaveEitherAddressOrUserIdOrHWId",
+                        "address IS NOT NULL OR player_user_id IS NOT NULL OR hwid IS NOT NULL"));
 
             // Ban exemption can't have flags 0 since that wouldn't exempt anything.
             // The row should be removed if setting to 0.
-            modelBuilder.Entity<ServerBanExemption>().ToTable(t =>
-                t.HasCheckConstraint("FlagsNotZero", "flags != 0"));
+            modelBuilder.Entity<ServerBanExemption>()
+                .ToTable(t =>
+                    t.HasCheckConstraint("FlagsNotZero", "flags != 0"));
 
             modelBuilder.Entity<ServerRoleBan>()
                 .HasIndex(p => p.PlayerUserId);
@@ -179,8 +182,10 @@ namespace Content.Server.Database
                 .HasIndex(p => p.BanId)
                 .IsUnique();
 
-            modelBuilder.Entity<ServerRoleBan>().ToTable(t =>
-                t.HasCheckConstraint("HaveEitherAddressOrUserIdOrHWId", "address IS NOT NULL OR player_user_id IS NOT NULL OR hwid IS NOT NULL"));
+            modelBuilder.Entity<ServerRoleBan>()
+                .ToTable(t =>
+                    t.HasCheckConstraint("HaveEitherAddressOrUserIdOrHWId",
+                        "address IS NOT NULL OR player_user_id IS NOT NULL OR hwid IS NOT NULL"));
 
             modelBuilder.Entity<Player>()
                 .HasIndex(p => p.UserId)
@@ -292,9 +297,10 @@ namespace Content.Server.Database
                 .OnDelete(DeleteBehavior.SetNull);
 
             // A message cannot be "dismissed" without also being "seen".
-            modelBuilder.Entity<AdminMessage>().ToTable(t =>
-                t.HasCheckConstraint("NotDismissedAndSeen",
-                    "NOT dismissed OR seen"));
+            modelBuilder.Entity<AdminMessage>()
+                .ToTable(t =>
+                    t.HasCheckConstraint("NotDismissedAndSeen",
+                        "NOT dismissed OR seen"));
 
             modelBuilder.Entity<ServerBan>()
                 .HasOne(ban => ban.CreatedBy)
@@ -799,12 +805,14 @@ namespace Content.Server.Database
 
         [ForeignKey("Round")]
         public int? RoundId { get; set; }
+
         public Round? Round { get; set; }
 
         /// <summary>
         /// The user ID of the banned player.
         /// </summary>
         public Guid? PlayerUserId { get; set; }
+
         [Required] public TimeSpan PlaytimeAtNote { get; set; }
 
         /// <summary>
@@ -981,6 +989,7 @@ namespace Content.Server.Database
         Full = 2,
         Panic = 3,
         Connected = 4, // Frontier
+
         /*
          * If baby jail is removed, please reserve this value for as long as can reasonably be done to prevent causing ambiguity in connection denial reasons.
          * Reservation by commenting out the value is likely sufficient for this purpose, but may impact projects which depend on SS14 like SS14.Admin.
@@ -988,8 +997,10 @@ namespace Content.Server.Database
          * Edit: It has
          */
         BabyJail = 5, // Frontier: 4<5
+
         /// Results from rejected connections with external API checking tools
         IPChecks = 6, // Frontier: 5<6
+
         /// Results from rejected connections who are authenticated but have no modern hwid associated with them.
         NoHwid = 7 // Frontier: 6<7
     }
@@ -1108,7 +1119,8 @@ namespace Content.Server.Database
     [Index(nameof(PlayerUserId))]
     public class AdminNote : IAdminRemarksCommon
     {
-        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int Id { get; set; }
+        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
 
         [ForeignKey("Round")] public int? RoundId { get; set; }
         public Round? Round { get; set; }
@@ -1142,7 +1154,8 @@ namespace Content.Server.Database
     [Index(nameof(PlayerUserId))]
     public class AdminWatchlist : IAdminRemarksCommon
     {
-        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int Id { get; set; }
+        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
 
         [ForeignKey("Round")] public int? RoundId { get; set; }
         public Round? Round { get; set; }
@@ -1173,13 +1186,15 @@ namespace Content.Server.Database
     [Index(nameof(PlayerUserId))]
     public class AdminMessage : IAdminRemarksCommon
     {
-        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int Id { get; set; }
+        [Required, Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int Id { get; set; }
 
         [ForeignKey("Round")] public int? RoundId { get; set; }
         public Round? Round { get; set; }
 
         [ForeignKey("Player")]
         public Guid? PlayerUserId { get; set; }
+
         public Player? Player { get; set; }
         [Required] public TimeSpan PlaytimeAtNote { get; set; }
 
@@ -1217,6 +1232,7 @@ namespace Content.Server.Database
     {
         [Required, ForeignKey("Player")]
         public Guid PlayerUserId { get; set; }
+
         public Player Player { get; set; } = default!;
 
         [Required]
@@ -1332,4 +1348,52 @@ namespace Content.Server.Database
         /// </summary>
         public float Score { get; set; }
     }
+
+    // Orehum Frontier
+
+    /// <summary>
+    /// Кастомная фракция, созданная игроками
+    /// </summary>
+    public class CustomFaction
+    {
+        public int Id { get; set; }
+
+        /// <summary>
+        /// Название фракции
+        /// </summary>
+        [Required, MaxLength(256)]
+        public string Name { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Описание фракции
+        /// </summary>
+        [Required, MaxLength(4096)]
+        public string Description { get; set; } = string.Empty;
+
+        /// <summary>
+        /// Владелец фракции
+        /// </summary>
+        [Required]
+        public Player Owner { get; set; } = default!;
+
+        /// <summary>
+        /// Члены фракции
+        /// </summary>
+        public List<Player> Members { get; set; } = default!;
+    }
+
+    /// <summary>
+    /// доступ к ролькам
+    /// </summary>
+    public class CustomFactionPlayerAllowedRole
+    {
+        public int Id { get; set; }
+
+        [Required]
+        public Player Player { get; set; } = default!;
+
+        public List<string> AllowedRoles { get; set; } = default!;
+    }
+
+// Orehum Frontier
 }
