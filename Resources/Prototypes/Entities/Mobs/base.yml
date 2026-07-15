@@ -47,6 +47,7 @@
     active: False
   - type: AnimatedEmotes # goob edit - animated emotes
   - type: StunVisuals
+  - type: StellarCutawayViewer # Stellar
 
 - type: entity
   save: false

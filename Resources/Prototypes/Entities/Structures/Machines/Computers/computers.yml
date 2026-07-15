@@ -9,7 +9,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -18,6 +19,10 @@
       state: atmos_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: GenericVisualizer
     visuals:
       enum.ComputerVisuals.Powered:
@@ -64,7 +69,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -73,6 +79,10 @@
       state: atmos_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: AtmosMonitoringConsole
     navMapTileColor: "#1a1a1a"
     navMapWallColor: "#404040"
@@ -179,7 +189,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -188,6 +199,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: Computer
     board: ShuttleConsoleCircuitboard
   # Frontier: shuttle intercom
@@ -221,7 +236,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -230,6 +246,10 @@
       state: syndie_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: Tag
     tags:
       - Syndicate
@@ -254,7 +274,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -263,6 +284,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: DroneConsole
     components:
       - type: CargoShuttle
@@ -287,7 +312,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -297,6 +323,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: ActivatableUI
     key: enum.IFFConsoleUiKey.Key
   - type: UserInterface
@@ -339,7 +369,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -348,6 +379,10 @@
       state: power_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -381,7 +416,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -390,6 +426,10 @@
       state: med_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -415,7 +455,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -424,6 +465,10 @@
       state: security_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -474,7 +519,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -483,6 +529,10 @@
       state: med_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: PointLight
     radius: 1.5
     energy: 4.0
@@ -513,7 +563,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -522,6 +573,10 @@
       state: rd_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: ResearchClient
   - type: ResearchConsole
   - type: ActiveRadio
@@ -561,7 +616,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -570,6 +626,10 @@
       state: tech_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: ResearchClient
   - type: AnalysisConsole
   - type: DeviceList
@@ -642,7 +702,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -651,6 +712,10 @@
       state: id_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: Computer
     board: IDComputerCircuitboard
   - type: PointLight
@@ -691,7 +756,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -700,6 +766,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: AccessReader
     access: [["HeadOfPersonnel"], ["HeadOfSecurity"]]
   - type: CommunicationsConsole
@@ -735,7 +805,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -744,6 +815,10 @@
       state: syndie_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: AccessReader
     access: [[ "NuclearOperative" ]]
   - type: CommunicationsConsole
@@ -769,7 +844,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -778,6 +854,10 @@
       state: wizard_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: AccessReader
     access: [[ "Wizard" ]]
   - type: CommunicationsConsole
@@ -803,7 +883,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -812,6 +893,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: AccessReader
     access: [[ "CentralCommand" ]]
   - type: CommunicationsConsole
@@ -835,7 +920,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -845,6 +931,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: SolarControlConsole
   - type: ActivatableUI
     key: enum.SolarControlConsoleUiKey.Key
@@ -874,7 +964,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -883,6 +974,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: RadarConsole
     maxRange: 256 # Frontier
     maxIffRange: 512 # Frontier
@@ -913,7 +1008,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -970,7 +1066,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -979,6 +1076,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: CargoOrderConsole
     account: Engineering
     announcementChannel: Engineering
@@ -1004,7 +1105,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1013,6 +1115,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: CargoOrderConsole
     account: Medical
     announcementChannel: Medical
@@ -1038,7 +1144,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1047,6 +1154,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: CargoOrderConsole
     account: Science
     announcementChannel: Science
@@ -1072,7 +1183,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1081,6 +1193,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: CargoOrderConsole
     account: Security
     announcementChannel: Security
@@ -1106,7 +1222,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1115,6 +1232,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: CargoOrderConsole
     account: Service
     announcementChannel: Service
@@ -1140,7 +1261,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1149,6 +1271,10 @@
       state: tech_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: CargoBountyConsole
   - type: ActivatableUI
     key: enum.CargoConsoleUiKey.Bounty
@@ -1181,7 +1307,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1190,6 +1317,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: FundingAllocationConsole
   - type: ActivatableUI
     key: enum.FundingAllocationConsoleUiKey.Key
@@ -1222,7 +1353,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1231,6 +1363,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: ApcPowerReceiver
     powerLoad: 3100 #We want this to fail first so I transferred most of the scanner and pod's power here. (3500 in total)
   - type: Computer
@@ -1271,7 +1407,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1280,6 +1417,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: SalvageJobBoardConsole
   - type: ActivatableUI
     key: enum.SalvageJobBoardUiKey.Key
@@ -1307,7 +1448,8 @@
     - type: Sprite
       layers:
         - map: ["computerLayerBody"]
-          state: computer
+          sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+          state: base0 # Stellar - Wallening
         - map: ["computerLayerKeyboard"]
           state: generic_keyboard
         - map: [ "computerLayerScreen" ]
@@ -1316,6 +1458,10 @@
           state: tech_key
         - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
           state: generic_panel_open
+    - type: IconSmooth # Begin Stellar - Wallening
+      key: StellarComputers
+      base: base
+      mode: CardinalFlags # End Stellar - Wallening
     - type: Appearance
     - type: GenericVisualizer
       visuals:
@@ -1360,7 +1506,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1369,6 +1516,10 @@
       state: tech_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: Computer
     board: SurveillanceCameraMonitorCircuitboard
   - type: DeviceNetwork
@@ -1399,7 +1550,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1408,6 +1560,10 @@
       state: tech_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: Computer
     board: SurveillanceWirelessCameraMonitorCircuitboard
   - type: DeviceNetwork
@@ -1456,7 +1612,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1465,6 +1622,10 @@
       state: tech_key # Frontier: generic_keys<tech_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: Anchorable
     flags:
     - Anchorable
@@ -1498,7 +1659,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1507,6 +1669,10 @@
       state: service_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: Computer
     board: ComputerMassMediaCircuitboard
   - type: DeviceNetworkRequiresPower
@@ -1538,7 +1704,8 @@
     - type: Sprite
       layers:
         - map: ["computerLayerBody"]
-          state: computer
+          sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+          state: base0 # Stellar - Wallening
         - map: ["computerLayerKeyboard"]
           state: generic_keyboard
         - map: ["computerLayerScreen"]
@@ -1547,6 +1714,10 @@
           state: atmos_key
         - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
           state: generic_panel_open
+    - type: IconSmooth # Begin Stellar - Wallening
+      key: StellarComputers
+      base: base
+      mode: CardinalFlags # End Stellar - Wallening
     - type: PointLight
       radius: 1.5
       energy: 4.0
@@ -1582,7 +1753,8 @@
   - type: Sprite
     layers:
     - map: ["computerLayerBody"]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: ["computerLayerKeyboard"]
       state: generic_keyboard
     - map: ["computerLayerScreen"]
@@ -1591,6 +1763,10 @@
       state: rd_key
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: RoboticsConsole
   - type: ActiveRadio
     channels:
@@ -1658,7 +1834,8 @@
   - type: Sprite
     layers:
     - map: [ "computerLayerBody" ]
-      state: computer
+      sprite: _ST/Tileset/Machines/Computers/computers_base.rsi # Stellar - Wallening
+      state: base0 # Stellar - Wallening
     - map: [ "computerLayerKeyboard" ]
       state: generic_keyboard
     - map: [ "computerLayerScreen" ]
@@ -1667,6 +1844,10 @@
       state: generic_keys
     - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
       state: generic_panel_open
+  - type: IconSmooth # Begin Stellar - Wallening
+    key: StellarComputers
+    base: base
+    mode: CardinalFlags # End Stellar - Wallening
   - type: ApcPowerReceiver
     powerLoad: 1000
   - type: Computer
