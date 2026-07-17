@@ -24,9 +24,9 @@
       - Window
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Structures/Windows/window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Structures/Windows/window.rsi
     state: full
   - type: Physics
     bodyType: Static
