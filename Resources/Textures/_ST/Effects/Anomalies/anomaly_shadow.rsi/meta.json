@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "license": "LicenseRef-Wallening",
+    "copyright": "By StudioFaewilds",
+    "size": {
+        "x": 192,
+        "y": 192
+    },
+    "states": [
+        {
+            "name": "pulse"
+        }
+    ]
+}
