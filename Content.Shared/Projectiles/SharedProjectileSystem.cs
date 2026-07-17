@@ -67,7 +67,7 @@ public abstract partial class SharedProjectileSystem : EntitySystem
 
     private void OnEmbedRemove(Entity<EmbeddableProjectileComponent> embeddable, ref RemoveEmbeddedProjectileEvent args)
     {
-        if (args.Cancelled)
+        if (args.Cancelled || _net.IsClient)
             return;
 
         EmbedDetach(embeddable, embeddable.Comp, args.User);

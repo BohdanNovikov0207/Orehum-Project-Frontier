@@ -206,6 +206,10 @@
         output: FuelGradePlasma
         rate: 1
     # End Frontier: magnet pickup, fuel adapter
+  # Mono
+    - type: ShipRepairable
+      repairTime: 10
+      repairCost: 35
 
 - type: entity
   name: S.U.P.E.R.P.A.C.M.A.N. portable generator # Frontier: no -type
@@ -281,6 +285,10 @@
         output: FuelGradeUranium
         rate: 0.5
     # End Frontier: magnet pickup, fuel adapter
+    # Mono
+    - type: ShipRepairable
+      repairTime: 15
+      repairCost: 50
 
 - type: entity
   name: J.R.P.A.C.M.A.N. portable generator # Frontier: no -type
@@ -403,3 +411,7 @@
               solution: tank
     - type: BindToStation # Frontier
       enabled: false # Frontier - should be draggable between stations
+    # Mono
+    - type: ShipRepairable
+      repairTime: 5
+      repairCost: 20

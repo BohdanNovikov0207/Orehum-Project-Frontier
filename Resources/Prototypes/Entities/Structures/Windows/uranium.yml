@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/uranium_window.rsi # Frontier
+    sprite: Structures/Windows/uranium_window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/uranium_window.rsi # Frontier
+    sprite: Structures/Windows/uranium_window.rsi
     state: full
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -50,6 +50,9 @@
     price: 80 # Frontier: 200<80 - TODO: material value rework
   - type: RadiationBlocker
     resistance: 3
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 3
 
 - type: entity
   id: UraniumWindowDirectional

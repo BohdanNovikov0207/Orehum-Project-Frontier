@@ -1,0 +1,8 @@
+- type: Tag
+  id: HideFromGhostWarps
+
+- type: Tag
+  id: ShipRepairTool
+
+- type: Tag
+  id: ADSRepairTool

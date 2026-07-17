@@ -76,6 +76,8 @@ namespace Content.Shared.Interaction
         [Dependency] private readonly TagSystem _tagSystem = default!;
         [Dependency] private readonly UseDelaySystem _useDelay = default!;
 
+        [Dependency] private readonly INetManager _net = default!; // Mono
+
         private EntityQuery<IgnoreUIRangeComponent> _ignoreUiRangeQuery;
         private EntityQuery<FixturesComponent> _fixtureQuery;
         private EntityQuery<ItemComponent> _itemQuery;
@@ -329,9 +331,29 @@ namespace Content.Shared.Interaction
                 return true;
             }
 
+            // Mono
+            if (_net.IsServer && session != null && Deleted(uid))
+                coords = VelocityCompensateInput(userEntity.Value, coords, session.Channel.Ping * 0.001f);
+
             UserInteraction(userEntity.Value, coords, !Deleted(uid) ? uid : null, checkAccess: ShouldCheckAccess(userEntity.Value));
 
             return false;
+        }
+
+        // Mono - compensate for velocity if target is map
+        // if target is not map assume the user wants to click where they clicked and do nothing
+        private EntityCoordinates VelocityCompensateInput(EntityUid userUid, EntityCoordinates coords, float ping)
+        {
+            var target = coords.EntityId;
+            var ourXform = Transform(userUid);
+            // only trigger if target is map and we're on a grid
+            if (ourXform.MapUid != target || ourXform.GridUid == null || !_physicsQuery.TryComp(ourXform.GridUid, out var gridBody))
+                return coords;
+
+            var grid = ourXform.GridUid.Value;
+            var relCoords = _transform.WithEntityId(coords, grid);
+            var vel = _broadphase.GetLinearVelocity(grid, relCoords.Position, gridBody);
+            return coords.Offset(vel * ping * 3f);
         }
 
         private bool ShouldCheckAccess(EntityUid user)

@@ -21,6 +21,11 @@
                 collection: GlassBreak
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
+    # Mono
+    - type: ShipRepairable
+      repairTo: StationMap
+      repairTime: 3
+      repairCost: 6
 
 - type: entity
   parent: BaseWallmountMachine
@@ -95,6 +100,10 @@
       blacklist:
         tags:
         - NoConsoleSound
+  # Mono
+    - type: ShipRepairable
+      repairTime: 3
+      repairCost: 6
 
 - type: entity
   parent: BaseWallmountMetallic

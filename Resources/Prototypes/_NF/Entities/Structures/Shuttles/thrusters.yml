@@ -42,6 +42,10 @@
     price: 100
   - type: Machine
     board: SmallThrusterMachineCircuitboard
+  # Mono
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4
 
 - type: entity
   id: SmallGyroscope
@@ -87,6 +91,9 @@
     price: 100
   - type: Machine
     board: SmallGyroscopeMachineCircuitboard
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4
 
 #region Security
 - type: entity
@@ -119,6 +126,9 @@
           acts: ["Destruction"]
   - type: Machine
     board: ThrusterSecurityMachineCircuitboard
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4
 
 - type: entity
   id: DebugThrusterSecurity
@@ -161,6 +171,9 @@
       visible: false
   - type: Machine
     board: GyroscopeSecurityMachineCircuitboard
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4
 
 - type: entity
   id: DebugGyroscopeSecurity
@@ -212,6 +225,9 @@
     board: SmallGyroscopeSecurityMachineCircuitboard
   - type: Fixtures # Small gyro, small fixture
     fixtures: *smallGyroFixtures
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4
 
 #region NFSD
 - type: entity
@@ -235,6 +251,9 @@
       offset: 0, 1
   - type: Machine
     board: ThrusterNfsdMachineCircuitboard
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4
 
 - type: entity
   id: DebugThrusterNfsd
@@ -270,6 +289,9 @@
       visible: false
   - type: Machine
     board: GyroscopeNfsdMachineCircuitboard
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4
 
 - type: entity
   id: DebugGyroscopeNfsd
@@ -307,3 +329,6 @@
       visible: false
   - type: Machine
     board: SmallGyroscopeNfsdMachineCircuitboard
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 4

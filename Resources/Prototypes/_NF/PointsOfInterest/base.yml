@@ -1,13 +1,13 @@
 - type: pointOfInterest
   id: BasePOI
   abstract: true
-  minimumDistance: 2000 # Some sane defaults
-  maximumDistance: 4000
+  minimumDistance: 1000 # Some sane defaults
+  maximumDistance: 2500
   spawnGamePreset: [ NFAdventure, NFPirate ]
   spawnGroup: Optional
   addComponents:
   - type: IFF
-    color: "#ffa600"
+    color: "#dcfff7"
     readOnly: true
   # Prevent gravity changes
   - type: ForceAnchor

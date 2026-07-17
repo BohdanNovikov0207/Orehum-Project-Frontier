@@ -1,0 +1,81 @@
+- type: department
+  id: TraumaTeamInterstellar
+  name: Trauma Team Interstellar
+  description: Организация Trauma Team Interstellar
+  color: "#29FFFF"
+  weight: -1000
+  roles:
+  - TraumaTeamLeader
+  - TraumaTeamMember
+
+- type: playTimeTracker
+  id: JobTraumaTeamMember
+
+- type: playTimeTracker
+  id: JobTraumaTeamLeader
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsTraumaTeam
+  suffix: Trauma Team, Locked
+  components:
+  - type: AccessReader
+    access: [["TraumaTeam"]]
+
+- type: entity
+  parent: Airlock
+  id: AirlockTraumaTeam
+  name: шлюз
+  suffix: Trauma Team
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/medical.rsi
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: Airlock
+  id: AirlockTraumaTeamLocked
+  name: шлюз
+  suffix: Trauma Team, Закрыт
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Standard/medical.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTraumaTeam ]
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockTraumaTeamGlass
+  name: стеклянный шлюз
+  suffix: Trauma Team
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/medical.rsi
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockMedical
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockTraumaTeamGlassLocked
+  name: стеклянный шлюз
+  suffix: Trauma Team, Закрыт
+  components:
+  - type: Sprite
+    sprite: Structures/Doors/Airlocks/Glass/medical.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTraumaTeam ]
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockMedical

@@ -11,9 +11,9 @@
 - type: pointOfInterest
   id: Bahama
   parent: BasePOI
-  name: "Bahama Mama's"
+  name: "Мамины Багамы [Нейтралитет]"
   minimumDistance: 1200
-  maximumDistance: 2900
+  maximumDistance: 2500
   spawnGamePreset: [ NFAdventure, NFPirate ]
   spawnGroup: RestStop
   gridPath: /Maps/_NF/POI/bahama.yml
@@ -27,7 +27,7 @@
 
 - type: gameMap
   id: Bahama
-  mapName: "Bahama Mama's"
+  mapName: "Мамины Багамы [Нейтралитет]"
   mapPath: /Maps/_NF/POI/bahama.yml
   minPlayers: 0
   stations:
@@ -35,4 +35,4 @@
       stationProto: DeadDropFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: "Bahama Mama's"
+          mapNameTemplate: "Мамины Багамы [Нейтралитет]"

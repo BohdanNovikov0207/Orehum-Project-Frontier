@@ -131,6 +131,8 @@
   - StandardFrontierVessel
   categories: [ HideSpawnMenu ]
   components:
+  - type: IFF
+    color: "#ae7d57"
   - type: Transform
 
 # region Expedition Shuttles

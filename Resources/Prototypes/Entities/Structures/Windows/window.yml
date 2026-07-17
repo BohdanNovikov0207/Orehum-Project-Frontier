@@ -24,9 +24,9 @@
       - Window
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Structures/Windows/window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/window.rsi # Frontier
+    sprite: Structures/Windows/window.rsi
     state: full
   - type: Physics
     bodyType: Static
@@ -96,6 +96,9 @@
   - type: StaticPrice
     price: 100
   - type: BlockWeather
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 3
 
 - type: entity
   parent: Window
@@ -217,6 +220,9 @@
       sprite: Structures/Windows/cracks_directional.rsi
   - type: StaticPrice
     price: 15
+  - type: ShipRepairable
+    repairTime: 2
+    repairCost: 2
 
 - type: entity
   id: WindowDirectionalRCDResistant

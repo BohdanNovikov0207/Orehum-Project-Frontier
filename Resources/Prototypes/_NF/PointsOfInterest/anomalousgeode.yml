@@ -11,9 +11,9 @@
 - type: pointOfInterest
   id: AnomalousGeode
   parent: BasePOI
-  name: 'Anomalous Geode'
-  minimumDistance: 2100
-  maximumDistance: 3800
+  name: 'Аномальная геода [Нейтралитет]'
+  minimumDistance: 1900
+  maximumDistance: 2100
   spawnGroup: ScienceLab
   gridPath: /Maps/_NF/POI/anomalousgeode.yml
   addComponents:
@@ -23,7 +23,7 @@
 
 - type: gameMap
   id: AnomalousGeode
-  mapName: 'Anomalous Geode'
+  mapName: 'Аномальная геода [Нейтралитет]'
   mapPath: /Maps/_NF/POI/anomalousgeode.yml
   minPlayers: 0
   stations:
@@ -31,7 +31,7 @@
       stationProto: StandardFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Anomalous Geode'
+          mapNameTemplate: 'Аномальная геода [Нейтралитет]'
         - type: StationJobs
           availableJobs: {}
         - type: StationDeadDropHintExempt

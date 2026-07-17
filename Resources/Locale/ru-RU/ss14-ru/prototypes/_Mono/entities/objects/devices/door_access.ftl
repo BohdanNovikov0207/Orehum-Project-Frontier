@@ -1,0 +1,12 @@
+ent-DoorElectronicsUSSP = { ent-DoorElectronics }
+    .suffix = СССП, Закрыт
+    .desc = { ent-DoorElectronics.desc }
+ent-DoorElectronicsUSSPHigh = { ent-DoorElectronics }
+    .suffix = СССП Защищённый, Закрыт
+    .desc = { ent-DoorElectronics.desc }
+ent-DoorElectronicsUSSPCommand = { ent-DoorElectronics }
+    .suffix = СССП Командный, Закрыт
+    .desc = { ent-DoorElectronics.desc }
+ent-DoorElectronicsTsfEngineer = TSF Engineering, Locked
+ent-DoorElectronicsGrandVizier = Grand Vizier, Locked
+ent-DoorElectronicsPdvCommand = PDV Command, Locked

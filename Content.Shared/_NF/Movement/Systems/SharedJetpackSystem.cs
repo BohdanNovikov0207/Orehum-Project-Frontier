@@ -1,4 +1,4 @@
-using Content.Shared._NF.Radar;
+using Content.Shared._Mono.Radar;
 using Content.Shared.Emag.Systems;
 using Content.Shared.Movement.Components;
 
@@ -51,7 +51,7 @@ public abstract partial class SharedJetpackSystem : EntitySystem
         var blip = EnsureComp<RadarBlipComponent>(uid);
         blip.RadarColor = Color.Cyan;
         blip.Scale = 1f;
-        blip.VisibleFromOtherGrids = true;
+        // blip.VisibleFromOtherGrids = true;
         blip.RequireNoGrid = true;
     }
 }

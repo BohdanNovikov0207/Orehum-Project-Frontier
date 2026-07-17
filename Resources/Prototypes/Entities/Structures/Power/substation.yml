@@ -231,6 +231,10 @@
   - type: Battery
     maxCharge: 2500000
     startingCharge: 2500000
+  # Mono
+  - type: ShipRepairable
+    repairTime: 6
+    repairCost: 20
 
 - type: entity
   parent: SubstationBasic
@@ -258,6 +262,10 @@
       board: !type:Container
       machine_parts: !type:Container # Frontier: manipulator<machine_parts
       powercell: !type:Container
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 16
 
       # Construction Frame
 - type: entity

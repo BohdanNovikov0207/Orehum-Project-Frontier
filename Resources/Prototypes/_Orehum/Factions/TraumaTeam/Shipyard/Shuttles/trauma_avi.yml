@@ -1,0 +1,27 @@
+- type: vessel
+  id: AV4
+  parent: BaseVessel
+  name: TTI AV-4
+  description: Компактный медицинский шаттл быстрого реагирования, предназначенный для операций Trauma Team, оптимизированный для быстрой высадки, эвакуации пациентов и аварийной логистической поддержки в пространстве Фронтира.
+  price: 10000
+  category: Small
+  group: TraumaTeam
+  shuttlePath: /Maps/_Orehum/Factions/TraumaTeam/Shuttles/trauma_avi.yml
+  guidebookPage: Null
+
+- type: gameMap
+  id: AV4
+  mapName: 'TTI AV-4'
+  mapPath: /Maps/_Orehum/Factions/TraumaTeam/Shuttles/trauma_avi.yml
+  minPlayers: 0
+  stations:
+    AV4:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'TTI AV-4 {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

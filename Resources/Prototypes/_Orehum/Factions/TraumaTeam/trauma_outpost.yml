@@ -1,0 +1,33 @@
+- type: pointOfInterest
+  id: TraumaTeamInterstellar
+  parent: BasePOI
+  name: 'Trauma Team Interstellar'
+  minimumDistance: 1650
+  maximumDistance: 3400
+  spawnGroup: Required
+  gridPath: /Maps/_Orehum/Factions/TraumaTeam/Outpost/tti_outpost.yml
+  addComponents:
+  - type: IFF
+    color: "#29FFFF"
+
+
+- type: gameMap
+  id: TraumaTeamInterstellar
+  mapName: 'Trauma Team Interstellar'
+  mapPath: /Maps/_Orehum/Factions/TraumaTeam/Outpost/tti_outpost.yml
+  minPlayers: 0
+  stations:
+    TraumaTeamInterstellar:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Trauma Team Interstellar'
+        - type: ExtraStationInformation
+          icon: /Textures/_Orehum/Factions/TraumaTeam/factiontrauma.png
+          stationSubtext: 'faction-lobby-traumateam-subtext'
+          stationDescription: 'faction-lobby-traumateam-description'
+          lobbySortOrder: 10
+        - type: StationJobs
+          availableJobs:
+            TraumaTeamLeader: [ 1, 1 ]
+            TraumaTeamMember: [ 6, 6 ]

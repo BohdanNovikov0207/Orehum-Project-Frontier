@@ -73,6 +73,10 @@
     interfaces:
       enum.RadarConsoleUiKey.Key:
         type: RadarConsoleBoundUserInterface
+        #ADT start
+      enum.GhostInfoUiKey.Key:
+        type: GhostInfoBoundUserInterface
+        #ADT end
   - type: IntrinsicUI
     uis:
       enum.RadarConsoleUiKey.Key:
@@ -85,6 +89,13 @@
   - type: ShipyardSellCondition # Teleport to shipyard console on sale
     preserveOnSale: true
   # End Frontier
+  - type: TypingIndicator
+    proto: ghost
+  - type: Speech
+  #ADT start
+  - type: GhostInfo
+  #ADT end
+
 
 # proto for player ghosts specifically
 - type: entity

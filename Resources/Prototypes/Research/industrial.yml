@@ -136,6 +136,12 @@
   - ThrusterMachineCircuitboard
   - GyroscopeMachineCircuitboard
   - MiniGravityGeneratorCircuitboard
+  - MachineFTLDriveCircuitboard # Frontier
+  # Goobstation R&D Console rework start
+  position: 2,-4
+  technologyPrerequisites:
+  - MechanicalCompression
+  # Goobstation R&D Console rework end
 
 - type: technology
   id: AdvancedAtmospherics

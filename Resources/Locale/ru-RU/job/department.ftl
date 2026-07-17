@@ -1,0 +1,9 @@
+department-Cargo = Отдел снабжения
+department-Civilian = Нейтральные
+department-Command = Командование
+department-Engineering = Электростанция Эдисона
+department-Security = Департамент Шерифа
+department-Science = Научный отдел
+department-Specific = На определённых станциях
+department-CentralCommand = Управление Секторальным Флотом
+department-Silicon = Силиконы

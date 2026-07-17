@@ -72,13 +72,15 @@
   - type: Appearance
   - type: WiresVisuals
   - type: Sprite
-    sprite: Structures/Wallmounts/air_monitors.rsi
+    drawdepth: Overdoors # Stellar
+    sprite: _ST/Tileset/Wallmounts/airalarm.rsi # Stellar - Wallening
     layers:
-    - state: alarmp
+    - state: base # Stellar
       map: ["airAlarmBase"]
-    - state: alarm0
+    - state: alarm0 # Stellar
+      shader: unshaded
       map: ["airAlarmState"] # TODO: fire alarm enum
-    - state: alarmx
+    - state: wires # Stellar
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: Construction
     graph: AirAlarm
@@ -109,6 +111,10 @@
     guides:
     - AirAlarms
     - DeviceMonitoringAndControl
+  # Mono
+  - type: ShipRepairable
+    repairTime: 3
+    repairCost: 6
 
 - type: entity
   parent: BaseWallmountMetallic
@@ -117,7 +123,7 @@
   description: An air alarm. Doesn't look like it'll be alarming air any time soon.
   components:
   - type: Sprite
-    sprite: Structures/Wallmounts/air_monitors.rsi
+    sprite: _ST/Tileset/Wallmounts/airalarm.rsi # Stellar - Wallening
     layers:
     - state: alarm_b1
       map: [ "enum.ConstructionVisuals.Layer" ]

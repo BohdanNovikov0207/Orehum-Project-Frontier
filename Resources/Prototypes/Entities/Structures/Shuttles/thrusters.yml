@@ -104,6 +104,10 @@
   - type: PirateBountyItem
     id: Thruster
   # End Frontier
+  # Mono
+  - type: ShipRepairable
+    repairTime: 5
+    repairCost: 10
 
 - type: entity
   id: ThrusterUnanchored
@@ -215,6 +219,10 @@
       - On # Frontier
       - Off # Frontier
       - Toggle # Frontier
+  # Mono
+  - type: ShipRepairable
+    repairTime: 6
+    repairCost: 12
 
 - type: entity
   id: GyroscopeUnanchored
@@ -297,3 +305,8 @@
     - type: PhysicalComposition
       materialComposition:
         Steel: 1200 # 12 sheets
+    # Mono
+    - type: ShipRepairable
+      repairTo: Thruster
+      repairTime: 6
+      repairCost: 12

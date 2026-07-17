@@ -1,0 +1,196 @@
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTraumaTeamMember
+  icon:
+    sprite: /Textures/_Orehum/Factions/TraumaTeam/job_icons.rsi
+    state: trauma
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconTraumaTeamLeader
+  icon:
+    sprite: /Textures/_Orehum/Factions/TraumaTeam/job_icons.rsi
+    state: trauma-leader
+
+- type: accessLevel
+  id: TraumaTeam
+  name: Trauma Team Interstellar
+
+- type: accessGroup
+  id: TraumaTeamAccess
+  tags:
+  - TraumaTeam
+
+- type: entity
+  parent: IDCardStandard
+  id: TraumaTeamMemberIDCard
+  name: ID-карта сотрудника Trauma Team
+  components:
+  - type: IdCard
+    path:
+    jobIcon: JobIconTraumaTeamMember
+  - type: PresetIdCard
+    job: TraumaTeamMember
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/id_cards.rsi
+    layers:
+    - state: id-card-trauma
+    - state: trauma-idcard-layer
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: TraumaTeamLeaderIDCard
+  name: ID-карта директора Trauma Team
+  components:
+  - type: IdCard
+    jobIcon: JobIconTraumaTeamLeader
+  - type: PresetIdCard
+    job: TraumaTeamLeader
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/id_cards.rsi
+    layers:
+    - state: id-card-trauma
+    - state: trauma-idcard-layer
+  - type: Clothing
+    sprite: _Orehum/Factions/TraumaTeam/id_cards.rsi
+
+- type: entity
+  parent: BasePDA
+  id: TraumaTeamMemberPDA
+  name: КПК сотрудника Trauma Team
+  description: Интерфейс этого КПК явно не старинный.
+  components:
+  - type: Pda
+    id: TraumaTeamMemberIDCard
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: PdaBorderColor
+    borderColor: "#29FFFF"
+    accentHColor: "#FFFDD0"
+  - type: Icon
+    sprite: _Orehum/Factions/TraumaTeam/pda.rsi
+    state: pda
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - MedTekCartridge
+
+- type: entity
+  parent: BasePDA
+  id: TraumaTeamLeaderPDA
+  name: КПК директора Trauma Team
+  description: Интерфейс этого КПК явно не старинный.
+  components:
+  - type: Pda
+    id: TraumaTeamLeaderIDCard
+  - type: Sprite
+    sprite: _Orehum/Factions/TraumaTeam/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: PdaBorderColor
+    borderColor: "#29FFFF"
+    accentHColor: "#FFFDD0"
+  - type: Icon
+    sprite: _Orehum/Factions/TraumaTeam/pda.rsi
+    state: pda
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - MedTekCartridge
+
+- type: job
+  id: TraumaTeamLeader
+  name: Директор TTI
+  description: Лидер фракции Trauma Team Interstellar
+  playTimeTracker: JobTraumaTeamLeader
+#  requirements:
+#    - !type:OverallPlaytimeRequirement
+#      time: 43200 # 12 hours
+  alwaysUseSpawner: true
+  icon: JobIconTraumaTeamLeader
+  weight: 91
+  displayWeight: 91
+  accessGroups:
+  - TraumaTeamAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ TrackingImplantTraumaTeam ]
+
+
+- type: job
+  id: TraumaTeamMember
+  name: Сотрудник TTI
+  description: Мембер фракции Trauma Team Interstellar
+  playTimeTracker: JobTraumaTeamMember
+#  requirements:
+#    - !type:OverallPlaytimeRequirement
+#      time: 43200 # 12 hours
+  alwaysUseSpawner: true
+  icon: JobIconTraumaTeamMember
+  supervisors: директору Trauma Team Interstellar
+  weight: 92
+  displayWeight: 92
+  accessGroups:
+  - TraumaTeamAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ TrackingImplantTraumaTeam ]
+
+- type: entity
+  id: SpawnPointTraumaTeamMember
+  parent: SpawnPointJobBase
+  name: Сотрудник Trauma Team Interstellar
+  components:
+  - type: SpawnPoint
+    job_id: TraumaTeamMember
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+        state: icon
+
+- type: entity
+  id: SpawnPointTraumaTeamLeader
+  parent: SpawnPointJobBase
+  name: Директор Trauma Team Interstellar
+  components:
+  - type: SpawnPoint
+    job_id: TraumaTeamLeader
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _Orehum/Factions/TraumaTeam/hardsuit.rsi
+        state: icon
