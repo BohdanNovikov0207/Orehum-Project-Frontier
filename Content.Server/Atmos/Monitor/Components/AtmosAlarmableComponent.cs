@@ -36,7 +36,7 @@ public sealed partial class AtmosAlarmableComponent : Component
     [ViewVariables] public bool IgnoreAlarms { get; set; } = false;
 
     [DataField("alarmSound")]
-    public SoundSpecifier AlarmSound { get; set; } = new SoundPathSpecifier("/Audio/_ST/Machines/atmos_alarm.ogg"); // Stellar - New default Atmos alarm
+    public SoundSpecifier AlarmSound { get; set; } = new SoundPathSpecifier("/Audio/_Orehum/Machines/atmos_alarm.ogg"); // Orehum - New default Atmos alarm
 
     [DataField("alarmVolume")]
     public float AlarmVolume { get; set; } = -10;
