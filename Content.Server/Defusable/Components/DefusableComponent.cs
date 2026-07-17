@@ -20,7 +20,7 @@ public sealed partial class DefusableComponent : Component
     ///     The bomb will play this sound on bolt.
     /// </summary>
     [ViewVariables(VVAccess.ReadOnly), DataField("boltSound")]
-    public SoundSpecifier BoltSound = new SoundPathSpecifier("/Audio/Machines/boltsdown.ogg");
+    public SoundSpecifier BoltSound = new SoundPathSpecifier("/Audio/_Orehum/Machines/boltsdown.ogg");
 
     /// <summary>
     ///     Is this bomb one use?
