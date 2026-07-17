@@ -1,9 +1,0 @@
-# SPDX-FileCopyrightText: 2026 Janet Blackquill
-#
-# SPDX-License-Identifier: LicenseRef-Wallening
-
-- type: stellarWallSmoothKey
-  id: WallSolid
-
-- type: stellarWallSmoothKey
-  id: Window
