@@ -8,8 +8,8 @@
     arc: 360
   - type: StationAiWhitelist
   - type: Sprite
-    drawdepth: WallMountedItems # Frontier: SmallObjects<WallMountedItems
-    sprite: Structures/Wallmounts/switch.rsi
+    drawdepth: Mobs # Stellar
+    sprite: _ST/Tileset/Machines/button.rsi # Stellar
     state: on
   - type: SignalSwitch
   - type: UseDelay
@@ -61,8 +61,8 @@
     arc: 360
   - type: StationAiWhitelist
   - type: Sprite
-    drawdepth: WallMountedItems # Frontier: SmallObjects<WallMountedItems
-    sprite: Structures/Wallmounts/switch.rsi
+    drawdepth: Mobs # Stellar
+    sprite: _ST/Tileset/Machines/button.rsi # Stellar
     state: dead
   - type: UseDelay
     delay: 0.5 # prevent light-toggling auto-clickers.
@@ -109,24 +109,32 @@
   name: apc net switch
   description: It's a switch for toggling lights that are connected to the same apc.
   components:
-  - type: WallMount
-    arc: 360
-  - type: Sprite
-    drawdepth: WallMountedItems # Frontier: SmallObjects<WallMountedItems
-    sprite: Structures/Wallmounts/switch.rsi
-    state: on
-  - type: Rotatable
-  - type: ExtensionCableReceiver
-  - type: DeviceNetwork
-    deviceNetId: Apc
-    transmitFrequencyId: SmartLight # assuming people want to use it for light switches.
-  - type: ApcNetworkConnection
-  - type: ApcNetSwitch
-  - type: Transform
-    anchored: false
-  - type: Construction
-    graph: LightSwitchGraph
-    node: LightSwitchNode
+    - type: WallMount
+      arc: 360
+    - type: Clickable
+    - type: InteractionOutline
+    - type: Physics
+      canCollide: false
+    - type: Transform
+      anchored: true
+    - type: Sprite
+      drawdepth: Mobs # Stellar
+      sprite: _ST/Tileset/Machines/button.rsi # Stellar
+      state: on
+    - type: Rotatable
+    - type: ExtensionCableReceiver
+    - type: DeviceNetwork
+      deviceNetId: Apc
+      transmitFrequencyId: SmartLight # assuming people want to use it for light switches.
+    - type: ApcNetworkConnection
+    - type: ApcNetSwitch
+    - type: Construction
+      graph: LightSwitchGraph
+      node: LightSwitchNode
+    - type: Fixtures
+    - type: Tag
+      tags:
+      - Structure
 
 #directional
 

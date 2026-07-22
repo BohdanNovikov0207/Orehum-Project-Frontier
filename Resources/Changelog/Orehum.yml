@@ -1,4 +1,5 @@
-Order: 1 # Orehum
+Name: Orehum
+Order: -1
 Entries:
 - author: Unenduring
   changes:
@@ -7,3 +8,9 @@ Entries:
   id: 100000
   time: '2025-04-30T00:34:21.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/37047
+- author: Unenduring
+  changes:
+    - type: Add
+      message: Проверка
+  id: 100001
+  time: '2026-07-17T10:30:01.0000000+00:00'

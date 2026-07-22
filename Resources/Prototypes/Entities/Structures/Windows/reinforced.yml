@@ -5,9 +5,9 @@
   components:
   - type: Sprite
     drawdepth: WallTops
-    sprite: _NF/Structures/Windows/reinforced_window.rsi # Frontier
+    sprite: Structures/Windows/reinforced_window.rsi
   - type: Icon
-    sprite: _NF/Structures/Windows/reinforced_window.rsi # Frontier
+    sprite: Structures/Windows/reinforced_window.rsi
   - type: Repairable
     fuelCost: 10
     doAfterDelay: 2
