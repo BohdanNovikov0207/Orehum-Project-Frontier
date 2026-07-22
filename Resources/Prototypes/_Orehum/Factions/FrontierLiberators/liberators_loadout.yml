@@ -1,0 +1,187 @@
+- type: roleLoadout
+  id: JobFrontierLiberatorsMember
+  groups:
+  - MercenaryHead
+  - FrontierLiberatorsJumpsuit
+  - MercenaryGloves
+  - MercenaryBackpack
+  - FrontierLiberatorsOuterClothing
+  - FrontierLiberatorsShoes
+  - FrontierLiberatorsFace
+  - ContractorGlasses
+  - FrontierLiberatorsBelt
+  - FrontierLiberatorsEars
+  - ContractorBoxSurvival
+  - FrontierLiberatorsMemberPDA
+  - ContractorWallet
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+- type: roleLoadout
+  id: JobFrontierLiberatorsCommander
+  groups:
+  - FrontierLiberatorsHead
+  - FrontierLiberatorsJumpsuit
+  - MercenaryGloves
+  - MercenaryBackpack
+  - FrontierLiberatorsOuterClothing
+  - FrontierLiberatorsShoes
+  - FrontierLiberatorsFace
+  - ContractorGlasses
+  - FrontierLiberatorsBelt
+  - FrontierLiberatorsEars
+  - ContractorBoxSurvival
+  - FrontierLiberatorsCommanderPDA
+  - ContractorWallet
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+# Groups
+
+- type: loadoutGroup
+  id: FrontierLiberatorsHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - ClothingHeadHatBeretCommander
+
+- type: loadoutGroup
+  id: FrontierLiberatorsJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenary
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenaryMedic
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenary
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckBlueMercenaryMedic
+  fallbacks:
+  - MercenaryClothingUniformJumpsuitMilitaryTurtleneckMercenary
+
+- type: loadoutGroup
+  id: FrontierLiberatorsOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - ClothingOuterHardsuitMercenary
+
+- type: loadoutGroup
+  id: FrontierLiberatorsEars
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - ClothingHeadsetAltFrontierLiberators
+
+- type: loadoutGroup
+  id: FrontierLiberatorsFace
+  name: loadout-group-contractor-face
+  minLimit: 0
+  maxLimit: 1
+  loadouts:
+  - ClothingMaskBalaclavaBlack
+  - ClothingMaskBandMerc
+
+- type: loadoutGroup
+  id: FrontierLiberatorsBelt
+  name: loadout-group-contractor-belt
+  minLimit: 0
+  loadouts:
+  - ClothingBeltMercenaryWebbing
+
+- type: loadoutGroup
+  id: FrontierLiberatorsShoes
+  name: loadout-group-contractor-shoes
+  loadouts:
+  - ClothingShoesBootsMercenaryFilled
+  - ClothingShoesBootsMagMercenaryFilled
+  fallbacks:
+  - ClothingShoesBootsMercenaryFilled
+
+- type: loadoutGroup
+  id: FrontierLiberatorsMemberPDA
+  name: loadout-group-contractor-pda
+  hidden: true
+  loadouts:
+  - FrontierLiberatorsMemberPDA
+  fallbacks:
+  - FrontierLiberatorsMemberPDA
+
+- type: loadoutGroup
+  id: FrontierLiberatorsCommanderPDA
+  name: loadout-group-contractor-pda
+  hidden: true
+  loadouts:
+  - FrontierLiberatorsCommanderPDA
+  fallbacks:
+  - FrontierLiberatorsCommanderPDA
+
+# Loadouts
+
+- type: loadout
+  id: ClothingShoesBootsMagMercenaryFilled
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  price: 750
+  equipment:
+    shoes: ClothingShoesBootsMagMercenaryFilled
+
+- type: loadout
+  id: ClothingOuterHardsuitMercenary
+  price: 1000
+  equipment:
+    outerClothing: ClothingOuterHardsuitMercenary
+
+- type: loadout
+  id: ClothingHeadsetAltFrontierLiberators
+  price: 100
+  equipment:
+    ears: ClothingHeadsetAltFrontierLiberators
+
+- type: loadout
+  id: ClothingMaskBandMerc
+  price: 250
+  storage:
+    back:
+    - ClothingMaskBandMerc
+
+- type: loadout
+  id: ClothingMaskBalaclavaBlack
+  price: 250
+  storage:
+    back:
+    - ClothingMaskBalaclavaBlack
+
+- type: loadout
+  id: ClothingBeltMercenaryWebbing
+  price: 100
+  equipment:
+    belt: ClothingBeltMercenaryWebbing
+
+- type: loadout
+  id: FrontierLiberatorsMemberPDA
+  price: 100
+  equipment:
+    id: FrontierLiberatorsMemberPDA
+
+- type: loadout
+  id: FrontierLiberatorsCommanderPDA
+  price: 100
+  equipment:
+    id: FrontierLiberatorsCommanderPDA
+
+- type: loadout
+  id: ClothingHeadHatBeretCommander
+  price: 100
+  equipment:
+    id: ClothingHeadHatBeretCommander
+
+- type: loadout
+  id: ClothingShoesBootsMercenaryFilled
+  price: 100
+  equipment:
+    id: ClothingShoesBootsMercenaryFilled

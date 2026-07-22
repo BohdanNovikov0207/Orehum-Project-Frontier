@@ -4,8 +4,8 @@ meta:
   engineVersion: 271.2.0
   forkId: ""
   forkVersion: ""
-  time: 06/13/2026 14:55:20
-  entityCount: 2677
+  time: 07/18/2026 12:45:26
+  entityCount: 2679
 maps: []
 grids:
 - 1
@@ -14218,6 +14218,13 @@ entities:
     - type: Transform
       pos: 2.5,-5.5
       parent: 1
+- proto: StationAdminBankATMMedical
+  entities:
+  - uid: 2491
+    components:
+    - type: Transform
+      pos: -3.5,2.5
+      parent: 1
 - proto: StationAnchorOff
   entities:
   - uid: 1169
@@ -16706,6 +16713,14 @@ entities:
     components:
     - type: Transform
       pos: 2.5,-1.5
+      parent: 1
+- proto: WarpPoint
+  entities:
+  - uid: 528
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: -11.5,5.5
       parent: 1
 - proto: WaterCooler
   entities:

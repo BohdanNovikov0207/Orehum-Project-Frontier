@@ -1,0 +1,32 @@
+- type: pointOfInterest
+  id: FrontierLiberators
+  name: 'Освободители Фронтира'
+  minimumDistance: 1700
+  maximumDistance: 3500
+  spawnGroup: Required
+  gridPath: /Maps/_Orehum/Factions/FrontierLiberators/Outpost/fl_outpost.yml
+  addComponents:
+  - type: IFF
+    color: "#97a647"
+
+
+- type: gameMap
+  id: FrontierLiberators
+  mapName: 'Освободители Фронтира'
+  mapPath: /Maps/_Orehum/Factions/FrontierLiberators/Outpost/fl_outpost.yml
+  minPlayers: 0
+  stations:
+    FrontierLiberators:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Освободители Фронтира'
+        - type: ExtraStationInformation
+          icon: /Textures/_Orehum/Factions/FrontierLiberators/factionliberators.png
+          stationSubtext: 'faction-lobby-frontierliberators-subtext'
+          stationDescription: 'faction-lobby-frontierliberators-description'
+          lobbySortOrder: 11
+        - type: StationJobs
+          availableJobs:
+            FrontierLiberatorsCommander: [ 1, 1 ]
+            FrontierLiberatorsMember: [ 10, 10 ]

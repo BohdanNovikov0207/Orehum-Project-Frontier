@@ -1,0 +1,130 @@
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconFrontierLiberatorsMember
+  icon:
+    sprite: /Textures/_Orehum/Factions/FrontierLiberators/job_icons.rsi
+    state: fl-soldier
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconFrontierLiberatorsCommander
+  icon:
+    sprite: /Textures/_Orehum/Factions/FrontierLiberators/job_icons.rsi
+    state: fl-commander
+
+- type: accessLevel
+  id: FrontierLiberators
+  name: Frontier Liberators
+
+- type: accessGroup
+  id: FrontierLiberatorsAccess
+  tags:
+  - FrontierLiberators
+  - Mercenary
+
+- type: entity
+  parent: IDCardStandard
+  id: FrontierLiberatorsMemberIDCard
+  name: ID-карта солдата Освободителей Фронтира
+  components:
+  - type: IdCard
+    path:
+    jobIcon: JobIconFrontierLiberatorsMember
+  - type: PresetIdCard
+    job: FrontierLiberatorsMember
+  - type: Sprite
+    sprite: _Orehum/Factions/FrontierLiberators/id_cards.rsi
+    layers:
+    - state: default
+    - state: member-liberators-layer
+  - type: Clothing
+    sprite: _Orehum/Factions/FrontierLiberators/id_cards.rsi
+
+- type: entity
+  parent: IDCardStandard
+  id: FrontierLiberatorsCommanderIDCard
+  name: ID-карта командира Освободителей Фронтира
+  components:
+  - type: IdCard
+    jobIcon: JobIconFrontierLiberatorsCommander
+  - type: PresetIdCard
+    job: FrontierLiberatorsCommander
+  - type: Sprite
+    sprite: _Orehum/Factions/FrontierLiberators/id_cards.rsi
+    layers:
+    - state: default
+    - state: commander-liberators-layer
+  - type: Clothing
+    sprite: _Orehum/Factions/FrontierLiberators/id_cards.rsi
+
+- type: entity
+  parent: MercenaryPDA
+  id: FrontierLiberatorsMemberPDA
+  name: КПК солдата Освободителей Фронтира
+  description: Интерфейс этого КПК явно не старинный.
+  components:
+  - type: Pda
+    id: FrontierLiberatorsMemberIDCard
+
+- type: entity
+  parent: MercenaryPDA
+  id: FrontierLiberatorsCommanderPDA
+  name: КПК командира Освободителей Фронтира
+  description: Интерфейс этого КПК явно не старинный.
+  components:
+  - type: Pda
+    id: FrontierLiberatorsCommanderIDCard
+
+- type: job
+  id: FrontierLiberatorsCommander
+  name: Командир FL
+  description: Лидер фракции Frontier Liberators
+  playTimeTracker: JobFrontierLiberatorsCommander
+  whitelisted: true
+  alwaysUseSpawner: true
+  icon: JobIconFrontierLiberatorsCommander
+  weight: 91
+  displayWeight: 91
+  accessGroups:
+  - FrontierLiberatorsAccess
+
+- type: job
+  id: FrontierLiberatorsMember
+  name: Солдат FL
+  description: Мембер фракции Frontier Liberators
+  playTimeTracker: JobFrontierLiberatorsMember
+  whitelisted: true
+  alwaysUseSpawner: true
+  icon: JobIconFrontierLiberatorsMember
+  supervisors: командиру Освободителей Фронтира
+  weight: 92
+  displayWeight: 92
+  accessGroups:
+  - FrontierLiberatorsAccess
+
+- type: entity
+  id: SpawnPointFrontierLiberatorsMember
+  parent: SpawnPointJobBase
+  name: Солдат Frontier Liberators
+  components:
+  - type: SpawnPoint
+    job_id: FrontierLiberatorsMember
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+        state: icon
+
+- type: entity
+  id: SpawnPointFrontierLiberatorsCommander
+  parent: SpawnPointJobBase
+  name: Командир Frontier Liberators
+  components:
+  - type: SpawnPoint
+    job_id: FrontierLiberatorsCommander
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+        state: icon

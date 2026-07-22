@@ -1,3 +1,148 @@
+# Base
+
+- type: entity
+  id: BallisticArtillery
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 600
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+    rotateWhilePulling: false
+    rotateWhileAnchored: true
+    increment: 45
+  - type: DeviceLinkSink
+    ports:
+    - SpaceArtilleryFire
+  - type: SpaceArtillery
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: ApcPowerReceiver
+  - type: ExtensionCableReceiver
+  - type: BatterySelfRecharger
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: FireControllable
+  - type: RadarBlip
+    radarColor: "#9999FF"
+    scale: 1
+  # Base
+
+- type: entity
+  id: BallisticArtillery
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StructuralMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.25,-0.25,0.25,0.25"
+        density: 600
+        mask:
+        - MachineMask
+        layer:
+        - MachineLayer
+  - type: Transform
+    anchored: true
+  - type: Anchorable
+  - type: Pullable
+  - type: Rotatable
+    rotateWhilePulling: false
+    rotateWhileAnchored: true
+    increment: 45
+  - type: DeviceLinkSink
+    ports:
+    - SpaceArtilleryFire
+  - type: SpaceArtillery
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: ApcPowerReceiver
+  - type: ExtensionCableReceiver
+  - type: BatterySelfRecharger
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: FireControllable
+  - type: RadarBlip
+    radarColor: "#9999FF"
+    scale: 1
+  # Mono
+  - type: ShipRepairable
+    repairTime: 15
+    repairCost: 50
+
 # 57mm
 
 - type: entity
@@ -163,73 +308,4 @@
     radarColor: "#C92BCC"
     scale: 2
 
-# Base
 
-- type: entity
-  id: BallisticArtillery
-  abstract: true
-  placement:
-    mode: SnapgridCenter
-  components:
-  - type: Damageable
-    damageContainer: StructuralInorganic
-    damageModifierSet: StructuralMetallic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 200
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-    - trigger:
-        !type:DamageTrigger
-        damage: 100
-      behaviors:
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalBreak
-  - type: Clickable
-  - type: InteractionOutline
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.25,-0.25,0.25,0.25"
-        density: 600
-        mask:
-        - MachineMask
-        layer:
-        - MachineLayer
-  - type: Transform
-    anchored: true
-  - type: Anchorable
-  - type: Pullable
-  - type: Rotatable
-    rotateWhilePulling: false
-    rotateWhileAnchored: true
-    increment: 45
-  - type: DeviceLinkSink
-    ports:
-    - SpaceArtilleryFire
-  - type: SpaceArtillery
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: BasicDevice
-  - type: ApcPowerReceiver
-  - type: ExtensionCableReceiver
-  - type: BatterySelfRecharger
-  - type: ContainerContainer
-    containers:
-      ballistic-ammo: !type:Container
-      machine_board: !type:Container
-      machine_parts: !type:Container
-  - type: FireControllable
-  - type: RadarBlip
-    radarColor: "#9999FF"
-    scale: 1

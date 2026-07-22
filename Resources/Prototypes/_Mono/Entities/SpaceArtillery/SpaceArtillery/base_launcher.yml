@@ -68,3 +68,7 @@
   - type: RadarBlip
     radarColor: "#9999FF"
     scale: 1
+  # Mono
+  - type: ShipRepairable
+    repairTime: 15
+    repairCost: 50

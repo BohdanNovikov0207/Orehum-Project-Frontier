@@ -1,0 +1,26 @@
+- type: entity
+  id: ComputerShipyardLiberators
+  parent: [ComputerShipyardBase]
+  name: консоль верфи Освободителей Фронтира
+  description: Используется для приобретения и продажи шаттлов Освободителей Фронтира.
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Machines/computers.rsi
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: shipyard
+    - map: ["computerLayerKeys"]
+      state: telesci_key
+  - type: ActivatableUI
+    key: enum.ShipyardConsoleUiKey.FrontierLiberators
+  - type: UserInterface
+    interfaces:
+      enum.ShipyardConsoleUiKey.FrontierLiberators:
+        type: ShipyardConsoleBoundUserInterface
+  - type: ShipyardConsole
+    shipyardChannel: FrontierLiberators
+    newAccessLevels: [FrontierLiberators]

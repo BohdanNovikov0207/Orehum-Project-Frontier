@@ -1,0 +1,38 @@
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyFrontierLiberators
+  name: ключ шифрования Освободителей Фронтира
+  description: Ключ шифрования FL.
+  components:
+  - type: EncryptionKey
+    channels:
+    - FrontierLiberators
+    defaultChannel: FrontierLiberators
+  - type: Sprite
+    layers:
+    - state: crypt_rusted
+    - sprite: _Orehum/Factions/FrontierLiberators/encryption_keys.rsi
+      state: frontierliberators
+
+- type: radioChannel
+  id: FrontierLiberators
+  name: Освободители Фронтира
+  keycode: 'f'
+  frequency: 2709
+  color: "#4B5320"
+  longRange: true
+
+- type: entity
+  parent: ClothingHeadsetAlt
+  id: ClothingHeadsetAltFrontierLiberators
+  name: полноразмерная гарнитура FL
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyFrontierLiberators
+  - type: Sprite
+    sprite: _NF/Clothing/Ears/Headsets/mercenary.rsi
+  - type: Clothing
+    sprite: _NF/Clothing/Ears/Headsets/mercenary.rsi

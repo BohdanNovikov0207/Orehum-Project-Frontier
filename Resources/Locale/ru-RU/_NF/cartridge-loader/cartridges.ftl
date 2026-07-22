@@ -13,10 +13,10 @@ ledger-no-expenses = Нет
 ledger-balance = Баланс:
 ledger-no-balance = N/A
 
-ledger-tab-Frontier = Аванпост Фронтира
+ledger-tab-Frontier = Администрация Сектора
 ledger-tab-Nfsd = ДШНФ
-ledger-tab-Medical = Медицинский Аванпост
-Expensesledger-tab-Edison = Электростанция Эдиссона
+ledger-tab-Medical = Trauma Team Interstellar
+ledger-tab-Edison = Электростанция Эдисона
 # Fallback, if this displays, something's wrong.
 ledger-tab-Unknown = Неизвестно
 

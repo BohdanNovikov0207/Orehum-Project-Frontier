@@ -21,7 +21,8 @@ public enum ShipyardConsoleUiKey : byte
     Medical,
     // Add ships to this key if they are only available from mothership consoles. Shipyards using it are inherently empty and are populated using the ShipyardListingComponent.
     Custom,
-    TraumaTeam // Orehum Trauma Team Faction | TTI
+    TraumaTeam, // Orehum Trauma Team Faction | TTI
+    FrontierLiberators // Orehum Frontier Liberators Faction | FL
 }
 
 public abstract class SharedShipyardSystem : EntitySystem

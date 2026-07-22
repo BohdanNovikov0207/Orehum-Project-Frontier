@@ -1,0 +1,27 @@
+- type: vessel
+  id: LiberatorsStriker
+  parent: BaseVessel
+  name: FL Striker
+  description: Легкий рейдерский шаттл "Освободителей Фронтира", переоборудованный из гражданского судна для стремительных абордажей, контрабандных операций и рейдов на удаленные объекты. Простая конструкция обеспечивает дешевое обслуживание и быстрый ремонт в полевых условиях.
+  price: 10000
+  category: Small
+  group: FrontierLiberators
+  shuttlePath: /Maps/_Orehum/Factions/FrontierLiberators/Shuttles/liberators_striker.yml
+  guidebookPage: Null
+
+- type: gameMap
+  id: LiberatorsStriker
+  mapName: 'FL Striker'
+  mapPath: /Maps/_Orehum/Factions/FrontierLiberators/Shuttles/liberators_striker.yml
+  minPlayers: 0
+  stations:
+    LiberatorsStriker:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'FL Striker {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

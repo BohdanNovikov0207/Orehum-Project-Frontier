@@ -136,9 +136,7 @@
   name: Директор TTI
   description: Лидер фракции Trauma Team Interstellar
   playTimeTracker: JobTraumaTeamLeader
-#  requirements:
-#    - !type:OverallPlaytimeRequirement
-#      time: 43200 # 12 hours
+  whitelisted: true
   alwaysUseSpawner: true
   icon: JobIconTraumaTeamLeader
   weight: 91
@@ -155,9 +153,9 @@
   name: Сотрудник TTI
   description: Мембер фракции Trauma Team Interstellar
   playTimeTracker: JobTraumaTeamMember
-#  requirements:
-#    - !type:OverallPlaytimeRequirement
-#      time: 43200 # 12 hours
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 7200 # 2 hours
   alwaysUseSpawner: true
   icon: JobIconTraumaTeamMember
   supervisors: директору Trauma Team Interstellar

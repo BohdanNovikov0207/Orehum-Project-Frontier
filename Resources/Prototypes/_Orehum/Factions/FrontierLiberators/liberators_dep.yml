@@ -1,0 +1,81 @@
+- type: department
+  id: FrontierLiberators
+  name: Освободители Фронтира
+  description: Организация Frontier Liberators
+  color: "#4B5320"
+  weight: -1000
+  roles:
+  - FrontierLiberatorsCommander
+  - FrontierLiberatorsMember
+
+- type: playTimeTracker
+  id: JobFrontierLiberatorsMember
+
+- type: playTimeTracker
+  id: JobFrontierLiberatorsCommander
+
+- type: entity
+  parent: DoorElectronics
+  id: DoorElectronicsLiberators
+  suffix: Frontier Liberators, Locked
+  components:
+  - type: AccessReader
+    access: [["FrontierLiberators"]]
+
+- type: entity
+  parent: Airlock
+  id: AirlockLiberators
+  name: шлюз
+  suffix: Frontier Liberators
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Standard/mercenary.rsi
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: Airlock
+  id: AirlockLiberatorsLocked
+  name: шлюз
+  suffix: Frontier Liberators, Закрыт
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Standard/mercenary.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsLiberators ]
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockLiberatorsGlass
+  name: стеклянный шлюз
+  suffix: Frontier Liberators
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Glass/mercenary.rsi
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockSecurity
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockLiberatorsGlassLocked
+  name: стеклянный шлюз
+  suffix: Frontier Liberators, Закрыт
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Doors/Airlocks/Glass/mercenary.rsi
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsLiberators ]
+  - type: WiresPanelSecurity
+    securityLevel: superMaxSecurity
+  - type: Wires
+    layoutId: AirlockSecurity
