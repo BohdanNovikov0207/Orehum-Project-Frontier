@@ -106,7 +106,6 @@
     - FloorDark
     - PiratePlating
     - PirateCatwalk
-    - PirateCatwalkHazard
     # Windows and grilles
     - MiningWindow
     - MiningWindowDiagonal

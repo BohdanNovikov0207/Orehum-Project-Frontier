@@ -38,8 +38,8 @@
       key_slots: !type:Container
   - type: Sprite
     noRot: false
-    drawdepth: Overdoors # Stellar
-    sprite: _ST/Tileset/Wallmounts/intercom.rsi # Stellar - Wallening
+    drawdepth: SmallObjects
+    sprite: Structures/Wallmounts/intercom.rsi
     layers:
     - state: base
     - state: unshaded
@@ -115,14 +115,13 @@
           False: { visible: false }
 
 - type: entity
-  parent: BaseWallmountMetallic # Frontier: add parent: BaseWallmountMetallic
   id: IntercomAssembly
   name: intercom assembly
   description: An intercom. It doesn't seem very helpful right now.
   components:
   - type: Sprite
-    drawdepth: Overdoors # Stellar
-    sprite: _ST/Tileset/Wallmounts/intercom.rsi # Stellar - Wallening
+    drawdepth: SmallObjects
+    sprite: Structures/Wallmounts/intercom.rsi
     layers:
     - state: build
     - state: panel

@@ -2,7 +2,7 @@
   name: chair
   id: SeatBase
   abstract: true
-  description: Looks like a good place to sit down and take a quick rest. # Stellar
+  description: You sit in this. Either by will or force.
   placement:
     mode: PlaceFree
   components:
@@ -21,7 +21,6 @@
         mask:
         - TableMask
   - type: Sprite
-    drawdepth: Mobs # Stellar
     sprite: Structures/Furniture/chairs.rsi
     noRot: true
   - type: Strap
@@ -57,8 +56,6 @@
   id: UnanchoredChairBase
   parent: SeatBase
   abstract: true
-  placement: # Stellar - Wallening
-    mode: SnapgridCenter # Stellar - Wallening
   components:
   - type: Anchorable
   - type: Rotatable
@@ -115,7 +112,6 @@
   parent: ChairBase
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Decor/Seating/steel_chair.rsi # Stellar - Wallening
     state: chair
   - type: Construction
     graph: Seat
@@ -128,7 +124,7 @@
   suffix: White
   components:
   - type: Sprite
-    state: chair # Stellar - Wallening
+    state: chair-greyscale
 
 - type: entity
   name: stool
@@ -170,8 +166,7 @@
   parent: RollingOfficeChairBase # Goobstation - rolling chair, definition under _Goobstation
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Decor/Seating/office_chair.rsi # Stellar - Wallening
-    state: chair # Stellar - Wallening
+    state: office-white
   - type: Construction
     graph: Seat
     node: chairOffice
@@ -182,8 +177,7 @@
   parent: ChairOfficeLight
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Decor/Seating/office_chair.rsi # Stellar - Wallening
-    state: chair # Stellar - Wallening
+    state: office-dark
   - type: Construction
     graph: Seat
     node: chairOfficeDark
@@ -195,8 +189,7 @@
   description: It looks comfy.
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Decor/Seating/comfy_chair.rsi # Stellar - Wallening
-    state: chair # Stellar - Wallening
+    state: comfy
   - type: Construction
     graph: Seat
     node: chairComfy
@@ -221,8 +214,7 @@
   parent: UnanchoredChairBase
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Decor/Seating/wood_chair.rsi # Stellar - Wallening
-    state: chair # Stellar - Wallening
+    state: wooden
   - type: Construction
     graph: Seat
     node: chairWood
@@ -266,7 +258,6 @@
   description: Looks uncomfortable.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/chairs.rsi # Stellar - Wallening
     state: ritual
   - type: Construction
     graph: RitualSeat
@@ -291,7 +282,6 @@
   description: It's staring back.
   components:
   - type: Sprite
-    sprite: Structures/Furniture/chairs.rsi # Stellar - Wallening
     state: cursed
   - type: Strap
     buckleSound:

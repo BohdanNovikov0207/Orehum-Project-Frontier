@@ -16,7 +16,7 @@
   - type: InteractionOutline
   - type: PlaceableSurface
   - type: Sprite
-    sprite: _ST/Tileset/Decor/Misc/rack.rsi # Stellar - Wallening
+    sprite: Structures/Furniture/furniture.rsi
     state: rack
     snapCardinals: true
   - type: Fixtures

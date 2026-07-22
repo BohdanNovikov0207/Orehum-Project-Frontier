@@ -124,13 +124,13 @@
       currentOre: NFOreBananium
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
@@ -147,13 +147,13 @@
       currentOre: NFOreBluespace
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
@@ -171,13 +171,13 @@
       currentOre: NFOreCoalDense
     - type: Sprite
       layers: # Hack to get these layers set up
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
@@ -194,13 +194,13 @@
       currentOre: NFOreDiamondDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
@@ -217,13 +217,13 @@
       currentOre: NFOreGoldDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
@@ -240,13 +240,13 @@
       currentOre: NFOreSteel
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
@@ -263,13 +263,13 @@
       currentOre: NFOrePlasmaDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
@@ -286,13 +286,13 @@
       currentOre: NFOreSpaceQuartzDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
@@ -309,13 +309,13 @@
       currentOre: NFOreSaltDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
@@ -332,13 +332,13 @@
       currentOre: NFOreSilverDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
@@ -355,13 +355,13 @@
       currentOre: NFOreUraniumDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
@@ -378,13 +378,13 @@
       currentOre: OreArtifactFragment
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: ice0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: ice0
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
@@ -505,13 +505,13 @@
       currentOre: NFOreBananium
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
@@ -528,13 +528,13 @@
       currentOre: NFOreBluespace
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
@@ -552,13 +552,13 @@
       currentOre: NFOreCoalDense
     - type: Sprite
       layers: # Hack to get these layers set up
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
@@ -575,13 +575,13 @@
       currentOre: NFOreDiamondDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
@@ -598,13 +598,13 @@
       currentOre: NFOreGoldDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
@@ -621,13 +621,13 @@
       currentOre: NFOreSteel
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
@@ -644,13 +644,13 @@
       currentOre: NFOrePlasmaDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
@@ -667,13 +667,13 @@
       currentOre: NFOreSpaceQuartzDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
@@ -690,13 +690,13 @@
       currentOre: NFOreSaltDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
@@ -713,13 +713,13 @@
       currentOre: NFOreSilverDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
@@ -736,13 +736,13 @@
       currentOre: NFOreUraniumDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
@@ -759,13 +759,13 @@
       currentOre: OreArtifactFragment
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
@@ -886,13 +886,13 @@
       currentOre: NFOreBananium
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
@@ -909,13 +909,13 @@
       currentOre: NFOreBluespace
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
@@ -933,13 +933,13 @@
       currentOre: NFOreCoalDense
     - type: Sprite
       layers: # Hack to get these layers set up
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
@@ -956,13 +956,13 @@
       currentOre: NFOreDiamondDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
@@ -979,13 +979,13 @@
       currentOre: NFOreGoldDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
@@ -1002,13 +1002,13 @@
       currentOre: NFOreSteel
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
@@ -1025,13 +1025,13 @@
       currentOre: NFOrePlasmaDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
@@ -1048,13 +1048,13 @@
       currentOre: NFOreSpaceQuartzDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
@@ -1071,13 +1071,13 @@
       currentOre: NFOreSaltDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
@@ -1094,13 +1094,13 @@
       currentOre: NFOreSilverDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
@@ -1117,13 +1117,13 @@
       currentOre: NFOreUraniumDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
@@ -1140,13 +1140,13 @@
       currentOre: OreArtifactFragment
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: sandstone0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: sandstone0
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
@@ -1268,13 +1268,13 @@
       currentOre: NFOreBananium
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
@@ -1291,13 +1291,13 @@
       currentOre: NFOreBluespace
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
@@ -1315,13 +1315,13 @@
       currentOre: NFOreCoalDense
     - type: Sprite
       layers: # Hack to get these layers set up
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
@@ -1338,13 +1338,13 @@
       currentOre: NFOreDiamondDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
@@ -1361,13 +1361,13 @@
       currentOre: NFOreGoldDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
@@ -1384,13 +1384,13 @@
       currentOre: NFOreSteel
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
@@ -1407,13 +1407,13 @@
       currentOre: NFOrePlasmaDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
@@ -1430,13 +1430,13 @@
       currentOre: NFOreSpaceQuartzDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
@@ -1453,13 +1453,13 @@
       currentOre: NFOreSaltDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
@@ -1476,13 +1476,13 @@
       currentOre: NFOreSilverDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
@@ -1499,13 +1499,13 @@
       currentOre: NFOreUraniumDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
@@ -1522,13 +1522,13 @@
       currentOre: OreArtifactFragment
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: necropolis0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: necropolis0
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
@@ -1649,13 +1649,13 @@
       currentOre: NFOreBananium
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
@@ -1672,13 +1672,13 @@
       currentOre: NFOreBluespace
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
@@ -1696,13 +1696,13 @@
       currentOre: NFOreCoalDense
     - type: Sprite
       layers: # Hack to get these layers set up
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
@@ -1719,13 +1719,13 @@
       currentOre: NFOreDiamondDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
@@ -1742,13 +1742,13 @@
       currentOre: NFOreGoldDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
@@ -1765,13 +1765,13 @@
       currentOre: NFOreSteel
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
@@ -1788,13 +1788,13 @@
       currentOre: NFOrePlasmaDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
@@ -1811,13 +1811,13 @@
       currentOre: NFOreSpaceQuartzDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
@@ -1834,13 +1834,13 @@
       currentOre: NFOreSaltDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
@@ -1857,13 +1857,13 @@
       currentOre: NFOreSilverDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
@@ -1880,13 +1880,13 @@
       currentOre: NFOreUraniumDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
@@ -1903,13 +1903,13 @@
       currentOre: OreArtifactFragment
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
@@ -2030,13 +2030,13 @@
       currentOre: NFOreBananium
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
@@ -2053,13 +2053,13 @@
       currentOre: NFOreBluespace
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
@@ -2077,13 +2077,13 @@
       currentOre: NFOreCoalDense
     - type: Sprite
       layers: # Hack to get these layers set up
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
@@ -2100,13 +2100,13 @@
       currentOre: NFOreDiamondDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
@@ -2123,13 +2123,13 @@
       currentOre: NFOreGoldDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
@@ -2146,13 +2146,13 @@
       currentOre: NFOreSteel
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
@@ -2169,13 +2169,13 @@
       currentOre: NFOrePlasmaDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
@@ -2192,13 +2192,13 @@
       currentOre: NFOreSpaceQuartzDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
@@ -2215,13 +2215,13 @@
       currentOre: NFOreSaltDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
@@ -2238,13 +2238,13 @@
       currentOre: NFOreSilverDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
@@ -2261,13 +2261,13 @@
       currentOre: NFOreUraniumDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
@@ -2284,13 +2284,13 @@
       currentOre: OreArtifactFragment
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi
@@ -2411,13 +2411,13 @@
       currentOre: NFOreBananium
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bananium
           sprite: Structures/Walls/rock.rsi
@@ -2434,13 +2434,13 @@
       currentOre: NFOreBluespace
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_bluespace
           sprite: _NF/Structures/Walls/rock.rsi
@@ -2458,13 +2458,13 @@
       currentOre: NFOreCoalDense
     - type: Sprite
       layers: # Hack to get these layers set up
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_coal
           sprite: Structures/Walls/rock.rsi
@@ -2481,13 +2481,13 @@
       currentOre: NFOreDiamondDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_diamond
           sprite: Structures/Walls/rock.rsi
@@ -2504,13 +2504,13 @@
       currentOre: NFOreGoldDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_gold
           sprite: Structures/Walls/rock.rsi
@@ -2527,13 +2527,13 @@
       currentOre: NFOreSteel
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_tin
           sprite: Structures/Walls/rock.rsi
@@ -2550,13 +2550,13 @@
       currentOre: NFOrePlasmaDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_phoron
           sprite: Structures/Walls/rock.rsi
@@ -2573,13 +2573,13 @@
       currentOre: NFOreSpaceQuartzDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_quartz
           sprite: Structures/Walls/rock.rsi
@@ -2596,13 +2596,13 @@
       currentOre: NFOreSaltDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_salt
           sprite: Structures/Walls/rock.rsi
@@ -2619,13 +2619,13 @@
       currentOre: NFOreSilverDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_silver
           sprite: Structures/Walls/rock.rsi
@@ -2642,13 +2642,13 @@
       currentOre: NFOreUraniumDense
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_uranium
           sprite: Structures/Walls/rock.rsi
@@ -2665,13 +2665,13 @@
       currentOre: OreArtifactFragment
     - type: Sprite
       layers:
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SE" ]
+        - map: [ "enum.CornerLayers.SE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.SW" ]
+        - map: [ "enum.CornerLayers.SW" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NE" ]
+        - map: [ "enum.CornerLayers.NE" ]
           state: cobblebrick0
-        - map: [ "enum.IconSmoothSystem+CornerLayers.NW" ]
+        - map: [ "enum.CornerLayers.NW" ]
           state: cobblebrick0
         - state: rock_artifact_fragment
           sprite: Structures/Walls/rock.rsi

@@ -22,7 +22,6 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -48,7 +47,6 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -74,7 +72,6 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 # region Frontier
@@ -98,7 +95,6 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -120,7 +116,6 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -142,7 +137,6 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -166,7 +160,6 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -191,7 +184,6 @@
   - ContractorImplanter
   - StationRepBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -215,7 +207,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 # region Misc
@@ -242,7 +233,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -268,7 +258,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 - type: roleLoadout
@@ -293,7 +282,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
 
 # region NFSD
@@ -320,7 +308,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NfsdSpeciesSpecific
 
 - type: roleLoadout
@@ -346,7 +333,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NfsdSpeciesSpecific
 
 - type: roleLoadout
@@ -372,7 +358,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NfsdSpeciesSpecific
 
 - type: roleLoadout
@@ -398,7 +383,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NfsdSpeciesSpecific
 
 - type: roleLoadout
@@ -423,7 +407,6 @@
   - ContractorEncryptionKey
   - ContractorBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific # Explicitly civilian variant
 
 # - type: roleLoadout # Fix when this is actully used
@@ -474,7 +457,6 @@
   - ContractorEncryptionKey
   - SeniorOfficerBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NfsdSpeciesSpecific
 
 - type: roleLoadout
@@ -500,7 +482,6 @@
   - ContractorEncryptionKey
   - SeniorOfficerBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NfsdSpeciesSpecific
 
 - type: roleLoadout
@@ -525,7 +506,6 @@
   - ContractorImplanter
   - SeniorOfficerBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NfsdSpeciesSpecific
 
 # region NFPirate
@@ -547,7 +527,6 @@
   - ContractorWallet
   - PirateBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
   canCustomizeName: true # pseudonym?
 
@@ -569,7 +548,6 @@
   - ContractorWallet
   - PirateBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
   canCustomizeName: true # pseudonym?
 
@@ -591,7 +569,6 @@
   - PirateCaptainWallet
   - PirateCaptainBackpackItems
   - ContractorHandItems
-  - ContractorSupportPets
   - NFSpeciesSpecific
   canCustomizeName: true # pseudonym?
 

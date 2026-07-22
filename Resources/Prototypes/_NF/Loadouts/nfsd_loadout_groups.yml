@@ -164,9 +164,9 @@
   - NfsdClothingHeadsetAltNfsdBrown
   - NfsdClothingHeadsetAltNfsdCreamandBrown
   - NfsdClothingHeadsetAltNfsdGreen
-  - NfsdNFClothingWristsetNfsdBrownCommand
-  - NfsdNFClothingWristsetNfsdCreamCommand
-  - NfsdNFClothingWristsetNfsdGreenCommand
+  - NfsdNFClothingWristsetNfsdBrown
+  - NfsdNFClothingWristsetNfsdCream
+  - NfsdNFClothingWristsetNfsdGreen
   fallbacks:
   - NfsdClothingHeadsetAltNfsdBrown
 
@@ -178,9 +178,9 @@
   - NfsdClothingHeadsetAltNfsdBrown
   - NfsdClothingHeadsetAltNfsdCreamandBrown
   - NfsdClothingHeadsetAltNfsdGreen
-  - NfsdNFClothingWristsetNfsdBrownCommand
-  - NfsdNFClothingWristsetNfsdCreamCommand
-  - NfsdNFClothingWristsetNfsdGreenCommand
+  - NfsdNFClothingWristsetNfsdBrown
+  - NfsdNFClothingWristsetNfsdCream
+  - NfsdNFClothingWristsetNfsdGreen
   fallbacks:
   - NfsdClothingHeadsetAltNfsdCreamandBrown
 
@@ -192,8 +192,8 @@
   - NfsdClothingHeadsetAltNfsdBrown
   - NfsdClothingHeadsetAltNfsdCreamandBrown
   - NfsdClothingHeadsetAltNfsdGreen
-  - NfsdNFClothingWristsetNfsdBrownCommand
-  - NfsdNFClothingWristsetNfsdCreamCommand
-  - NfsdNFClothingWristsetNfsdGreenCommand
+  - NfsdNFClothingWristsetNfsdBrown
+  - NfsdNFClothingWristsetNfsdCream
+  - NfsdNFClothingWristsetNfsdGreen
   fallbacks:
   - NfsdClothingHeadsetAltNfsdGreen

@@ -1,4 +1,3 @@
-using Content.Shared._DV.Silicons.Borgs; // DeltaV
 using Content.Shared.Silicons.Borgs;
 using JetBrains.Annotations;
 using Robust.Client.GameObjects;
@@ -27,7 +26,6 @@ public sealed class BorgBoundUserInterface : BoundUserInterface
         {
             SendMessage(new BorgEjectBrainBuiMessage());
         };
-        _menu.IdChipButtonPressed += () => SendMessage(new BorgEjectIdChipMessage()); // DeltaV
 
         _menu.EjectBatteryButtonPressed += () =>
         {

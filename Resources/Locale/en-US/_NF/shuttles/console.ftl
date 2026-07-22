@@ -28,8 +28,4 @@ shuttle-console-hide-target-description = Toggles the visibility of the target w
 shuttle-console-target-name = Target
 shuttle-console-map-track = ⌖
 
-<<<<<<< HEAD
-shuttle-console-undock-all = Undock All
-=======
 shuttle-console-network-ports = Network Ports
->>>>>>> origin/master

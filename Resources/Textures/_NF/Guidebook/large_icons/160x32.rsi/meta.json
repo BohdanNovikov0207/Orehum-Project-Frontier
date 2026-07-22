@@ -1,10 +1,8 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "coffeehouse_banner, rusty_banner by AmbitiousFailure (discord/github)",
-    "extra_copyright": [
-      "nfsd_banner by AmbitiousFailure (discord/github) and Bartholemew Dingleberry (discord/github)"
-    ],
+    "copyright": "coffeehouse_banner by AmbitiousFailure (discord/github)",
+    "extra_copyright": [],
     "metaAtlas": false,
     "size": {
       "x": 160,
@@ -13,12 +11,6 @@
     "states": [
     {
       "name": "coffeehouse_banner"
-    },
-    {
-      "name": "rusty_banner"
-    },
-    {
-      "name": "nfsd_banner"
     }
   ]
 }

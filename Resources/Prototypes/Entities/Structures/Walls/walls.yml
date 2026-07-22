@@ -330,6 +330,7 @@
   components:
     - type: Sprite
       sprite: Structures/Walls/plastitanium.rsi
+      color: "#cdf3cd" # Frontier
     - type: Icon
       sprite: Structures/Walls/plastitanium.rsi
     - type: IconSmooth
@@ -372,6 +373,7 @@
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
+    color: "#cdf3cd" # Frontier
     state: state0
   - type: Icon
     sprite: Structures/Walls/plastitanium_diagonal.rsi
@@ -392,26 +394,13 @@
   - type: Sprite
     drawdepth: Walls
     sprite: Structures/Walls/plastitanium_diagonal.rsi
+    color: "#ffffff" # Frontier
     state: state0
   - type: Icon
     sprite: Structures/Walls/plastitanium_diagonal.rsi
     state: state0
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1000
-      behaviors:
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            Girder:
-              min: 1
-              max: 1
-        - !type:DoActsBehavior
-          acts: [ "Destruction" ]
-        - !type:PlaySoundBehavior
-          sound:
-            collection: MetalSlam
+  - type: RCDDeconstructable # Frontier
+    deconstructable: false # Frontier
 
 - type: entity
   parent: BaseWallTierTwo # Mono
@@ -419,9 +408,9 @@
   name: reinforced wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _NF/Structures/Walls/solid.rsi # Frontier
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _NF/Structures/Walls/solid.rsi # Frontier
     state: rgeneric
   - type: Construction
     graph: Girder
@@ -515,10 +504,14 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _NF/Structures/Walls/reinforced_diagonal.rsi # Frontier: _NF folder
     state: state0
+  - type: IconSmooth
+    mode: DiagonalNF # Frontier: Diagonal<DiagonalNF
+    key: walls
+    base: state
   - type: Icon
-    sprite: Structures/Walls/reinforced_diagonal.rsi
+    sprite: _NF/Structures/Walls/reinforced_diagonal.rsi # Frontier: _NF folder
     state: state0
   - type: Damageable
     damageContainer: StructuralInorganic
@@ -739,13 +732,13 @@
   name: solid wall
   components:
   - type: Sprite
-    sprite: Structures/Walls/solid.rsi
+    sprite: _NF/Structures/Walls/solid.rsi # Frontier
   - type: WallReplacementMarker
   - type: Construction
     graph: Girder
     node: wall
   - type: Icon
-    sprite: Structures/Walls/solid.rsi
+    sprite: _NF/Structures/Walls/solid.rsi # Frontier
   - type: RCDDeconstructable
     cost: 6
     delay: 8
@@ -783,12 +776,12 @@
   components:
   - type: Sprite
     drawdepth: Walls
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _NF/Structures/Walls/solid_diagonal.rsi # Frontier: use _NF variant
     state: state0
   - type: Icon
-    sprite: Structures/Walls/solid_diagonal.rsi
+    sprite: _NF/Structures/Walls/solid_diagonal.rsi # Frontier: use _NF variant
     state: state0
-  - type: Destructible
+  - type: Destructible # Mono - override HP stats from parent: WallShuttleDiagonal
     thresholds:
     - trigger:
         !type:DamageTrigger
@@ -827,28 +820,6 @@
   - type: IconSmooth
     key: walls
     base: solid
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 300
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-    - trigger:
-        !type:DamageTrigger
-        damage: 150
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          collection: MetalSlam
-      - !type:ChangeConstructionNodeBehavior
-        node: girder
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
 
 - type: entity
   parent: BaseWallTierOne # Mono

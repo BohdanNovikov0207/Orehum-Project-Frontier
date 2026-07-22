@@ -150,9 +150,6 @@
   - type: Clothing
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_green.rsi
   - type: CatWearable
-  - type: Tag
-    tags:
-    - HamsterWearable
 
 - type: entity
   parent: ClothingHeadBaseButcherable
@@ -165,9 +162,6 @@
   - type: Clothing
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_brown.rsi
   - type: CatWearable
-  - type: Tag
-    tags:
-    - HamsterWearable
 
 - type: entity
   parent: ClothingHeadBaseButcherable
@@ -180,9 +174,6 @@
   - type: Clothing
     sprite: _NF/Clothing/Head/Hats/nfsd_beret_cream.rsi
   - type: CatWearable
-  - type: Tag
-    tags:
-    - HamsterWearable
 
 - type: entity
   parent: ClothingHeadBaseButcherable
@@ -237,9 +228,6 @@
   - type: Clothing
     sprite: _NF/Clothing/Head/Hats/nfsd_campaign_small.rsi
   - type: CatWearable
-  - type: Tag
-    tags:
-    - HamsterWearable
   - type: PirateBountyItem
     id: CampaignHat
 
@@ -323,6 +311,3 @@
   - type: Clothing
     sprite: _NF/Clothing/Head/Hats/beret_arcadia.rsi
   - type: CatWearable
-  - type: Tag
-    tags:
-      - HamsterWearable

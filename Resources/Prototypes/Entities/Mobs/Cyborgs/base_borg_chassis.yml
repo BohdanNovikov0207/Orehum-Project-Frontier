@@ -120,7 +120,6 @@
     containers:
       borg_brain: !type:ContainerSlot { }
       cell_slot: !type:ContainerSlot { }
-      borg_id_chip: !type:ContainerSlot # DeltaV - borg id chips
       borg_module: !type:Container { }
       part-container: !type:Container
   - type: PowerCellSlot
@@ -131,7 +130,7 @@
     activated: false # gets activated when a mind is added
     onUse: false # no item-borg toggling sorry
   - type: ItemTogglePointLight
-  #- type: AccessToggle # DeltaV - IdChipSlot disables access, don't re-enable it when losing power
+  - type: AccessToggle
   # TODO: refactor movement to just be based on toggle like speedboots but for the boots themselves
   # TODO: or just have sentient speedboots be fast idk
   - type: PowerCellDraw
@@ -141,10 +140,6 @@
     slots:
       cell_slot:
         name: power-cell-slot-component-slot-name-default
-  - type: IdChipSlot # DeltaV - borg id chips
-    whitelist:
-      components:
-      - NFIDChip # Frontier - swap IdChip tag for whitelist comp
   - type: Body
   - type: StatusEffects
     allowed:
@@ -169,7 +164,6 @@
     containers:
     - part-container
     - cell_slot
-    - borg_id_chip # DeltaV - borg id chips
   - type: Lock
     locked: true
     unlockOnClick: false
@@ -202,7 +196,6 @@
         - borg_brain
         - borg_module
         - cell_slot
-        - borg_id_chip # DeltaV
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
   - type: HandheldLight
@@ -229,7 +222,7 @@
   - type: ToggleableVisuals
     spriteLayer: light
   - type: PointLight
-    enabled: false # DeltaV - comment to prevent upstream removing, borg id chips
+    enabled: false
     mask: /Textures/Effects/LightMasks/cone.png
     autoRot: true
     radius: 4
@@ -325,15 +318,13 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen
-  # Frontier begin - ID chips replace this functionality
-  #- type: Access
-  #  enabled: false
-  #  groups: # Frontier
-  #  - AllAccess # Frontier
-  #  - GeneralAccess # Frontier
-  #  tags:
-  #  - Borg
-  # Frontier end
+  - type: Access
+    enabled: false
+    groups:
+    #- AllAccess # Frontier
+    - GeneralAccess # Frontier
+    tags:
+    - Borg
 #  - type: AccessReader
 #    access: [["Command"], ["Research"]]
   - type: ShowJobIcons
@@ -349,13 +340,10 @@
   - type: NpcFactionMember
     factions:
     - Syndicate
-  # Frontier begin - ID chips replace this functionality
-  #- type: Access
-  #  enabled: false
-  #  tags:
-  #  - NuclearOperative
-  #  - SyndicateAgent
-  # Frontier end
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
   - type: AccessReader
     access: [["SyndicateAgent"], ["NuclearOperative"]]
   - type: SiliconLawProvider
@@ -389,13 +377,11 @@
   - type: NpcFactionMember
     factions:
     - NanoTrasen #The seemingly best fit. It was a regular NT cyborg once, after all.
-  # Frontier begin - ID chips replace this functionality
-  #- type: Access
-  #  enabled: false # DeltaV - comment to prevent upstream removing, borg id chips
-  #  groups:
+  - type: Access
+    enabled: false
+    groups:
   #  - AllAccess #Randomized access would be fun. AllAccess is the best i can think of right now that does make it too hard for it to enter the station or navigate it.. # Frontier
-  #  - GeneralAccess # Frontier
-  # Frontier end - ID chips replace this functionality
+    - GeneralAccess # Frontier
   # - type: AccessReader # Frontier
   #   access: [["Command"], ["Research"]] # Frontier
   - type: StartIonStormed
@@ -419,12 +405,10 @@
   - type: NpcFactionMember # They're still syndicate even if they can't listen to the radio or see icons
     factions:
     - Syndicate
-  # Frontier begin - ID chips replace this functionality
-  #- type: Access
-  #  tags:
-  #  - NuclearOperative
-  #  - SyndicateAgent
-  # Frontier end
+  - type: Access
+    tags:
+    - NuclearOperative
+    - SyndicateAgent
   - type: AccessReader
     access: [ [ "SyndicateAgent" ], [ "NuclearOperative" ] ]
   - type: IntrinsicRadioTransmitter # Copy components from base SyndiBorg but without the stuff we don't want
@@ -547,12 +531,10 @@
     - Cyborgs
     - Robotics
     # TODO: add Xenoborg guide (part 7 spoilers)
-  # Frontier begin - ID chips replace this functionality
-  #- type: Access 
-  #  enabled: false
-  #  tags:
-  #  - Xenoborg
-  # Frontier end
+  - type: Access
+    enabled: false
+    tags:
+    - Xenoborg
   - type: AccessReader
     access: [["Xenoborg"]]
   - type: ShowJobIcons # not sure if it is needed

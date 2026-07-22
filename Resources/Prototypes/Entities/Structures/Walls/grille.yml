@@ -16,27 +16,17 @@
     - type: CanBuildWindowOnTop
     - type: Sprite
       drawdepth: Walls
-      # Begin Stellar - Wallening
-      noRot: true
-      sprite: _ST/Tileset/Walls/grille.rsi
+      sprite: Structures/Walls/grille.rsi
       layers:
-        - state: full
+        - state: grille
         - state: electrified
           sprite: Effects/electricity.rsi
           map: ["enum.ElectrifiedLayers.Sparks"]
           shader: unshaded
           visible: false
-    - type: SpriteFade
-    - type: PlacementReplacement
-      key: grilles
     - type: Icon
-      sprite: _ST/Tileset/Walls/grille.rsi
-      state: full
-    - type: IconSmooth
-      key: wallgrill
-      base: base
-      mode: CardinalFlags
-      # End Stellar - Wallening
+      sprite: Structures/Walls/grille.rsi
+      state: grille
     - type: Construction
       graph: Grille
       node: grille
@@ -103,15 +93,15 @@
 - type: entity
   id: ClockworkGrille
   parent: Grille
-  name: DEPRECATED # Stellar
-  description: DEPRECATED # Stellar
+  name: clockwork grille
+  description: A flimsy framework of iron rods assembled in traditional Ratvarian fashion.
   components:
-  # - type: Sprite # Begin Stellar
-  #   drawdepth: Walls
-  #   sprite: Structures/Walls/clockwork_grille.rsi
-  #   state: ratvargrille
-  #   layers:
-  #     - state: ratvargrille # End Stellar
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/clockwork_grille.rsi
+    state: ratvargrille
+    layers:
+      - state: ratvargrille
   - type: Icon
     sprite: Structures/Walls/clockwork_grille.rsi
     state: ratvargrille
@@ -123,13 +113,13 @@
 - type: entity
   id: GrilleBroken
   parent: BaseStructure
-  name: DEPRECATED # Stellar
-  description: DEPRECATED # Stellar
+  name: grille
+  description: A flimsy framework of iron rods. It has seen better days.
   components:
-  # - type: Sprite # Begin Stellar
-  #   drawdepth: Walls
-  #   sprite: Structures/Walls/grille.rsi
-  #   state: grille_broken # End Stellar
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/grille.rsi
+    state: grille_broken
   - type: Icon
     sprite: Structures/Walls/grille.rsi
     state: grille_broken
@@ -165,13 +155,13 @@
 - type: entity
   id: ClockworkGrilleBroken
   parent: GrilleBroken
-  name: DEPRECATED # Stellar
-  description: DEPRECATED # Stellar
+  name: clockwork grille
+  description: A flimsy framework of iron rods assembled in traditional Ratvarian fashion. It has seen better days.
   components:
-  # - type: Sprite # Begin Stellar
-  #   drawdepth: Walls
-  #   sprite: Structures/Walls/clockwork_grille.rsi
-  #   state: brokenratvargrille # End Stellar
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/clockwork_grille.rsi
+    state: brokenratvargrille
   - type: Icon
     sprite: Structures/Walls/clockwork_grille.rsi
     state: brokenratvargrille
@@ -182,18 +172,18 @@
 - type: entity
   id: GrilleDiagonal
   parent: Grille
-  name: DEPRECATED # Stellar
+  name: diagonal grille
   components:
-  # - type: Sprite # Begin Stellar
-  #   drawdepth: Walls
-  #   sprite: Structures/Walls/grille.rsi
-  #   layers:
-  #   - state: grille_diagonal
-  #   - state: electrified_diagonal
-  #     sprite: Effects/electricity.rsi
-  #     map: ["enum.ElectrifiedLayers.Sparks"]
-  #     shader: unshaded
-  #     visible: false # End Stellar
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/grille.rsi
+    layers:
+    - state: grille_diagonal
+    - state: electrified_diagonal
+      sprite: Effects/electricity.rsi
+      map: ["enum.ElectrifiedLayers.Sparks"]
+      shader: unshaded
+      visible: false
   - type: Icon
     sprite: Structures/Walls/grille.rsi
     state: grille_diagonal
@@ -220,18 +210,18 @@
 - type: entity
   id: ClockworkGrilleDiagonal
   parent: ClockworkGrille
-  name: DEPRECATED # Stellar
+  name: diagonal clockwork grille
   components:
-  # - type: Sprite # Begin Stellar
-  #   drawdepth: Walls
-  #   sprite: Structures/Walls/clockwork_grille.rsi
-  #   layers:
-  #   - state: ratvargrille_diagonal
-  #   - state: electrified_diagonal
-  #     sprite: Effects/electricity.rsi
-  #     map: ["enum.ElectrifiedLayers.Sparks"]
-  #     shader: unshaded
-  #     visible: false # End Stellar
+  - type: Sprite
+    drawdepth: Walls
+    sprite: Structures/Walls/clockwork_grille.rsi
+    layers:
+    - state: ratvargrille_diagonal
+    - state: electrified_diagonal
+      sprite: Effects/electricity.rsi
+      map: ["enum.ElectrifiedLayers.Sparks"]
+      shader: unshaded
+      visible: false
   - type: Icon
     sprite: Structures/Walls/clockwork_grille.rsi
     state: ratvargrille_diagonal

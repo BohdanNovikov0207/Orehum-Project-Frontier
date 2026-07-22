@@ -5,9 +5,8 @@
   description: A container able to harness a scan of an anomaly and turn it into research data.
   components:
   - type: Sprite
-    drawdepth: Mobs # Stellar - Wallening
     noRot: true
-    sprite: _ST/Tileset/Science/anomaly_vessel.rsi # Stellar
+    sprite: Structures/Machines/Anomaly/anomaly_vessel.rsi
     layers:
     - state: base
     - state: powered-1
@@ -96,9 +95,9 @@
   description: An advanced anomaly vessel capable of greater research potential at the cost of increased volatility and low-level radioactive decay into the environment.
   components:
   - type: Sprite
-    sprite: _ST/Tileset/Science/adv_anomaly_vessel.rsi # Stellar
-    offset: 0,0.5 # Stellar - Wallening
-    drawdepth: Mobs # Stellar - Wallening
+    sprite: Structures/Machines/Anomaly/adv_anomaly_vessel.rsi
+    offset: 0,0.5
+    drawdepth: Mobs
   - type: SpriteFade
   - type: AnomalyVessel
     pointMultiplier: 1.25 # Frontier: 2<1.25
@@ -123,8 +122,7 @@
   components:
   - type: Sprite
     noRot: true
-    drawdepth: Mobs # Stellar - Wallening
-    sprite: _ST/Tileset/Science/ape.rsi # Stellar
+    sprite: Structures/Machines/Anomaly/ape.rsi
     layers:
     - state: base
     - state: unshaded
@@ -147,7 +145,7 @@
       fix1:
         shape:
           !type:PhysShapeCircle
-          radius: 0.25 # Stellar
+          radius: 0.35
         density: 50
         mask:
         - MachineMask
@@ -223,11 +221,6 @@
       - SetParticleSigma
   - type: BindToStation # Frontier
     enabled: false # Frontier - should be draggable between stations
-  - type: Dropshadow # Begin Stellar - Wallening
-    sprite:
-      sprite: _ST/Effects/dropshadow.rsi
-      state: shadow-ape
-    offset: 0, -0.37 # End Stellar - Wallening
 
 - type: entity
   id: MachineAnomalyGenerator
@@ -240,9 +233,9 @@
   - type: StationAiWhitelist
   - type: SpriteFade
   - type: Sprite
-    sprite: _ST/Tileset/Science/anomaly_generator.rsi # Stellar
-    offset: 0, 0.5 # Stellar - Wallening
-    drawdepth: Walls # Stellar - Wallening
+    sprite: Structures/Machines/Anomaly/anomaly_generator.rsi
+    offset: 0,1
+    drawdepth: Mobs
     layers:
     - state: base
     - state: panel

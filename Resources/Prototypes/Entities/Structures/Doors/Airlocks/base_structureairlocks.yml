@@ -168,7 +168,7 @@
   - type: Paintable
     group: AirlockStandard
   - type: StaticPrice
-    price: 200 # Stellar - our station so stellar that airlocks are worth more
+    price: 150
   - type: LightningTarget
     priority: 1
   - type: Tag

@@ -46,8 +46,6 @@ namespace Content.Client.Atmos.Overlays
         private readonly int[] _fireFrameCounter = new int[FireStates];
         private readonly Texture[][] _fireFrames = new Texture[FireStates][];
 
-        private static readonly Vector2 TileOffset = new(0f, 0.5f); // Stellar - wallening
-
         private int _gasCount;
 
         public const int GasOverlayZIndex = (int) Shared.DrawDepth.DrawDepth.Effects; // Under ghosts, above mostly everything else
@@ -229,7 +227,7 @@ namespace Content.Client.Atmos.Overlays
                             {
                                 var opacity = gas.Opacity[i];
                                 if (opacity > 0)
-                                    state.drawHandle.DrawTexture(state.frames[i][state.frameCounter[i]], tilePosition + TileOffset, Color.White.WithAlpha(opacity)); // Stellar - wallening
+                                    state.drawHandle.DrawTexture(state.frames[i][state.frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
                             }
                         }
                     }
@@ -251,7 +249,7 @@ namespace Content.Client.Atmos.Overlays
 
                             var fireState = gas.FireState - 1;
                             var texture = state.fireFrames[fireState][state.fireFrameCounter[fireState]];
-                            state.drawHandle.DrawTexture(texture, index + TileOffset); // Stellar - wallening
+                            state.drawHandle.DrawTexture(texture, index);
                         }
                     }
 
@@ -292,7 +290,7 @@ namespace Content.Client.Atmos.Overlays
                         var opacity = atmos.OverlayData.Opacity[i];
 
                         if (opacity > 0)
-                            handle.DrawTexture(_frames[i][_frameCounter[i]], tilePosition + TileOffset, Color.White.WithAlpha(opacity)); // Stellar - wallening
+                            handle.DrawTexture(_frames[i][_frameCounter[i]], tilePosition, Color.White.WithAlpha(opacity));
                     }
                 }
             }
