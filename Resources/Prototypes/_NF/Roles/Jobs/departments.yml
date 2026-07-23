@@ -7,9 +7,10 @@
   roles:
   - StationRepresentative
   - StationTrafficController
-  - Valet # nyano
+#  - Valet # nyano
   - MailCarrier # nyano
-  - SecurityGuard
+#  - SecurityGuard
+  - ReporterKFC # Orehum
 
 # - type: department
 #   id: Antag

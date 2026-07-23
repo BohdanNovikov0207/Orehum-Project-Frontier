@@ -13,7 +13,7 @@
   parent: BasePOI
   name: 'Экспедиционный аванпост'
   minimumDistance: 1650
-  maximumDistance: 3400
+  maximumDistance: 3000
   spawnGroup: Required
   gridPath: /Maps/_NF/POI/lodge.yml
   addComponents:

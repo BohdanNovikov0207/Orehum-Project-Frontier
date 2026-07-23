@@ -69,13 +69,13 @@ public sealed partial class CCVars
     ///     Control displaying SSD indicators near players
     /// </summary>
     public static readonly CVarDef<bool> ICShowSSDIndicator =
-        CVarDef.Create("ic.show_ssd_indicator", true, CVar.CLIENTONLY);
+        CVarDef.Create("ic.show_ssd_indicator", false, CVar.CLIENTONLY);
 
     /// <summary>
     ///     Forces SSD characters to sleep after ICSSDSleepTime seconds
     /// </summary>
     public static readonly CVarDef<bool> ICSSDSleep =
-        CVarDef.Create("ic.ssd_sleep", false, CVar.SERVER); // Frontier: true < false
+        CVarDef.Create("ic.ssd_sleep", true, CVar.SERVER); // Frontier: true < false
 
     /// <summary>
     ///     Time between character getting SSD status and falling asleep

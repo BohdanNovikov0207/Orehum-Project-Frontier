@@ -139,6 +139,7 @@
   whitelisted: true
   alwaysUseSpawner: true
   icon: JobIconTraumaTeamLeader
+  supervisors: супервайзеру Trauma Team Interstellar
   weight: 91
   displayWeight: 91
   accessGroups:

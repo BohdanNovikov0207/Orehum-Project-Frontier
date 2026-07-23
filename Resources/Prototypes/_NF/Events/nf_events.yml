@@ -18,7 +18,7 @@
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_normal_crate.ogg
     weight: 5
     duration: 35
-    reoccurrenceDelay: 120
+    reoccurrenceDelay: 60
   - type: BluespaceCargoRule
     spawnerPrototype: RandomCargoSpawner
     flashPrototype: EffectFlashBluespaceQuiet
@@ -39,7 +39,7 @@
     weight: 5
     duration: 35
     maximumPlayers: 20
-    reoccurrenceDelay: 180
+    reoccurrenceDelay: 60
   - type: BluespaceCargoRule
     spawnerPrototype: CrateFoodMcCargo
     flashPrototype: EffectFlashMcBluespace
@@ -55,9 +55,8 @@
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_bluespace_syndie_crate.ogg
     weight: 1
     duration: 35
-    earliestStart: 90
-    minimumPlayers: 5
-    reoccurrenceDelay: 480 # 8 hours
+    earliestStart: 35
+    reoccurrenceDelay: 60
   - type: BluespaceCargoRule
     spawnerPrototype: CrateSyndicateSurplusBundle
     maximumSpawns: 1
@@ -70,7 +69,6 @@
     weight: 8 # Fairly common.
     duration: 35
     earliestStart: 50
-    minimumPlayers: 5
     reoccurrenceDelay: 50
   - type: RandomFaxRule
     minFaxes: 1

@@ -1,0 +1,29 @@
+- type: roleLoadout
+  id: JobReporterKFC
+  groups:
+  - ReporterJumpsuit
+  - ContractorBackpack
+  - ContractorGlasses
+  - ContractorNeck
+  - ContractorGloves
+  - ContractorOuterClothing
+  - ContractorBackpackItems
+  - ContractorHandItems
+#  - ReporterKFCPDA
+  - ContractorBoxSurvival
+  - NFSpeciesSpecific
+
+#- type: loadoutGroup
+#  id: ReporterKFCPDA
+#  name: loadout-group-contractor-pda
+#  hidden: true
+#  loadouts:
+#  - ReporterKFCPDA
+#  fallbacks:
+#  - ReporterKFCPDA
+#
+#- type: loadout
+#  id: ReporterKFCPDA
+#  price: 100
+#  equipment:
+#    id: ReporterKFCPDA

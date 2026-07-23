@@ -84,6 +84,7 @@
   whitelisted: true
   alwaysUseSpawner: true
   icon: JobIconFrontierLiberatorsCommander
+  supervisors: супервайзеру Освободителей Фронтира
   weight: 91
   displayWeight: 91
   accessGroups:

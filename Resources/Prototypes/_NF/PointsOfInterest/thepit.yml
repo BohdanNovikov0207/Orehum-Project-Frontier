@@ -13,7 +13,7 @@
   parent: BasePOI
   name: "Яма [Нейтралитет]"
   minimumDistance: 2200
-  maximumDistance: 4200
+  maximumDistance: 3400
   spawnGroup: Arena
   gridPath: /Maps/_NF/POI/arena.yml
   addComponents:

@@ -24,7 +24,7 @@
     weight: 7
     earliestStart: 15 # Frontier
     duration: 1
-    minimumPlayers: 15
+    minimumPlayers: 5
   - type: BreakerFlipRule
 
 - type: entity

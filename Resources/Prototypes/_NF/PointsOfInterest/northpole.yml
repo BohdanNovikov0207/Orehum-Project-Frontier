@@ -13,7 +13,7 @@
   parent: BasePOI
   name: "Северный полюс"
   minimumDistance: 2150
-  maximumDistance: 3850
+  maximumDistance: 3050
   spawnGroup: Christmas
   spawnChance: 0
   gridPath: /Maps/_NF/POI/northpole.yml

@@ -1,0 +1,83 @@
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconReporterKFC
+  icon:
+    sprite: /Textures/_Orehum/Factions/SectorAdmins/job_icons.rsi
+    state: reporter
+
+- type: playTimeTracker
+  id: JobReporterKFC
+
+- type: job
+  id: ReporterKFC
+  name: репортёр КФС
+  description: Возможно, вы подумали, что КФС связано с одноименным рестораном, но нет - это название канала, что расшифровывается как `Кино, Философия, Смерть`
+  playTimeTracker: JobReporterKFC
+  startingGear: ReporterKFCGear
+  whitelisted: true
+  alwaysUseSpawner: true
+  icon: "JobIconReporterKFC"
+  supervisors: управляющему
+  access:
+  - Service
+  - Maintenance
+  - External
+  - Frontier
+  - Brig
+  - Captain
+  - Mercenary
+  - StationTrafficController
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, NFSDTrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: PreventShipyardTitleOverwrite
+
+- type: startingGear
+  id: ReporterKFCGear
+  equipment:
+    shoes: ClothingShoesColorWhite
+    id: ReporterKFCPDA
+    ears: ClothingHeadsetService
+  storage:
+    back:
+    - TapeRecorder
+    - CassetteTape
+    - CassetteTape
+    - MicrophoneInstrument
+
+- type: entity
+  parent: IDCardStandard
+  id: ReporterKFCIDCard
+  name: ID-карта репортёра КФС
+  components:
+  - type: Sprite
+    layers:
+    - state: default
+    - state: idreporter
+  - type: PresetIdCard
+    job: ReporterKFC
+
+- type: entity
+  parent: ReporterPDA
+  id: ReporterKFCPDA
+  name: КПК репортёра КФС
+  description: Интерфейс этого КПК явно не старинный.
+  components:
+  - type: Pda
+    id: ReporterKFCIDCard
+
+- type: entity
+  id: SpawnPointReporterKFC
+  parent: SpawnPointJobBase
+  name: Репортёр КФС Sector Admins
+  components:
+  - type: SpawnPoint
+    job_id: ReporterKFC
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: Clothing/Uniforms/Jumpsuit/reporter.rsi
+        state: icon

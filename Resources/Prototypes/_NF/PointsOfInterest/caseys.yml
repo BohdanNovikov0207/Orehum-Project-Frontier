@@ -13,7 +13,7 @@
   parent: BasePOI
   name: "Казино безумного Кейси [Нейтралитет]"
   minimumDistance: 2250
-  maximumDistance: 3000
+  maximumDistance: 2700
   gridPath: /Maps/_NF/POI/caseyscasino.yml
   addComponents:
   - type: StationTransit

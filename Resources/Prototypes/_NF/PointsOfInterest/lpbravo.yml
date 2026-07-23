@@ -12,8 +12,8 @@
   id: LPBravo
   parent: BasePOI
   name: 'Прослушивающий пост Браво'
-  minimumDistance: 3500
-  maximumDistance: 5000
+  minimumDistance: 3000
+  maximumDistance: 3500
   spawnGroup: SyndicateFOB
   gridPath: /Maps/_NF/POI/lpbravo.yml
   hideWarp: true
