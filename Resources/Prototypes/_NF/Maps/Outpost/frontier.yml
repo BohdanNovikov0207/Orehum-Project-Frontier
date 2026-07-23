@@ -1,6 +1,6 @@
 - type: gameMap
   id: Frontier
-  mapName: 'Администрация Сектора'
+  mapName: 'Сектор Жандер'
   mapPath: /Maps/_NF/Outpost/frontier.yml
   minPlayers: 0
   maxPlayers: 100
