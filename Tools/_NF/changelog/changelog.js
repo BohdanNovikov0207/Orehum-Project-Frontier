@@ -143,7 +143,7 @@ function writeChangelog(entry) {
     let data = { Entries: [] };
 
     // Create a new changelogs file if it does not exist
-    if (fs.existsSync(`../../${process.env.CHANGELOG_DIR}`)) {
+    if (fs.existsSync(`../../../${process.env.CHANGELOG_DIR}`)) {
         const file = fs.readFileSync(`../../../${process.env.CHANGELOG_DIR}`, "utf8");
         data = yaml.load(file);
     }
@@ -155,7 +155,7 @@ function writeChangelog(entry) {
 
     // Write updated changelogs file
     fs.writeFileSync(
-        `../../${process.env.CHANGELOG_DIR}`,
+        `../../../${process.env.CHANGELOG_DIR}`,
         "Name: Orehum\nOrder: -1\nEntries:\n" + // IF YOU ARE A FORK, CHANGE THIS!!!!!!!!!!!!
             yaml.dump(data.Entries, { indent: 2 }).replace(/^---/, "")
     );
