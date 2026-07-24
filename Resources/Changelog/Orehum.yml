@@ -1,4 +1,5 @@
-Order: 1 # Orehum
+Name: Orehum
+Order: -1
 Entries:
 - author: Unenduring
   changes:
@@ -7,3 +8,23 @@ Entries:
   id: 100000
   time: '2025-04-30T00:34:21.0000000+00:00'
   url: https://github.com/space-wizards/space-station-14/pull/37047
+- author: Unenduring
+  changes:
+    - type: Add
+      message: Большинство шаттлов ДШ обзавелось пушками
+    - type: Add
+      message: Возвращены все треки в музыкальный автомат из прошлой сборки
+    - type: Tweak
+      message: Уменьшена ценность лута в ивентовых хранилищах
+    - type: Tweak
+      message: Увеличено количество символов для описания контракта
+    - type: Tweak
+      message: Изменены спрайты окон, укреплённых и обычных стен
+    - type: Tweak
+      message: Возможное исправление отсутствия геймрулов после ~4 часов раунда
+    - type: Fix
+      message: >-
+        Исправлена уязвимость госпиталя TTI, позволявшая обзавестись их
+        вооружением
+  id: 100001
+  time: '2026-07-24T23:11:59.0000000+00:00'
