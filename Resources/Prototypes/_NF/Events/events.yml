@@ -45,7 +45,6 @@
   #     volume: -4
     weight: 5
     duration: 60
-    maxDuration: 120
   - type: PowerGridCheckRule
 
 - type: entity
@@ -63,7 +62,6 @@
     endAudio:
       path: /Audio/_NF/Announcements/PocketSizedAndy/andy2_solar_flare_end.ogg
     duration: 120
-    maxDuration: 240
   - type: SolarFlareRule
     allChannels: true
     lightBreakChancePerSecond: 0.0003

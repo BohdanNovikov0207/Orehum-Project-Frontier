@@ -79,3 +79,12 @@
     securityLevel: superMaxSecurity
   - type: Wires
     layoutId: AirlockMedical
+
+- type: entity
+  parent: WindoorSecureMedicalLocked
+  id: WindoorTraumaTeamLocked
+  suffix: Trauma Team, Закрыт
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsTraumaTeam ]
