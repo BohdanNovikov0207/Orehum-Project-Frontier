@@ -14,8 +14,7 @@
     earliestStart: 40
     weight: 5
     duration: 1350
-    maxDuration: 1560
-    reoccurrenceDelay: 120 # 2 hours
+    reoccurrenceDelay: 60 # 2 hours
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -56,8 +55,7 @@
     earliestStart: 40
     weight: 5
     duration: 1020
-    maxDuration: 1350
-    reoccurrenceDelay: 120 # 2 hours
+    reoccurrenceDelay: 60 # 2 hours
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -99,8 +97,7 @@
     maximumPlayers: 10
     weight: 5
     duration: 590
-    maxDuration: 780
-    reoccurrenceDelay: 120 # 2 hours
+    reoccurrenceDelay: 60 # 2 hours
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -141,8 +138,7 @@
     earliestStart: 40
     weight: 1
     duration: 1800
-    maxDuration: 2400
-    reoccurrenceDelay: 120 # 2 hours
+    reoccurrenceDelay: 60 # 2 hours
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -179,8 +175,7 @@
     earliestStart: 100
     weight: 1
     duration: 900
-    maxDuration: 1200
-    reoccurrenceDelay: 120 # 2 hours
+    reoccurrenceDelay: 60 # 2 hours
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -218,8 +213,7 @@
     minimumPlayers: 5
     weight: 1
     duration: 1800
-    maxDuration: 2400
-    reoccurrenceDelay: 120 # 2 hours
+    reoccurrenceDelay: 60 # 2 hours
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
@@ -256,7 +250,6 @@
     earliestStart: 20
     weight: 1
     duration: 1800
-    maxDuration: 2400
     maxOccurrences: 1
   - type: BluespaceErrorRule
     groups:
@@ -295,8 +288,7 @@
     maximumPlayers: 20
     weight: 5
     duration: 900
-    maxDuration: 1800
-    reoccurrenceDelay: 240 # once per 4 hours
+    reoccurrenceDelay: 60
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup

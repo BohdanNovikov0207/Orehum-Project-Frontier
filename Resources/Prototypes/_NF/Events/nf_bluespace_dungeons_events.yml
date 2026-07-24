@@ -14,8 +14,7 @@
     endRadioAnnouncementChannel: Supply
     weight: 5
     duration: 1800 # 30 minutes
-    maxDuration: 1800 # 30 minutes
-    reoccurrenceDelay: 120 # 2 hours (some variety - at worst, alternates between four dungeon types)
+    reoccurrenceDelay: 60 # 2 hours (some variety - at worst, alternates between four dungeon types)
   - type: ActiveRadio
     channels:
     - Supply

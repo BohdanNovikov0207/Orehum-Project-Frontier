@@ -14,7 +14,6 @@
     endRadioAnnouncementChannel: Engineering
     weight: 5
     duration: 1800 # 30 minutes
-    maxDuration: 1800 # 30 minutes
   - type: BluespaceErrorRule
     groups:
       grid: !type:GridSpawnGroup
