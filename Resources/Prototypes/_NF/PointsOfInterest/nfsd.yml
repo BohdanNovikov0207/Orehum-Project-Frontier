@@ -11,7 +11,7 @@
 - type: pointOfInterest
   id: Nfsd
   parent: BasePOI
-  name: 'Аванпост ДШНФ'
+  name: 'Департамент Шерифа'
   minimumDistance: 750
   maximumDistance: 1000
   spawnGroup: Required
@@ -25,7 +25,7 @@
 
 - type: gameMap
   id: Nfsd
-  mapName: 'Аванпост ДШНФ'
+  mapName: 'Департамент Шерифа'
   mapPath: /Maps/_NF/POI/nfsd.yml
   minPlayers: 0
   stations:
@@ -33,7 +33,7 @@
       stationProto: SecurityFrontierOutpost
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'Аванпост ДШНФ'
+          mapNameTemplate: 'Департамент Шерифа'
         - type: ExtraStationInformation
           icon: /Textures/_NF/Interface/StationIcons/nfsd-banner.png
           stationSubtext: 'frontier-lobby-nfsd-subtext'
@@ -47,7 +47,7 @@
             Brigmedic: [ 0, 0 ]
             NFDetective: [ 0, 0 ]
             Deputy: [ 3, 3 ]
-            Cadet: [ 0, 0 ]
+            Cadet: [ 4, 4 ]
             # Others:
             PublicAffairsLiaison: [ 1, 1 ]
             Prisoner: [ 0, 0 ]

@@ -1,11 +1,19 @@
 - type: soundCollection
   id: NFLobbyMusic
   files:
-    - /Audio/Lobby/thunderdome.ogg
-    - /Audio/Lobby/space_asshole.ogg
-    - /Audio/Lobby/singuloose.ogg
-    - /Audio/Lobby/title3.ogg
-    - /Audio/Lobby/mod.flip-flap.ogg
-    - /Audio/Lobby/Spac_Stac.ogg
-    - /Audio/Lobby/pwmur.ogg
-    - /Audio/Lobby/every_light_is_blinking_at_once.ogg
+#    - /Audio/Lobby/thunderdome.ogg
+#    - /Audio/Lobby/space_asshole.ogg
+#    - /Audio/Lobby/singuloose.ogg
+#    - /Audio/Lobby/title3.ogg
+#    - /Audio/Lobby/mod.flip-flap.ogg
+#    - /Audio/Lobby/Spac_Stac.ogg
+#    - /Audio/Lobby/pwmur.ogg
+#    - /Audio/Lobby/every_light_is_blinking_at_once.ogg
+    - /Audio/_Orehum/Lobby/moon-dust.ogg
+    - /Audio/_Orehum/Lobby/rayman-first-flight.ogg
+    - /Audio/_Orehum/Lobby/space2.ogg
+    - /Audio/_Orehum/Lobby/gregory-semenov-fei-theme.ogg
+    - /Audio/_Orehum/Lobby/nikinit-flight.ogg
+    - /Audio/_Orehum/Lobby/nikinit-illusion.ogg
+    - /Audio/_Orehum/Lobby/zakker-aka-santilo-robot-force.ogg
+    - /Audio/_Orehum/Lobby/korzhavin-denis-thelongwayballad.ogg

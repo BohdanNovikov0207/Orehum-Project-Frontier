@@ -13,7 +13,7 @@
         - type: IFF
           color: "#52d2be"
         - type: StationNameSetup
-          mapNameTemplate: 'Аванпост АС'
+          mapNameTemplate: 'Администрация Сектора'
 #          nameGenerator:
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
