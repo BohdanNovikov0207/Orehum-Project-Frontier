@@ -81,6 +81,7 @@
       key_slots:
       - EncryptionKeyCommon
       - EncryptionKeyTraumaTeam
+      - EncryptionKeyMedical
   - type: Sprite
     sprite: _Orehum/Factions/TraumaTeam/headset.rsi
   - type: Clothing
